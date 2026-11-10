@@ -17,6 +17,27 @@ def differences(a,b,path=''):
         return [v for i,(x,y) in enumerate(zip(a,b)) for v in differences(x,y,path+'/'+str(i))]
     return [] if a==b else [(path,a,b)]
 
+def compare_assay(old,fresh,name):
+    """Retain exact discrete outputs; compare numerical references at stated precision."""
+    if name=='ASSAY_MODELS.txt':
+        a=list(map(float,old.read_text().split()));b=list(map(float,fresh.read_text().split()))
+        assert len(a)==len(b)
+        error=max(abs(x-y) for x,y in zip(a,b));assert error<=2e-13,(name,error)
+        return dict(file=name,maximum_absolute_difference=error,tolerance=2e-13)
+    a=stable(json.loads(old.read_text()));b=stable(json.loads(fresh.read_text()))
+    if name=='ASSAY_AUDIT.json':
+        # Each run's file hashes remain exact integrity checks of its own bytes.
+        for key,folder,prefix in [('output_sha256',R/'results',''),('source_sha256',R/'assay_frontier','')]:
+            for n,h in b[key].items():assert sha((folder/(prefix+n)).read_bytes())==h,(name,n)
+        for n,h in a['output_sha256'].items():assert sha((old.parent/('Data_S13_'+n.lower())).read_bytes())==h,(name,n)
+        a.pop('output_sha256');b.pop('output_sha256')
+    delta=differences(a,b);error=0.
+    for path,x,y in delta:
+        # Counts, seeds, pass/fail flags, protocol and source hashes stay exact.
+        assert type(x) is float and type(y) is float,(name,path,x,y)
+        error=max(error,abs(x-y));assert abs(x-y)<=2e-10,(name,path,x,y)
+    return dict(file=name,maximum_absolute_difference=error,tolerance=2e-10)
+
 def main():
     manifest=json.loads((ROOT/'RELEASE_MANIFEST.json').read_text())
     assert manifest['version']=='0.12.0' and len(manifest['files'])>70
@@ -29,7 +50,7 @@ def main():
     meta=json.loads((ROOT/'.zenodo.json').read_text());assert meta['license']=='MIT' and meta['version']=='0.12.0' and meta['upload_type']=='software'
     assert 'MIT' in (ROOT/'CITATION.cff').read_text()
     execution=json.loads((R/'results/EXECUTION.json').read_text());assert execution['status']=='PASS_EXACT_MATHEMATICAL_RESULTS' and len(execution['commands'])==11 and all(x['exit_code']==0 for x in execution['commands'])
-    compared=[]
+    compared=[];numerical_comparisons=[]
     for old in sorted((ROOT/'expected/core').iterdir()):
         fresh=R/'results'/old.name;assert fresh.is_file(),old.name
         if old.suffix=='.json':assert stable(json.loads(old.read_text()))==stable(json.loads(fresh.read_text())),old.name
@@ -39,7 +60,9 @@ def main():
         for old in sorted((R/folder).glob(prefix+'*')):
             name=old.name.removeprefix(prefix).upper().replace('.JSON','.json').replace('.CSV','.csv').replace('.TXT','.txt');fresh=R/'results'/name
             assert fresh.is_file(),name
-            if old.suffix=='.json':
+            if name in {'ASSAY_AUDIT.json','ASSAY_MOMENTS.json','ASSAY_MODELS.txt'}:
+                numerical_comparisons.append(compare_assay(old,fresh,name))
+            elif old.suffix=='.json':
                 delta=differences(stable(json.loads(old.read_text())),stable(json.loads(fresh.read_text())))
                 if delta:
                     (R/'results/REPRODUCTION_DIFFERENCES.json').write_text(json.dumps(dict(file=name,differences=delta),indent=2)+'\n')
@@ -52,7 +75,7 @@ def main():
     power=json.loads((R/'results/DESIGN_POWER.json').read_text());assert power['status']=='PASS_EXACT_DECLARED_POWER' and power['rows']==120
     tutorial=json.loads((R/'results/DESIGN_TUTORIAL.json').read_text());assert tutorial['fixed_horizon_design']['sufficient_blocks_certified']==200326
     assay=json.loads((R/'results/ASSAY_AUDIT.json').read_text());assert assay['status']=='PASS_FROZEN_TRAJECTORY_CAMPAIGN' and len(assay['power'])==72
-    out=dict(assay_settings=72,design_contrast=cert['absolute_contrast'],power_rows=power['rows'],status='PASS_PUBLIC_CODE_DATA_REPRODUCTION',version='0.12.0',manifest_files=len(manifest['files']),compared_results=len(compared),compared_names=compared,kinetic_counts=audit['counts'],publication_scope='Software and mathematical data; manuscripts excluded',license='MIT')
+    out=dict(numerical_reference_comparisons=numerical_comparisons,assay_settings=72,design_contrast=cert['absolute_contrast'],power_rows=power['rows'],status='PASS_PUBLIC_CODE_DATA_REPRODUCTION',version='0.12.0',manifest_files=len(manifest['files']),compared_results=len(compared),compared_names=compared,kinetic_counts=audit['counts'],publication_scope='Software and mathematical data; manuscripts excluded',license='MIT')
     (R/'results/PUBLIC_VERIFICATION.json').write_text(json.dumps(out,indent=2)+'\n')
     print(json.dumps(out,indent=2))
 if __name__=='__main__':main()

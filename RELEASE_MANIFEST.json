@@ -139,6 +139,6 @@
     "research/translation_counts/independent_clusters.py": "9d3a49209d0b693d10449c3a4cf5005b46d0b4ff81ac88c884842bce37e7a8fc",
     "research/translation_counts/moment_envelope.py": "4592e223cac8afb4f00560e8b70a85ab57b4728d9d35692af691563f511c3850",
     "research/translation_counts/verify.py": "945649cced3ae935345ab114349d13545d0f43f377e75b497bfdafd467b4f1d2",
-    "verify_release.py": "15196a3ee2ceb9cf4028d31efc116dc17d102ab4e57ef3aec6f29b2939dd13f3"
+    "verify_release.py": "e237d5f332088aab341b307f19c9952fba2e175be857f9296dac8e81caa83d48"
   }
 }
