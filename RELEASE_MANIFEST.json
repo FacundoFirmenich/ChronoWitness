@@ -4,7 +4,7 @@
   "publication_scope": "Code and computational data; manuscripts excluded",
   "files": {
     ".gitattributes": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
-    ".github/workflows/reproduce.yml": "6831148911291ad8a81e2238e7e383db8bcf316e96838e4ba9ce01129cb354a7",
+    ".github/workflows/reproduce.yml": "5b5057de788e5104c05e1d72cc7910f76cbb9b2512d324ff75c59cb47a37c67d",
     ".gitignore": "f8ec54f26d1f33434564cfd852fa9014b1950b4fa623ac7b92d080134ab9eabd",
     ".zenodo.json": "f6a81bc9a16ed0ec129a16bf4ee23cd113548c55db8f2d570f140cdafab52a47",
     "CHANGELOG.md": "eabfd2408f31c2b53efb16dc39110814869cc43a197e862058d5fae0022d2d78",
@@ -139,6 +139,6 @@
     "research/translation_counts/independent_clusters.py": "9d3a49209d0b693d10449c3a4cf5005b46d0b4ff81ac88c884842bce37e7a8fc",
     "research/translation_counts/moment_envelope.py": "4592e223cac8afb4f00560e8b70a85ab57b4728d9d35692af691563f511c3850",
     "research/translation_counts/verify.py": "945649cced3ae935345ab114349d13545d0f43f377e75b497bfdafd467b4f1d2",
-    "verify_release.py": "0aa0d3d03c6343fa35a92a41e7185c5a71f4a251f8912cf51e000eb337c21459"
+    "verify_release.py": "15196a3ee2ceb9cf4028d31efc116dc17d102ab4e57ef3aec6f29b2939dd13f3"
   }
 }

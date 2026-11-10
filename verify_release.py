@@ -8,6 +8,15 @@ def stable(x):
     if isinstance(x,list):return [stable(v) for v in x]
     return x
 
+def differences(a,b,path=''):
+    if type(a) is not type(b):return [(path,a,b)]
+    if isinstance(a,dict):
+        return [v for k in sorted(set(a)|set(b)) for v in ([(path+'/'+k,a.get(k),b.get(k))] if k not in a or k not in b else differences(a[k],b[k],path+'/'+k))]
+    if isinstance(a,list):
+        if len(a)!=len(b):return [(path+'/length',len(a),len(b))]
+        return [v for i,(x,y) in enumerate(zip(a,b)) for v in differences(x,y,path+'/'+str(i))]
+    return [] if a==b else [(path,a,b)]
+
 def main():
     manifest=json.loads((ROOT/'RELEASE_MANIFEST.json').read_text())
     assert manifest['version']=='0.12.0' and len(manifest['files'])>70
@@ -30,7 +39,12 @@ def main():
         for old in sorted((R/folder).glob(prefix+'*')):
             name=old.name.removeprefix(prefix).upper().replace('.JSON','.json').replace('.CSV','.csv').replace('.TXT','.txt');fresh=R/'results'/name
             assert fresh.is_file(),name
-            if old.suffix=='.json':assert stable(json.loads(old.read_text()))==stable(json.loads(fresh.read_text())),name
+            if old.suffix=='.json':
+                delta=differences(stable(json.loads(old.read_text())),stable(json.loads(fresh.read_text())))
+                if delta:
+                    (R/'results/REPRODUCTION_DIFFERENCES.json').write_text(json.dumps(dict(file=name,differences=delta),indent=2)+'\n')
+                    print(json.dumps(dict(file=name,difference_count=len(delta),first_differences=delta[:20]),indent=2),flush=True)
+                assert not delta,name
             else:assert old.read_bytes()==fresh.read_bytes(),name
             compared.append(name)
     audit=json.loads((R/'results/KINETIC_AUDIT.json').read_text());assert audit['status']=='PASS_CERTIFIED_CONTINUOUS_TIME_FD7_WITNESS'

@@ -19,7 +19,13 @@ jobs:
       - name: Reproduce and verify the scientific release
         run: OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python reproduce_release.py
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
         with:
           name: chronowitness-code-data-verification
-          path: research/results/PUBLIC_VERIFICATION.json
+          path: |
+            research/results/PUBLIC_VERIFICATION.json
+            research/results/REPRODUCTION_DIFFERENCES.json
+            research/results/ASSAY*.json
+            research/results/ASSAY*.csv
+            research/results/ASSAY*.txt
           if-no-files-found: error
