@@ -1,0 +1,88 @@
+{
+  "version": "0.12",
+  "aim": "Link continuous-time trajectories, finite-window reporter observation, calibration uncertainty and sequential power",
+  "models": [
+    "two_state_null",
+    "certified_three_state"
+  ],
+  "words": [
+    "101111110010110010001000",
+    "100010110010111111001000"
+  ],
+  "pulse_duration": 1,
+  "windows_periods": [
+    1,
+    4
+  ],
+  "reporter_rates": [
+    "1/8",
+    "1"
+  ],
+  "reporter_initial": 0,
+  "initialization": "Independent draws from each arm periodic boundary distribution; numerical distributions independently checked",
+  "validation_per_seed": 32768,
+  "validation_seeds": [
+    202611101,
+    202611102
+  ],
+  "power_replicates_per_seed": 256,
+  "power_seeds": [
+    202611103,
+    202611104
+  ],
+  "power_horizons": [
+    1024,
+    4096,
+    8192
+  ],
+  "power_stakes": [
+    [
+      "1/8",
+      "1/4",
+      "1/2",
+      "1"
+    ],
+    [
+      "1/32",
+      "1/16",
+      "1/8",
+      "1/4",
+      "1/2",
+      "1"
+    ]
+  ],
+  "power_tolerances": [
+    "0",
+    "1/500",
+    "1/200"
+  ],
+  "alpha": "1/20",
+  "benchmark_replicates": 8192,
+  "benchmark_seed": 202611105,
+  "benchmark_probabilities": [
+    "1/2",
+    "3/5"
+  ],
+  "benchmark_tolerances": [
+    "0",
+    "1/10"
+  ],
+  "benchmark_horizon": 256,
+  "calibration_relative_rate_errors": [
+    "0",
+    "1/100",
+    "1/20",
+    "1/10"
+  ],
+  "endpoint_absolute_errors": [
+    "0",
+    "1/1000",
+    "1/100"
+  ],
+  "mc_reporting": "Pointwise 95% and simultaneous Bonferroni 95% Clopper-Pearson intervals; seed-specific counts retained",
+  "validation_error_budget": "1/1000 for bounded moment and exact-power reference envelopes",
+  "sampling": "Fresh independent paired trajectories for every block; shared paths across declared window/method comparisons, no empirical-pool resampling",
+  "biological_status": "Declared stochastic kinetic and bounded linear reporter models; no measured cellular data or calibrated biological time units",
+  "runtime": "C++17 event-driven CTMC; Python3.12 numpy2.2.6 scipy1.15.3 for numerical moment references and binomial intervals",
+  "failure_policy": "Retain every scenario and seed; no outcome-driven grid changes or selective reruns"
+}

@@ -1,0 +1,66 @@
+{
+  "status": "PASS_EXACT_CALIBRATION_BUDGETS",
+  "rows": 48,
+  "extreme_checks": 480,
+  "positive_gap_cases": 28,
+  "gap_definition": "Certified latent contrast minus twice the worst-case observation bias",
+  "support_definition": "1 plus the same total observation bias",
+  "endpoint_contract": "Uniform endpoint bounds established before each block; observed post-block discrepancies alone are not predictable allowances",
+  "two_stage": [
+    {
+      "relative_box": "1/100",
+      "coefficient_intervals": [
+        [
+          "19800/10201",
+          "20200/9801"
+        ],
+        [
+          "100/101",
+          "100/99"
+        ]
+      ],
+      "endpoint_caps": [
+        "3",
+        "5"
+      ],
+      "single_arm_numerator_bound": "7666700/33326667"
+    },
+    {
+      "relative_box": "1/10",
+      "coefficient_intervals": [
+        [
+          "180/121",
+          "220/81"
+        ],
+        [
+          "10/11",
+          "10/9"
+        ]
+      ],
+      "endpoint_caps": [
+        "3",
+        "5"
+      ],
+      "single_arm_numerator_bound": "7670/3267"
+    },
+    {
+      "relative_box": "1/4",
+      "coefficient_intervals": [
+        [
+          "24/25",
+          "40/9"
+        ],
+        [
+          "4/5",
+          "4/3"
+        ]
+      ],
+      "endpoint_caps": [
+        "3",
+        "5"
+      ],
+      "single_arm_numerator_bound": "164/25"
+    }
+  ],
+  "csv_sha256": "5539c608303763a56245c18c264cb35de61479cb7917c4f029d4f37809754a71"
+}

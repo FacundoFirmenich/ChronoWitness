@@ -8,14 +8,16 @@ permissions:
 jobs:
   science:
     runs-on: ubuntu-24.04
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
       - uses: actions/setup-python@e797f83bcb11b83ae66e0230d6156d7c80228e7c
         with:
           python-version: '3.12'
+      - name: Install pinned assay dependencies
+        run: python -m pip install -r requirements-assay.txt
       - name: Reproduce and verify the scientific release
-        run: python reproduce_release.py
+        run: OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python reproduce_release.py
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: chronowitness-code-data-verification

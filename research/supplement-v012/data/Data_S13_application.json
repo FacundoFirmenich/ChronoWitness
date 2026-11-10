@@ -1,0 +1,11 @@
+{
+  "status": "PASS_APPLICATION_INTERFACES",
+  "planned_pulses": 3456,
+  "exact_path_checks": 1024,
+  "invalid_contracts_rejected": 2,
+  "source_sha256": {
+    "analyze.py": "688d0c7fb8de851e63651f89d9b1b6632cdf4ac64a38b63f554bcffafe9dca5f",
+    "plan.py": "9245b9d0e19d69f43ab20e42a53ef7682b0baf70e1963ee02fae358f2f8e1712",
+    "verify.py": "c0312749733f0bb7cad5a767dcc47abe1827267933e71f92fb79f660c7ebde9f"
+  }
+}

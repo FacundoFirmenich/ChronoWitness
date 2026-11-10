@@ -40,15 +40,22 @@ Continue with the [worked example and assay guide](docs/WORKED_EXAMPLE.md), or i
 
 The design study also searches a fixed positive-generator domain and certifies the selected rational candidate independently. [Data S12](research/supplement-v011/data/) contains the search record, interval certificate and exact power calculations. These distinguish the existence of a separator, the size of its contrast and the performance of a specified statistical design.
 
+## Design the observation as well as the input
+
+The [trajectory assay study](docs/TRAJECTORY_ASSAY.md) connects continuous-time readers, finite reporter windows and sequential power. It shows how a reporter transient can create a raw contrast under the two-state null or reverse a separating contrast. Endpoint correction and a calibration budget recover a qualified comparison. Power is reported with Monte Carlo intervals and acquisition-time comparisons.
+
+Use the same guide to export a paired FD7 stimulus plan or analyze qualified block scores. [Data S13](research/supplement-v012/data/) retains the complete declared campaign, including null cases, alternative mixtures and calibration settings that do not retain a positive guaranteed gap.
+
 ## Reproduce the results
 
 The complete verification runs on Linux with Python 3.12 and a C++17 compiler:
 
 ```sh
+python -m pip install -r requirements-assay.txt
 python reproduce_release.py
 ```
 
-This command rebuilds the mathematical results, checks the new interval certificate and exact first-crossing probabilities, and compares the outputs with the distributed references. The [GitHub Actions workflow](.github/workflows/reproduce.yml) executes the same procedure.
+This command rebuilds the mathematical results, checks the interval certificate, exact first-crossing probabilities and trajectory-level Monte Carlo against independent moment references, and compares the outputs with the distributed references. The [GitHub Actions workflow](.github/workflows/reproduce.yml) executes the same procedure.
 
 The numerical search is a separate, reproducible step:
 
@@ -63,7 +70,7 @@ Its protocol fixes the parameter domain, objective, seeds and evaluation budget.
 
 - **Understand the method:** [scientific results](docs/SCIENTIFIC_RESULTS.md) and [worked example](docs/WORKED_EXAMPLE.md).
 - **Design an observation:** [assay requirements and decision path](docs/ASSAY_GUIDE.md).
-- **Inspect the evidence:** [data dictionary](research/supplement-v010/DATA_DICTIONARY.md), Data S1–S11 in their versioned directories, and [Data S12](research/supplement-v011/data/).
+- **Inspect the evidence:** [data dictionary](research/supplement-v010/DATA_DICTIONARY.md), Data S1–S11 in their versioned directories, [Data S12](research/supplement-v011/data/) and [Data S13](research/supplement-v012/data/).
 - **Extend the calculation:** exact reader code in `research/analysis/`, observation bounds in `research/finite_reporter/` and `research/input_robustness/`, count envelopes in `research/count_tails/` and `research/translation_counts/`, and tests in `research/statistical_inference/`.
 - **Audit a release:** `RELEASE_MANIFEST.json` records file hashes; release assets include the source distribution and its checksum.
 

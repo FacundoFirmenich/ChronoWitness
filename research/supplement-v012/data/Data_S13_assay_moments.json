@@ -1,0 +1,272 @@
+{
+  "status": "PASS_NUMERICAL_MOMENT_REFERENCES",
+  "method": "Block matrix exponential independently checked by DOP853; stationary linear solve checked by tree formula",
+  "maximum_ode_difference": 1.3210410543251783e-10,
+  "records": [
+    {
+      "model": "two_state_null",
+      "arm": 0,
+      "periods": 1,
+      "mean": 0.546803491919308,
+      "second_moment": 0.31172149253038756,
+      "variance": 0.012727433755238826,
+      "reporters": [
+        {
+          "rate": "1/8",
+          "raw_mean": 0.3983364717068978,
+          "endpoint_mean": 0.4454010606372302,
+          "corrected_mean": 0.5468034919193079
+        },
+        {
+          "rate": "1",
+          "raw_mean": 0.533191521172017,
+          "endpoint_mean": 0.32668729793497786,
+          "corrected_mean": 0.5468034919193077
+        }
+      ]
+    },
+    {
+      "model": "two_state_null",
+      "arm": 0,
+      "periods": 4,
+      "mean": 0.5468034919193093,
+      "second_moment": 0.3022494509396696,
+      "variance": 0.0032553921645194217,
+      "reporters": [
+        {
+          "rate": "1/8",
+          "raw_mean": 0.5077422186359365,
+          "endpoint_mean": 0.46873527940047366,
+          "corrected_mean": 0.5468034919193093
+        },
+        {
+          "rate": "1",
+          "raw_mean": 0.5434004992323564,
+          "endpoint_mean": 0.3266872979473108,
+          "corrected_mean": 0.5468034919193075
+        }
+      ]
+    },
+    {
+      "model": "two_state_null",
+      "arm": 1,
+      "periods": 1,
+      "mean": 0.5468034919193079,
+      "second_moment": 0.311705326641764,
+      "variance": 0.012711267866615361,
+      "reporters": [
+        {
+          "rate": "1/8",
+          "raw_mean": 0.38088918144408374,
+          "endpoint_mean": 0.4977429314256722,
+          "corrected_mean": 0.5468034919193078
+        },
+        {
+          "rate": "1",
+          "raw_mean": 0.5330373910879258,
+          "endpoint_mean": 0.33038641995316254,
+          "corrected_mean": 0.5468034919193075
+        }
+      ]
+    },
+    {
+      "model": "two_state_null",
+      "arm": 1,
+      "periods": 4,
+      "mean": 0.5468034919193091,
+      "second_moment": 0.30224844057163025,
+      "variance": 0.003254381796480299,
+      "reporters": [
+        {
+          "rate": "1/8",
+          "raw_mean": 0.5031518835430979,
+          "endpoint_mean": 0.5238193005145284,
+          "corrected_mean": 0.5468034919193087
+        },
+        {
+          "rate": "1",
+          "raw_mean": 0.543361966711332,
+          "endpoint_mean": 0.3303864199656351,
+          "corrected_mean": 0.5468034919193073
+        }
+      ]
+    },
+    {
+      "model": "certified_three_state",
+      "arm": 0,
+      "periods": 1,
+      "mean": 0.51865292984209,
+      "second_moment": 0.3203959012792374,
+      "variance": 0.051395039645453444,
+      "reporters": [
+        {
+          "rate": "1/8",
+          "raw_mean": 0.34512311801106743,
+          "endpoint_mean": 0.5205894354930675,
+          "corrected_mean": 0.5186529298420899
+        },
+        {
+          "rate": "1",
+          "raw_mean": 0.49457723685744814,
+          "endpoint_mean": 0.5778166316314103,
+          "corrected_mean": 0.5186529298420902
+        }
+      ]
+    },
+    {
+      "model": "certified_three_state",
+      "arm": 0,
+      "periods": 4,
+      "mean": 0.5186529298420909,
+      "second_moment": 0.28272841252092384,
+      "variance": 0.013727550887139006,
+      "reporters": [
+        {
+          "rate": "1/8",
+          "raw_mean": 0.47299770356324317,
+          "endpoint_mean": 0.547862715346171,
+          "corrected_mean": 0.5186529298420908
+        },
+        {
+          "rate": "1",
+          "raw_mean": 0.5126340065957035,
+          "endpoint_mean": 0.5778166316532245,
+          "corrected_mean": 0.5186529298420912
+        }
+      ]
+    },
+    {
+      "model": "certified_three_state",
+      "arm": 1,
+      "periods": 1,
+      "mean": 0.5085734592945856,
+      "second_moment": 0.3064987559171604,
+      "variance": 0.047851792418298844,
+      "reporters": [
+        {
+          "rate": "1/8",
+          "raw_mean": 0.36164453043014716,
+          "endpoint_mean": 0.44078678659331555,
+          "corrected_mean": 0.5085734592945856
+        },
+        {
+          "rate": "1",
+          "raw_mean": 0.4889171098503639,
+          "endpoint_mean": 0.4717523866613282,
+          "corrected_mean": 0.5085734592945859
+        }
+      ]
+    },
+    {
+      "model": "certified_three_state",
+      "arm": 1,
+      "periods": 4,
+      "mean": 0.5085734592945867,
+      "second_moment": 0.2723833808013524,
+      "variance": 0.0137364173024897,
+      "reporters": [
+        {
+          "rate": "1/8",
+          "raw_mean": 0.4699168537036884,
+          "endpoint_mean": 0.4638792670907803,
+          "corrected_mean": 0.5085734592945867
+        },
+        {
+          "rate": "1",
+          "raw_mean": 0.503659371933346,
+          "endpoint_mean": 0.47175238667913816,
+          "corrected_mean": 0.508573459294587
+        }
+      ]
+    }
+  ],
+  "models": [
+    {
+      "model": "two_state_null",
+      "generators": [
+        [
+          [
+            -0.75,
+            0.75
+          ],
+          [
+            0.25,
+            -0.25
+          ]
+        ],
+        [
+          [
+            -0.5,
+            0.5
+          ],
+          [
+            1.5,
+            -1.5
+          ]
+        ]
+      ],
+      "initial": [
+        [
+          0.2716726261494654,
+          0.7283273738505346
+        ],
+        [
+          0.27198049977551253,
+          0.7280195002244875
+        ]
+      ]
+    },
+    {
+      "model": "certified_three_state",
+      "generators": [
+        [
+          [
+            -0.03125,
+            0.015625,
+            0.015625
+          ],
+          [
+            0.015625,
+            -0.03125,
+            0.015625
+          ],
+          [
+            0.015625,
+            1.231201171875,
+            -1.246826171875
+          ]
+        ],
+        [
+          [
+            -0.242919921875,
+            0.015625,
+            0.227294921875
+          ],
+          [
+            0.585205078125,
+            -0.600830078125,
+            0.015625
+          ],
+          [
+            0.015625,
+            0.015625,
+            -0.03125
+          ]
+        ]
+      ],
+      "initial": [
+        [
+          0.5680631044863912,
+          0.41639576831378255,
+          0.015541127199826268
+        ],
+        [
+          0.47025074528168576,
+          0.5139610779108142,
+          0.015788176807499967
+        ]
+      ]
+    }
+  ],
+  "protocol_sha256": "75d1fe1a123d8ee672247a2a252a1969861799555d49f300147fc9d38e581c55"
+}
