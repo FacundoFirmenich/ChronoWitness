@@ -1,0 +1,12 @@
+{
+  "status": "PASS_EXACT",
+  "polynomial_construction": "forward recurrence independent of backward coefficient proposer",
+  "witness_construction": "direct two-cycle propagation from each basis state; no stationary solver",
+  "phase_word_initial_cases": 144,
+  "state0_contrast": "5/131072",
+  "block_rows_identical_all_phases": true,
+  "mutation_rejections": 3,
+  "finite_contract": "one wash-in cycle; next-cycle expected profile exact; empirical random profile not exact",
+  "biological_data": false,
+  "external_peer_review": false
+}

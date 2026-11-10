@@ -1,0 +1,100 @@
+{
+  "scope": "Exact mathematical design ensemble;not biological data",
+  "profile_scale": 12,
+  "stationary_profile_denominator": 288,
+  "phase_mean_from_sum_denominator": 6912,
+  "classes": [
+    {
+      "states": 1,
+      "transition_functions": 1,
+      "initial_state_cases": 1,
+      "fixed_phase0_separating_cases": 0,
+      "common_phase_separating_cases": 0,
+      "phase_mean_separating_cases": 0,
+      "phase_profile_multiset_separating_cases": 0,
+      "finite_window_checks_burn2_measure6": 48,
+      "first_phase_mean_witness": null,
+      "first_phase_multiset_witness": null
+    },
+    {
+      "states": 2,
+      "transition_functions": 16,
+      "initial_state_cases": 32,
+      "fixed_phase0_separating_cases": 0,
+      "common_phase_separating_cases": 24,
+      "phase_mean_separating_cases": 0,
+      "phase_profile_multiset_separating_cases": 0,
+      "finite_window_checks_burn2_measure6": 1536,
+      "first_phase_mean_witness": null,
+      "first_phase_multiset_witness": null
+    },
+    {
+      "states": 3,
+      "transition_functions": 729,
+      "initial_state_cases": 2187,
+      "fixed_phase0_separating_cases": 0,
+      "common_phase_separating_cases": 1788,
+      "phase_mean_separating_cases": 0,
+      "phase_profile_multiset_separating_cases": 0,
+      "finite_window_checks_burn2_measure6": 104976,
+      "first_phase_mean_witness": null,
+      "first_phase_multiset_witness": null
+    },
+    {
+      "states": 4,
+      "transition_functions": 65536,
+      "initial_state_cases": 262144,
+      "fixed_phase0_separating_cases": 9960,
+      "common_phase_separating_cases": 423168,
+      "phase_mean_separating_cases": 9024,
+      "phase_profile_multiset_separating_cases": 9144,
+      "finite_window_checks_burn2_measure6": 0,
+      "first_phase_mean_witness": {
+        "delta": [
+          0,
+          1,
+          0,
+          2,
+          1,
+          3,
+          2,
+          1
+        ],
+        "q0": 0,
+        "sum_scaled_A": [
+          864,
+          864,
+          864,
+          1440,
+          1152,
+          864,
+          576,
+          288
+        ],
+        "sum_scaled_B": [
+          864,
+          1440,
+          1440,
+          1152,
+          864,
+          576,
+          288,
+          288
+        ]
+      },
+      "first_phase_multiset_witness": {
+        "delta": [
+          0,
+          1,
+          0,
+          2,
+          1,
+          3,
+          2,
+          1
+        ],
+        "q0": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "status": "PASS_EXACT_SUPPLEMENT",
+  "coefficient_rows": 332,
+  "instrument_phase_initial_rows": 96,
+  "normalization_checks": [
+    {
+      "schedule": "A",
+      "raw_sum_total": 6912,
+      "phase_mean": [
+        "1/8",
+        "1/8",
+        "1/8",
+        "5/24",
+        "1/6",
+        "1/8",
+        "1/12",
+        "1/24"
+      ],
+      "wrong_denominator_rejected": true
+    },
+    {
+      "schedule": "B",
+      "raw_sum_total": 6912,
+      "phase_mean": [
+        "1/8",
+        "5/24",
+        "5/24",
+        "1/6",
+        "1/8",
+        "1/12",
+        "1/24",
+        "1/24"
+      ],
+      "wrong_denominator_rejected": true
+    }
+  ],
+  "finite_promoter_transient": {
+    "rational_parameter_sets": 36,
+    "checks": 1296,
+    "comparison": "Direct affine recurrence vs coefficients of h0,h1 in the closed geometric integral",
+    "parameter_domain": {
+      "b0_b1": [
+        "1/4",
+        "1/2",
+        "3/4"
+      ],
+      "r0_r1": [
+        "1/4",
+        "3/4"
+      ],
+      "initial_p": [
+        0,
+        1
+      ],
+      "discarded_periods": [
+        0,
+        1,
+        3
+      ],
+      "measured_periods": [
+        1,
+        2,
+        5
+      ]
+    },
+    "biological_parameters_or_observations": false
+  },
+  "source_sha256": {
+    "supplement-v08/build_supplement.py": "a23d8a69904008e1a9cff8409b24b9648e54b2a3eb3d6dcd694a9c83418469de",
+    "analysis/audit_phase_ensemble.cpp": "98b9dfd3273ac527f3586f657dcddf482d3d2606032fab261181108a8643bb56"
+  }
+}

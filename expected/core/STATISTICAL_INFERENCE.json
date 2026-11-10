@@ -1,0 +1,204 @@
+{
+  "status": "PASS_EXACT_STATISTICAL_INTERFACE",
+  "biological_observations": false,
+  "monte_carlo": false,
+  "domain": {
+    "laws": [
+      "fair",
+      "boundary",
+      "alternating",
+      "adaptive",
+      "uninformative"
+    ],
+    "path_horizon": 10,
+    "alphas": [
+      "1/5",
+      "1/20"
+    ],
+    "stakes": [
+      "1/8",
+      "1/4",
+      "1/2",
+      "1"
+    ],
+    "counting_horizon": 64,
+    "vertex_support": [
+      "-2",
+      "-1",
+      "0",
+      "1",
+      "2"
+    ],
+    "vertex_tolerances": [
+      "0",
+      "1/4",
+      "1",
+      "2"
+    ]
+  },
+  "counts": {
+    "law_cases": 10,
+    "path_leaves": 8194,
+    "tree_nodes": 8204,
+    "local_component_checks": 65632,
+    "count_product_checks": 8188,
+    "vertex_checks": 256,
+    "box_cases": 8,
+    "box_corners": 160,
+    "randomized_pair_checks": 144,
+    "rejected_invalid_contracts": 3
+  },
+  "adverse": {
+    "duplicated_block": {
+      "copies": 6,
+      "nominal_alpha": "1/20",
+      "false_rejection_probability": "1",
+      "wrong_e": "32",
+      "one_block_e": "1"
+    },
+    "outcome_selected_stake": {
+      "expected_factor": "3/2"
+    },
+    "clipping": {
+      "latent_mean": "0",
+      "clipped_mean": "-1/3",
+      "required_bias_allowance": "1/3"
+    },
+    "endpoint_covariance": {
+      "anticorrelated_variance": "4",
+      "diagonal_only_variance": "2",
+      "common_mode_variance": "0"
+    },
+    "repeated_fixed_test": {
+      "horizon": 64,
+      "nominal_alpha": "1/20",
+      "ever_reject": "220037786606526241/1152921504606846976"
+    },
+    "valid_e_process": {
+      "horizon": 64,
+      "ever_reject": "22136624327822177/1152921504606846976"
+    }
+  },
+  "cases": [
+    {
+      "law": "fair",
+      "horizon": 10,
+      "alpha": "1/5",
+      "leaves": 1024,
+      "nodes": 1023,
+      "local_component_checks": 8184,
+      "count_product_checks": 2047,
+      "first_cross_probability": "1/16",
+      "terminal_mean_e": "1"
+    },
+    {
+      "law": "fair",
+      "horizon": 10,
+      "alpha": "1/20",
+      "leaves": 1024,
+      "nodes": 1023,
+      "local_component_checks": 8184,
+      "count_product_checks": 2047,
+      "first_cross_probability": "1/128",
+      "terminal_mean_e": "1"
+    },
+    {
+      "law": "boundary",
+      "horizon": 10,
+      "alpha": "1/5",
+      "leaves": 1024,
+      "nodes": 1023,
+      "local_component_checks": 8184,
+      "count_product_checks": 2047,
+      "first_cross_probability": "198593/8388608",
+      "terminal_mean_e": "2072918499057/3276800000000"
+    },
+    {
+      "law": "boundary",
+      "horizon": 10,
+      "alpha": "1/20",
+      "leaves": 1024,
+      "nodes": 1023,
+      "local_component_checks": 8184,
+      "count_product_checks": 2047,
+      "first_cross_probability": "0",
+      "terminal_mean_e": "2072918499057/3276800000000"
+    },
+    {
+      "law": "alternating",
+      "horizon": 10,
+      "alpha": "1/5",
+      "leaves": 1024,
+      "nodes": 1023,
+      "local_component_checks": 8184,
+      "count_product_checks": 0,
+      "first_cross_probability": "50625/8388608",
+      "terminal_mean_e": "226523/512000"
+    },
+    {
+      "law": "alternating",
+      "horizon": 10,
+      "alpha": "1/20",
+      "leaves": 1024,
+      "nodes": 1023,
+      "local_component_checks": 8184,
+      "count_product_checks": 0,
+      "first_cross_probability": "0",
+      "terminal_mean_e": "226523/512000"
+    },
+    {
+      "law": "adaptive",
+      "horizon": 10,
+      "alpha": "1/5",
+      "leaves": 1024,
+      "nodes": 1023,
+      "local_component_checks": 8184,
+      "count_product_checks": 0,
+      "first_cross_probability": "78125/2097152",
+      "terminal_mean_e": "31494839300526897/43980465111040000"
+    },
+    {
+      "law": "adaptive",
+      "horizon": 10,
+      "alpha": "1/20",
+      "leaves": 1024,
+      "nodes": 1023,
+      "local_component_checks": 8184,
+      "count_product_checks": 0,
+      "first_cross_probability": "0",
+      "terminal_mean_e": "31494839300526897/43980465111040000"
+    },
+    {
+      "law": "uninformative",
+      "horizon": 10,
+      "alpha": "1/5",
+      "leaves": 1,
+      "nodes": 10,
+      "local_component_checks": 80,
+      "count_product_checks": 0,
+      "first_cross_probability": "0",
+      "terminal_mean_e": "4638957297/8589934592"
+    },
+    {
+      "law": "uninformative",
+      "horizon": 10,
+      "alpha": "1/20",
+      "leaves": 1,
+      "nodes": 10,
+      "local_component_checks": 80,
+      "count_product_checks": 0,
+      "first_cross_probability": "0",
+      "terminal_mean_e": "4638957297/8589934592"
+    }
+  ],
+  "source_sha256": {
+    "betting.py": "6e58c2511954c90fd9079c1ac03050c43c7ed5a2dd6c219dd46599d418aaba1b",
+    "independent_paths.py": "d6e329e71b633aa40c8f54c234d99e972128619fc3acd76b0e27e5f28d7ac1a2",
+    "verify.py": "2fa660eb1ec2358d068bb7fd263324ee1132fb6bb86cefc88cd631d3251602b6"
+  },
+  "csv_sha256": {
+    "STATISTICAL_CROSSINGS.csv": "a7f3a1c3879cc82415e51d9b70536077e2f472e9589f968eba273b7e929476c1",
+    "STATISTICAL_CASES.csv": "995205445b3f09ed8fa158bf2635fe6b552d0065f44ba5b145efea7a55f6f609"
+  },
+  "elapsed_seconds": 2.3261638909999647
+}

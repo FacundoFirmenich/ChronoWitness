@@ -1,0 +1,43 @@
+{
+  "scope": "Exact FD7 one-way reader-instrument cascade; not biological data",
+  "upstream_states": 2,
+  "instrument_states": 2,
+  "transition_tables": 4096,
+  "table_initial_pairs": 16384,
+  "phase_mean_full_profile_separators": 48,
+  "phase_law_full_profile_separators": 56,
+  "phase_mean_instrument_bit_separators": 44,
+  "phase_law_instrument_bit_separators": 52,
+  "first_instrument_mean_witness": {
+    "delta": [
+      1,
+      2,
+      0,
+      3,
+      0,
+      2,
+      1,
+      3
+    ],
+    "reader_delta": [
+      0,
+      1,
+      0,
+      1
+    ],
+    "instrument_delta_by_joint_state_input": [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      1
+    ],
+    "initial_joint_state": 0,
+    "mean_scaled_sum_A": 3264,
+    "mean_scaled_sum_B": 3456,
+    "normalization_to_time_fraction": 6912
+  }
+}

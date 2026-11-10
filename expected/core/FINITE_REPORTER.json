@@ -1,0 +1,81 @@
+{
+  "status": "PASS_EXACT_FINITE_REPORTER",
+  "model_cases": 32,
+  "flow_operator_columns": 672,
+  "periodic_profiles": 192,
+  "finite_windows": 6912,
+  "certified_raw_bounds": 6912,
+  "resonant_bound_cases": 864,
+  "wrong_sign_controls": 6912,
+  "hidden_endpoint_controls": 3456,
+  "rejected_invalid_weight_certificates": 2,
+  "parameter_domain": {
+    "kappa_pairs": [
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        3,
+        2
+      ]
+    ],
+    "equilibria": [
+      [
+        "1/4",
+        "3/4"
+      ],
+      [
+        "3/4",
+        "1/4"
+      ]
+    ],
+    "synthesis_contrasts": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        -1
+      ]
+    ],
+    "single_decay": 4,
+    "maturation_rate": 4,
+    "mature_decay": 5,
+    "interval": "log(2) in arbitrary units",
+    "phases": [
+      0,
+      1,
+      7
+    ],
+    "discard": [
+      0,
+      1,
+      3
+    ],
+    "measure": [
+      1,
+      2,
+      5
+    ]
+  },
+  "independence": "Rational spectral projectors vs componentwise ODE exponential coefficients; independent method imports no projector or matrix solver.",
+  "logarithm_bound": "64 positive terms of 2*atanh(1/3), plus a rational upper bound on the remainder; no floating point in certification.",
+  "readout_boundary": "C A^-1 must lie in the row span of endpoint measurement R for a universal exact correction from R*x endpoints.",
+  "empirical_data": false,
+  "source_sha256": {
+    "exact_flow.py": "aa831a63924258c3c970a330e9d63515f35dc636b3c0f9dec7b3bf93604bf092",
+    "independent_flow.py": "5be0d2ae5b28330d9df81a3cc8c285a18faff6e086c4a7bb78cae22b430391ba",
+    "verify.py": "96d6a5bfc3d7ff2af1a1ae79c1ce85a1a1f672860f26f2df0289cfd530be0367"
+  },
+  "csv_sha256": "1c22ff8ed676e9e5a9df5fbf64f821211d7c6345cdbb2eef3e4041573501c07d"
+}

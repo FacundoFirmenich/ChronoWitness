@@ -1,0 +1,5 @@
+states,transition_functions,initial_state_cases,fixed_phase0_separating_cases,common_phase_separating_cases,phase_mean_separating_cases,phase_profile_multiset_separating_cases
+1,1,1,0,0,0,0
+2,16,32,0,24,0,0
+3,729,2187,0,1788,0,0
+4,65536,262144,9960,423168,9024,9144

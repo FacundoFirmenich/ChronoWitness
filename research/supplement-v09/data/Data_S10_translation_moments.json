@@ -1,0 +1,60 @@
+{
+  "status": "PASS_EXACT_TRANSLATION_MOMENTS",
+  "biological_observations": false,
+  "monte_carlo": false,
+  "counts": {
+    "parameter_sets": 108,
+    "initial_cases": 432,
+    "global_moment_identities": 2160,
+    "ode_residual_identities": 2160,
+    "initial_identities": 2160,
+    "generator_component_identities": 19440,
+    "uniform_certificates": 324,
+    "uniform_time_checks": 9720,
+    "windows": 3888,
+    "positive_window_budgets": 3888,
+    "equal_degradation_cases": 144,
+    "double_degradation_cases": 96,
+    "stationary_fano_checks": 81,
+    "degradation_vs_deathfree_checks": 540,
+    "rejected_invalid_contracts": 8
+  },
+  "model": "Explicit M immigration/degradation, catalytic protein production kappa*M, protein degradation; no burst approximation.",
+  "conditional_extension": "Pathwise predictable rate bounds imply positive moment differential inequalities; the chemical mean-null hypotheses remain separate.",
+  "verification_independence": "ODE recurrence and molecule-survival/Poisson-immigration formulas share only the rational exponential-polynomial ring. Direct reaction generator is independently evaluated. Proofs in S14 extend beyond the parameter grid.",
+  "single_mrna_counterexample": {
+    "time": "log(2)",
+    "initial_mrna": 1,
+    "initial_protein": 0,
+    "immigration": "0",
+    "translation": "2",
+    "mrna_degradation": "1",
+    "protein_degradation": "1",
+    "protein_mean": "log(2)",
+    "protein_factorial_second": "2 - 2*log(2)",
+    "excess_variance_over_poisson_lower": "33313156240476989/250000000000000000",
+    "excess_variance_over_poisson_upper": "133252624961907957/1000000000000000000"
+  },
+  "stationary_counterexample": {
+    "immigration": 1,
+    "translation": 2,
+    "mrna_degradation": 1,
+    "protein_degradation": 1,
+    "protein_mean": "2",
+    "protein_variance": "4",
+    "protein_second": "8",
+    "poisson_second_with_same_mean": "6"
+  },
+  "source_sha256": {
+    "exp_polynomial.py": "800645c88167d74728dc71ab9ae2b05fcec05d6abce629a2bba65a2501bbecc1",
+    "independent_clusters.py": "9d3a49209d0b693d10449c3a4cf5005b46d0b4ff81ac88c884842bce37e7a8fc",
+    "moment_envelope.py": "4592e223cac8afb4f00560e8b70a85ab57b4728d9d35692af691563f511c3850",
+    "verify.py": "945649cced3ae935345ab114349d13545d0f43f377e75b497bfdafd467b4f1d2"
+  },
+  "csv_sha256": {
+    "TRANSLATION_CASES.csv": "f00ac03977b274296072795ea353cf89f6aaa90d49640030e5aee1088938dbbb",
+    "TRANSLATION_CURVES.csv": "6b23e318ce117c7b153351cf2128bbaefb676f6f9eec30578dab862645ead2e0",
+    "TRANSLATION_STATIONARY.csv": "514d36951266b118d263d6aa943492fdec9eb85cc574e310054d4b24c35c83ba",
+    "TRANSLATION_WINDOWS.csv": "322b55b10762c764402b9f80e8214e52706595cdf7bf3310d180fa887ebb35ee"
+  }
+}

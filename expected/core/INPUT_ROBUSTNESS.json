@@ -1,0 +1,81 @@
+{
+  "status": "PASS_EXACT_INPUT_ROBUSTNESS",
+  "counts": {
+    "flow_columns": 560,
+    "kernel_crosschecks": 1728,
+    "windows": 1728,
+    "corrected_bounds": 1728,
+    "raw_bounds": 1728,
+    "amplitude_bounds": 3456,
+    "timing_budgets": 1728,
+    "resonant_windows": 864,
+    "rejected_omitted_history": 32
+  },
+  "domain": {
+    "cases": 8,
+    "inputs": [
+      "0",
+      "1/4",
+      "3/4",
+      "1"
+    ],
+    "symbol_duration": "4 log(2)",
+    "phases": [
+      0,
+      7
+    ],
+    "scenarios": [
+      "ideal",
+      "amplitude",
+      "delay",
+      "alternating_jitter",
+      "mixed",
+      "history_only"
+    ],
+    "initial": [
+      "periodic",
+      "zero",
+      "one"
+    ],
+    "windows": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "rate_families": [
+      "alpha=1+v, beta=1+3v",
+      "alpha=1+8v, beta=9-8v"
+    ],
+    "synthesis_families": [
+      "u0=v^2, u1=v^2+v+1",
+      "u0=v^2, u1=(1-v)^2"
+    ],
+    "reporter": "scalar decay 7 or maturation 8 then mature decay 7; no immature degradation"
+  },
+  "common_mode_counterexample": {
+    "hamming_distance": 6,
+    "unchanged_difference": true,
+    "synthesis_mean_contrast": "1/4",
+    "corrected_reporter_contrast": "synthesis_mean_contrast / delta",
+    "empirical": false
+  },
+  "scope": "Exact mathematical inputs; finite-grid implementation checks accompany general proofs. Acquisition window is fixed on a common physical time axis. No statistical decision or calibration inferred.",
+  "independence": "Spectral projectors vs componentwise ODE interval construction; closed acquisition primitives vs differential-equation error-filter recurrence.",
+  "source_sha256": {
+    "input_robustness/verify.py": "895deb525a4bd054056b10c49a4d9520dcc142d817f5b6b4dfd43e3c29d17782",
+    "input_robustness/kernels.py": "cedbc3b0ad4de4497e959529e31d44d4c56869a02183e950a7e915d6fd22e01c",
+    "input_robustness/independent_envelope.py": "1245f62bfcd8991046186143be250f3998a9d746f3ac299ec090b4316254c6c5",
+    "finite_reporter/exact_flow.py": "aa831a63924258c3c970a330e9d63515f35dc636b3c0f9dec7b3bf93604bf092",
+    "finite_reporter/independent_flow.py": "5be0d2ae5b28330d9df81a3cc8c285a18faff6e086c4a7bb78cae22b430391ba"
+  },
+  "csv_sha256": "18504e39965e3fa00e6478a69ce8a201d16cbceb3a5c76bfd698b7b558da62a6"
+}

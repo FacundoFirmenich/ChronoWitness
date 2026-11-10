@@ -1,0 +1,36 @@
+{
+  "status": "PASS_EXACT",
+  "words_checked": 510,
+  "forward_backward_and_rotation_checks": true,
+  "matched_counts_negative_control": {
+    "words": [
+      "0011",
+      "0101"
+    ],
+    "theta": [
+      "1/4",
+      "1/2",
+      "1/4",
+      "3/4"
+    ],
+    "profile_A": [
+      "37/126",
+      "13/42",
+      "13/63",
+      "4/21"
+    ],
+    "profile_B": [
+      "2/7",
+      "9/28",
+      "3/14",
+      "5/28"
+    ]
+  },
+  "three_state_witness_determinants": [
+    "-1/4",
+    "0"
+  ],
+  "homogeneous_continuous_time_embedding": "EXCLUDED_FOR_BOTH_MATRICES_BY_DETERMINANT",
+  "biological_bridge": "Analytical two-state kinetic and linear-reporter mean theorem; no observed biological data",
+  "biological_data": false
+}

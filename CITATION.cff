@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "Please cite the ChronoWitness software release when using this code or its mathematical certificates."
+type: software
+title: "ChronoWitness: exact temporal-input identities and kinetic-reader certificates"
+authors:
+  - family-names: Firmenich
+    given-names: Facundo
+version: 0.10.0
+date-released: 2026-11-10
+license: GPL-3.0-only
+repository-code: "https://github.com/FacundoFirmenich/ChronoWitness"
+url: "https://github.com/FacundoFirmenich/ChronoWitness/releases/tag/v0.10.0"

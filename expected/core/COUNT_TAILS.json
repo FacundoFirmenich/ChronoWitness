@@ -1,0 +1,101 @@
+{
+  "status": "PASS_CERTIFIED_COUNT_TAILS",
+  "monte_carlo": false,
+  "biological_observations": false,
+  "arithmetic": "Exact rational operations and outward-rounded rigorous exponential intervals; 24 decimal places.",
+  "counts": {
+    "compound_laws": 36,
+    "stoploss_cases": 360,
+    "pgf_inequalities": 1560,
+    "independent_coefficient_checks": 396,
+    "exponential_crosschecks": 7,
+    "reaction_states": 6548,
+    "reaction_transitions": 74522,
+    "detector_boxes": 6,
+    "detector_vertices": 1168,
+    "detector_path_checks": 750,
+    "capital_product_crosschecks": 648,
+    "saturation_null_component_checks": 48,
+    "quadratic_pointwise_checks": 820,
+    "rejected_invalid_contracts": 9
+  },
+  "chemical_scope": "Nonbranching conversions/death plus dominated immigration batches; initial population must be covered. Explicit translation branching is not automatically covered.",
+  "saturation_counterexample": {
+    "latent_means": [
+      "1",
+      "1"
+    ],
+    "saturated_means": [
+      "1",
+      "1/2"
+    ],
+    "mean_contrast": "1/2",
+    "naive_false_reject_by_24": "16241061/16777216",
+    "qualified_false_reject_by_24": "277/4194304",
+    "corrected_tolerance": "1/2"
+  },
+  "rare_count_controls": [
+    {
+      "large_count": 2,
+      "probability": "1/2",
+      "mean": "1",
+      "cap": "1",
+      "loss": "1/2"
+    },
+    {
+      "large_count": 4,
+      "probability": "1/4",
+      "mean": "1",
+      "cap": "1",
+      "loss": "3/4"
+    },
+    {
+      "large_count": 16,
+      "probability": "1/16",
+      "mean": "1",
+      "cap": "1",
+      "loss": "15/16"
+    },
+    {
+      "large_count": 64,
+      "probability": "1/64",
+      "mean": "1",
+      "cap": "1",
+      "loss": "63/64"
+    },
+    {
+      "large_count": 256,
+      "probability": "1/256",
+      "mean": "1",
+      "cap": "1",
+      "loss": "255/256"
+    }
+  ],
+  "structural_adverse_controls": [
+    {
+      "case": "ignored_initial_count",
+      "actual": 1,
+      "invalid_envelope": 0
+    },
+    {
+      "case": "translation_without_envelope",
+      "actual": 2,
+      "invalid_envelope": 1
+    },
+    {
+      "case": "batch_treated_as_single_arrival",
+      "actual": 3,
+      "invalid_envelope": 1
+    }
+  ],
+  "source_sha256": {
+    "envelopes.py": "da0152e75cefe3255023f6a6dc17269d6290510f8e574b1a32232e4b2f8566cf",
+    "independent_laws.py": "e7ceaa8ba463d5c63152150d2aaf6565d888088687e342778fce2dab54bca83d",
+    "verify.py": "9b110971ae1007a87c4eeb6412973159dedfab9f5be13f8ab3931b0e27c1ccec"
+  },
+  "csv_sha256": {
+    "COUNT_TAIL_CASES.csv": "f5e46f06218b2e207221ef718f16e093dd1dacadc2c767a01c4bdf9bfe6989fb",
+    "COUNT_TAIL_CURVES.csv": "6f0c401527053f7c9c2719444cdab8b5f6823f39f5f13ba09bfd02e731e9396b",
+    "SATURATION_CROSSINGS.csv": "6e911ced803620194255a7a12918f4c93ee6dc3400080e18ad0b95128b7f896f"
+  }
+}

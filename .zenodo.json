@@ -1,0 +1,23 @@
+{
+  "title": "ChronoWitness: exact temporal-input identities and kinetic-reader certificates",
+  "creators": [
+    {
+      "name": "Firmenich, Facundo"
+    }
+  ],
+  "version": "0.10.0",
+  "publication_date": "2026-11-10",
+  "upload_type": "software",
+  "access_right": "open",
+  "license": "GPL-3.0-only",
+  "language": "eng",
+  "description": "Exact and independently checked software for temporal-input identities, finite-state and continuous-time kinetic reader thresholds, molecular observation bounds and statistical tests. Includes mathematical certificates and data. Manuscripts are held separately.",
+  "keywords": [
+    "biological memory",
+    "temporal input design",
+    "continuous-time Markov chains",
+    "exact arithmetic",
+    "model discrimination",
+    "reproducible research"
+  ]
+}
