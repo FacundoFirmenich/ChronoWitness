@@ -1,0 +1,11 @@
+{
+  "status": "PASS_EXACT_DECLARED_POWER",
+  "horizon": 256,
+  "rows": 120,
+  "independent_path_checks": 12244,
+  "monte_carlo": false,
+  "biological_calibration": false,
+  "block_law": "iid scores +1 with probability p and -1 otherwise",
+  "protocol_sha256": "8ee2e4c41d00e2b6c6c6220a644f2133e88d7722142e293255cdf89ea1a94421",
+  "csv_sha256": "76c590793f798c1c564ff8cde5847d37ef551131c5715aed7aaba11b15611026"
+}

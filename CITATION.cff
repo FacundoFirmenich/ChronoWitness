@@ -5,8 +5,8 @@ title: "ChronoWitness: exact temporal-input identities and kinetic-reader certif
 authors:
   - family-names: Firmenich
     given-names: Facundo
-version: 0.10.0
+version: 0.11.0
 date-released: 2026-11-10
-license: GPL-3.0-only
+license: MIT
 repository-code: "https://github.com/FacundoFirmenich/ChronoWitness"
-url: "https://github.com/FacundoFirmenich/ChronoWitness/releases/tag/v0.10.0"
+url: "https://github.com/FacundoFirmenich/ChronoWitness/releases/tag/v0.11.0"

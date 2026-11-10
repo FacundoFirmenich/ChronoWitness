@@ -1,0 +1,172 @@
+{
+  "status": "NUMERICAL_SEARCH_REQUIRES_CERTIFICATION",
+  "protocol_sha256": "8ee2e4c41d00e2b6c6c6220a644f2133e88d7722142e293255cdf89ea1a94421",
+  "records": [
+    {
+      "seed": 103,
+      "success": false,
+      "message": "Maximum number of iterations has been exceeded.",
+      "iterations": 160,
+      "evaluations": 15547,
+      "numerical_objective": 0.010079470848117111,
+      "rates_numerators": [
+        64,
+        64,
+        64,
+        64,
+        64,
+        5043,
+        64,
+        931,
+        2397,
+        64,
+        64,
+        64
+      ],
+      "denominator": 4096,
+      "quantized_occupations": [
+        [
+          0.5186529298420895,
+          0.29949088532429485,
+          0.18185618483361543
+        ],
+        [
+          0.5085734592945853,
+          0.3090418518415333,
+          0.18238468886388123
+        ]
+      ],
+      "quantized_contrast": [
+        0.010079470547504243,
+        -0.009550966517238468,
+        -0.0005285040302658028
+      ]
+    },
+    {
+      "seed": 211,
+      "success": false,
+      "message": "Maximum number of iterations has been exceeded.",
+      "iterations": 160,
+      "evaluations": 15547,
+      "numerical_objective": 0.009962073551959993,
+      "rates_numerators": [
+        64,
+        995,
+        3875,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        2645
+      ],
+      "denominator": 4096,
+      "quantized_occupations": [
+        [
+          0.5054750463260006,
+          0.23095283187574314,
+          0.263572121798256
+        ],
+        [
+          0.5154371187668311,
+          0.22131388245219663,
+          0.26324899878097235
+        ]
+      ],
+      "quantized_contrast": [
+        -0.009962072440830472,
+        0.009638949423546511,
+        0.0003231230172836552
+      ]
+    },
+    {
+      "seed": 307,
+      "success": false,
+      "message": "Maximum number of iterations has been exceeded.",
+      "iterations": 160,
+      "evaluations": 15599,
+      "numerical_objective": 0.009644850076807515,
+      "rates_numerators": [
+        64,
+        4043,
+        64,
+        64,
+        64,
+        983,
+        64,
+        64,
+        2636,
+        64,
+        64,
+        64
+      ],
+      "denominator": 4096,
+      "quantized_occupations": [
+        [
+          0.22537872409638357,
+          0.26374871997826804,
+          0.5108725559253482
+        ],
+        [
+          0.21573387382921227,
+          0.26343750394228926,
+          0.5208286222284984
+        ]
+      ],
+      "quantized_contrast": [
+        0.009644850267171295,
+        0.00031121603597877856,
+        -0.009956066303150157
+      ]
+    }
+  ],
+  "selected": {
+    "seed": 103,
+    "success": false,
+    "message": "Maximum number of iterations has been exceeded.",
+    "iterations": 160,
+    "evaluations": 15547,
+    "numerical_objective": 0.010079470848117111,
+    "rates_numerators": [
+      64,
+      64,
+      64,
+      64,
+      64,
+      5043,
+      64,
+      931,
+      2397,
+      64,
+      64,
+      64
+    ],
+    "denominator": 4096,
+    "quantized_occupations": [
+      [
+        0.5186529298420895,
+        0.29949088532429485,
+        0.18185618483361543
+      ],
+      [
+        0.5085734592945853,
+        0.3090418518415333,
+        0.18238468886388123
+      ]
+    ],
+    "quantized_contrast": [
+      0.010079470547504243,
+      -0.009550966517238468,
+      -0.0005285040302658028
+    ]
+  },
+  "baseline": [
+    1.0327257952136293e-06,
+    -1.0195305817917166e-05,
+    9.162580022703537e-06
+  ],
+  "elapsed_seconds": 10.57315444946289
+}

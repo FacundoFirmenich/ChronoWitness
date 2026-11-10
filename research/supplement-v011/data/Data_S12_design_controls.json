@@ -1,0 +1,50 @@
+{
+  "status": "PASS_MATCHED_RUN_DESIGN_CONTROL",
+  "cases": [
+    {
+      "name": "FD7",
+      "word_a": "101111110010110010001000",
+      "word_b": "100010110010111111001000",
+      "length": 24,
+      "ones": 12,
+      "cyclic_switches": 12,
+      "same_symbol_labelled_run_multiset": true,
+      "word_count_l1": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        8
+      ],
+      "two_state_polynomial_identity": true,
+      "promoter_integral_contrast_constant": "0",
+      "promoter_integral_contrast_log2": "0"
+    },
+    {
+      "name": "matched_runs_control",
+      "word_a": "101111110010110010001000",
+      "word_b": "111111000110001001001010",
+      "length": 24,
+      "ones": 12,
+      "cyclic_switches": 12,
+      "same_symbol_labelled_run_multiset": true,
+      "word_count_l1": [
+        0,
+        0,
+        0,
+        4,
+        16,
+        28,
+        36,
+        40
+      ],
+      "two_state_polynomial_identity": false,
+      "promoter_integral_contrast_constant": "-3160538/218157069",
+      "promoter_integral_contrast_log2": "0"
+    }
+  ],
+  "scope": "Two fixed design pairs; establishes specificity of the uniform null, not optimality over all designs"
+}

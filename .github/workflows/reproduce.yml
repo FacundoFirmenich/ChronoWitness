@@ -14,19 +14,8 @@ jobs:
       - uses: actions/setup-python@e797f83bcb11b83ae66e0230d6156d7c80228e7c
         with:
           python-version: '3.12'
-      - name: Reproduce exact mathematics
-        working-directory: research
-        run: |
-          python reproduce.py
-          python finite_reporter/verify.py
-          python input_robustness/verify.py
-          python statistical_inference/verify.py
-          python count_tails/verify.py
-          python translation_counts/verify.py
-          python supplement-v08/build_supplement.py
-          python kinetic_reader/verify.py
-      - name: Verify public code and data
-        run: python verify_release.py
+      - name: Reproduce and verify the scientific release
+        run: python reproduce_release.py
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: chronowitness-code-data-verification

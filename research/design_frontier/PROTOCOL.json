@@ -1,0 +1,52 @@
+{
+  "version": "0.11",
+  "question": "Increase the certified FD7 integrated-occupation contrast within a declared positive three-state generator box",
+  "duration": 1,
+  "rate_lower": "1/64",
+  "rate_upper": "4",
+  "readout": "state-zero occupation, normalized in [0,1]",
+  "objective": "maximize absolute difference of integrated periodic state-zero occupation",
+  "search": "differential_evolution on 12 log off-diagonal rates",
+  "seeds": [
+    103,
+    211,
+    307
+  ],
+  "maxiter": 160,
+  "popsize": 8,
+  "tol": 1e-10,
+  "polish": true,
+  "quantization_denominator": 4096,
+  "certification": "outward rational uniformization followed by independent Markov tree stationary formula",
+  "claim_boundary": "Best found in the frozen finite campaign; no global optimality claim",
+  "power_scope": "Exact first-crossing probabilities under declared iid two-point block laws; no biological calibration",
+  "power_stakes": [
+    [
+      "1/8",
+      "1/4",
+      "1/2",
+      "1"
+    ],
+    [
+      "1/32",
+      "1/16",
+      "1/8",
+      "1/4",
+      "1/2",
+      "1"
+    ]
+  ],
+  "power_tolerances": [
+    "0",
+    "1/10",
+    "1/4"
+  ],
+  "power_probabilities": [
+    "1/2",
+    "11/20",
+    "3/5",
+    "7/10"
+  ],
+  "power_horizon": 256,
+  "alpha": "1/20"
+}

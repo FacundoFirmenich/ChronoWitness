@@ -1,56 +1,76 @@
 # ChronoWitness
 
-Exact temporal-input identities and kinetic-reader certificates.
+**Temporal input design for testing models of cellular memory.**
 
-Research and software by **Facundo Firmenich**. Version **0.10.0**.
+ChronoWitness turns carefully matched input histories into quantitative tests of dynamical models. Its FD7 schedules share the same symbol counts, short-word statistics, run lengths and autocorrelations. Within the two-state promoter class, they must produce the same periodic mean response for every admissible choice of switching rates. A measured difference can therefore challenge that model class once delivery, observation and sampling have been accounted for.
 
-ChronoWitness studies how finite-state and molecular readers distinguish periodic input histories. It provides exact computations for a fixed pair of binary schedules, FD7, and connects state thresholds to integrated kinetic occupations, finite observation, delivery errors, count saturation and statistical testing.
+The software connects that identity to exact state thresholds, kinetic constructions, reporter dynamics and sequential inference. Every reported computational result is accompanied by a reproducible calculation or certificate.
 
-## Scientific contents
-
-| Component | Reproduced result |
-|---|---|
-| Temporal design | Matched cyclic word counts through order seven, run multisets and autocorrelations |
-| Finite-state readers | Deterministic minimum four under the phase-balanced profile-law contract; positive discrete Markov minimum three |
-| Kinetic readers | A continuous-time three-state construction, independently certified integrated occupations and a quantified rate-perturbation neighborhood |
-| Observation | Finite-window reporter corrections, delivered-input error bounds and saturation envelopes |
-| Molecular counts | Explicit mRNA–protein moment bounds, retaining correlations and degradation |
-| Inference | Exact checks of block-level tests valid under optional stopping |
-
-The calculations evaluate declared mathematical models. The witness margins are model quantities; assay power depends on experimental calibration and variability.
-
-## Reproduce
-
-Use Linux, Python 3.10 or newer and a C++17 compiler. The scientific computations use the Python standard library.
-
-```sh
-cd research
-python reproduce.py
-python finite_reporter/verify.py
-python input_robustness/verify.py
-python statistical_inference/verify.py
-python count_tails/verify.py
-python translation_counts/verify.py
-python supplement-v08/build_supplement.py
-python kinetic_reader/verify.py
-cd ..
-python verify_release.py
+```mermaid
+flowchart LR
+    A[Matched temporal inputs] --> B[Parameter-uniform model identity]
+    B --> C[Acquisition and detector budget]
+    C --> D[Block-level statistical test]
+    E[Separating kinetic models] --> F[Certified contrast]
+    F --> C
 ```
 
-The GitHub Actions workflow runs this full sequence. `verify_release.py` checks every distributed file and compares fresh results with the archived mathematical certificates. New computation goes into `research/results/`.
+## Start with the scientific example
 
-## Data and implementation
+From a checkout of this repository:
 
-Data S1–S9 retain `research/supplement-v08/data/`, Data S10 retains `research/supplement-v09/data/`, and Data S11 is in `research/supplement-v010/data/`. The directory versions identify unchanged dependencies. The [data dictionary](research/supplement-v010/DATA_DICTIONARY.md) explains their columns and normalization. `expected/core/` contains reference outputs for independent regression.
+```sh
+python research/design_frontier/tutorial.py
+```
 
-The kinetic implementation uses exact rational spectral propagation and a separate uniformization implementation with outward-rounded intervals and explicit truncation bounds. Its independent periodic distribution calculation uses a three-state tree formula.
+The example verifies the two-state polynomial identity, evaluates a kinetic promoter exactly, transports its mean through a linear reporter, and reads the certified three-state contrast. It then connects an explicitly defined observation model to a conservative sample-size calculation. It uses the Python standard library and requires no experimental dataset.
 
-## Release and citation
+Continue with the [worked example and assay guide](docs/WORKED_EXAMPLE.md), or inspect the [results and their assumptions](docs/SCIENTIFIC_RESULTS.md).
 
-The latest release contains this complete code-and-data distribution, its checksum and citation metadata. `CITATION.cff` and `.zenodo.json` describe the software for the GitHub–Zenodo integration. The Zenodo DOI will be added when assigned.
+## What the method establishes
 
-The manuscript and its Supplementary Information document are held separately until their bioRxiv release. This repository and its release assets contain the reproducible software and mathematical data.
+| Question | Result |
+|---|---|
+| Can matched short-word statistics hide a temporal distinction? | FD7 matches cyclic word counts through order seven while retaining a reader-dependent distinction. |
+| How many deterministic states are needed? | Four, for the phase-balanced occupation-profile law used here. |
+| How many positive Markov or kinetic states are needed? | Three; all two-state readers in the stated occupation classes share the null. |
+| Does reporter dynamics preserve the null? | A common stable linear cascade preserves periodic mean equality. Finite windows admit endpoint corrections or transient bounds. |
+| Can acquisition and detection change the contrast? | Delivery errors, hidden endpoints and saturation enter an explicit observation budget. |
+| Can an experiment stop when evidence is sufficient? | The bounded-block test supports optional stopping under its conditional range and mean contracts. |
 
-## License
+The design study also searches a fixed positive-generator domain and certifies the selected rational candidate independently. [Data S12](research/supplement-v011/data/) contains the search record, interval certificate and exact power calculations. These distinguish the existence of a separator, the size of its contrast and the performance of a specified statistical design.
 
-The software is licensed under **GNU General Public License version 3 only**, SPDX **GPL-3.0-only**. See [LICENSE](LICENSE). This choice does not license or publish the separately held manuscripts. The included numerical tables and certificates are the mathematical outputs used by the software.
+## Reproduce the results
+
+The complete verification runs on Linux with Python 3.12 and a C++17 compiler:
+
+```sh
+python reproduce_release.py
+```
+
+This command rebuilds the mathematical results, checks the new interval certificate and exact first-crossing probabilities, and compares the outputs with the distributed references. The [GitHub Actions workflow](.github/workflows/reproduce.yml) executes the same procedure.
+
+The numerical search is a separate, reproducible step:
+
+```sh
+python -m pip install -r requirements-search.txt
+python research/design_frontier/search.py
+```
+
+Its protocol fixes the parameter domain, objective, seeds and evaluation budget. Numerical proposals are assessed by rational interval certification. The search record includes termination status for every seed.
+
+## Choose a route through the repository
+
+- **Understand the method:** [scientific results](docs/SCIENTIFIC_RESULTS.md) and [worked example](docs/WORKED_EXAMPLE.md).
+- **Design an observation:** [assay requirements and decision path](docs/ASSAY_GUIDE.md).
+- **Inspect the evidence:** [data dictionary](research/supplement-v010/DATA_DICTIONARY.md), Data S1–S11 in their versioned directories, and [Data S12](research/supplement-v011/data/).
+- **Extend the calculation:** exact reader code in `research/analysis/`, observation bounds in `research/finite_reporter/` and `research/input_robustness/`, count envelopes in `research/count_tails/` and `research/translation_counts/`, and tests in `research/statistical_inference/`.
+- **Audit a release:** `RELEASE_MANIFEST.json` records file hashes; release assets include the source distribution and its checksum.
+
+The repository supplies theoretical and computational research. Applying the test to cells requires the assay-specific rates or bounds, observation model and experimental units described in the guide.
+
+## Cite and reuse
+
+Research and software by **Facundo Firmenich**. Citation metadata is available in [CITATION.cff](CITATION.cff); release metadata is supplied for GitHub–Zenodo archiving.
+
+The code is distributed under the **MIT License**. See [LICENSE](LICENSE). The academic manuscript and supplementary document are maintained separately.

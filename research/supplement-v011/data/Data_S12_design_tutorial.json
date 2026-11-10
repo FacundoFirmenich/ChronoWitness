@@ -1,0 +1,25 @@
+{
+  "status": "PASS_EXACT_TUTORIAL",
+  "two_state_profile": [
+    "3942935/17696952",
+    "12023201/53090856",
+    "4905541/17696952",
+    "14522227/53090856"
+  ],
+  "promoter_integral_constant": "1346711/1474746",
+  "promoter_integral_log2": "12",
+  "reporter_gain": "3/2",
+  "reporter_null": "exactly zero",
+  "kinetic_certified_contrast_lower": "1007947054750415234260065966876413708319922593891/100000000000000000000000000000000000000000000000000",
+  "ideal_readout": "Independent paired state-zero indicators, each sampled at a uniform time in the periodic cycle",
+  "score_radius": "1",
+  "mean_tolerance": "0",
+  "fixed_horizon_design": {
+    "alpha": 0.05,
+    "target_power": 0.8,
+    "sufficient_blocks_certified": 200326,
+    "method": "Hoeffding sufficient bound with rational upper bounds on logarithms and square roots; conservative, not minimal"
+  },
+  "biological_calibration": false,
+  "elapsed_seconds": 0.004177374999983385
+}
