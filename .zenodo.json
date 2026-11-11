@@ -5,13 +5,13 @@
       "name": "Firmenich, Facundo"
     }
   ],
-  "version": "0.13.0",
+  "version": "0.14.1",
   "publication_date": "2026-11-11",
   "upload_type": "software",
   "access_right": "open",
   "license": "MIT",
   "language": "eng",
-  "description": "Exact and independently checked software for temporal-input identities, finite-state and continuous-time kinetic reader thresholds, molecular observation bounds and statistical tests. Includes mathematical certificates and data. Manuscripts are held separately. Includes secondary cellular-data prediction and local calibration transport, support failures and adverse tail outcomes.",
+  "description": "Exact and independently checked software for temporal-input identities, finite-state and continuous-time kinetic reader thresholds, molecular observation bounds and statistical tests. Includes mathematical certificates and data. Manuscripts are held separately. Includes secondary cellular-data prediction and local calibration transport, support failures and adverse tail outcomes. Version 0.14 adds E6 safeguards, ten additional acquisition dates in E8, nested residual-level verification and the FD8-32 finite design frontier. Direct cellular FD7 intervention is not established by these records.",
   "keywords": [
     "biological memory",
     "temporal input design",
