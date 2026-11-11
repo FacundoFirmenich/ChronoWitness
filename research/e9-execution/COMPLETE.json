@@ -1,0 +1,8 @@
+{
+  "status": "COMPLETE_PRIMARY_E9",
+  "seconds": 351.550310751,
+  "peak_rss_kb": 1322184,
+  "test_days": 2,
+  "numerical_protocol_sha256": "6edd9be5ba63c4921344c72b854a6cc07bfb16b004ba7e732b8e0cbcf8f4b64f",
+  "direct_fd_validation": false
+}
