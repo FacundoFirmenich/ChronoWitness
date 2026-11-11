@@ -1,0 +1,24 @@
+{
+  "status": "PASS_SEPARATE_PYTHON_PHASE_ORBITS",
+  "records": [
+    {
+      "candidate": 0,
+      "states": 3,
+      "mean_separators": 6,
+      "law_separators": 6
+    },
+    {
+      "candidate": 2,
+      "states": 3,
+      "mean_separators": 0,
+      "law_separators": 6
+    },
+    {
+      "candidate": 3,
+      "states": 3,
+      "mean_separators": 0,
+      "law_separators": 0
+    }
+  ],
+  "seconds": 28.751542599999084
+}

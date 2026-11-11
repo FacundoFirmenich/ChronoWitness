@@ -54,6 +54,14 @@ The local study identifies 270 jurisdictions with adequate calibration and evalu
 
 These results qualify observation and calibration. The source dataset used its own input programs and does not constitute a paired FD7 intervention. [Inspect all local results and reproduce E4](research/e4-local/README.md).
 
+## New frontier: nested evidence and extended input identities
+
+The [E6–E8 and FD8 campaign](research/e6-e8-fd8/README.md) adds ten acquisition dates and a certified 32-pulse extension. The early guard reduces local upper-tail losses from 102 to 62 on the same 552 supported jurisdictions, while retaining adverse transfers and non-estimable strata. These overlapping jurisdictions are not independent replicates.
+
+The FD8-32 pair preserves the three-state deterministic profile-law null and yields a 60.33% larger contrast for the same kinetic witness at fixed total period, using shorter pulses. A separate phase-law check demonstrates why equal means alone are insufficient. The input audit of the cellular acquisitions does not establish a direct FD7 intervention.
+
+Full source, residual-level results and exact certificates are distributed in [release v0.14.0](https://github.com/FacundoFirmenich/ChronoWitness/releases/tag/v0.14.0). Earlier campaigns remain unchanged and retain their original scope.
+
 ## Reproduce the results
 
 The complete verification runs on Linux with Python 3.12 and a C++17 compiler:

@@ -1,0 +1,56 @@
+{
+  "status": "PASS_INDEPENDENT_DIRECT_SUBSTRING_SEARCH",
+  "cohorts": [
+    {
+      "date": "2022-05-07",
+      "exact_match": true,
+      "nonzero_count_groups": 0
+    },
+    {
+      "date": "2022-05-09",
+      "exact_match": true,
+      "nonzero_count_groups": 2
+    },
+    {
+      "date": "2022-05-11",
+      "exact_match": true,
+      "nonzero_count_groups": 0
+    },
+    {
+      "date": "2022-05-24",
+      "exact_match": true,
+      "nonzero_count_groups": 0
+    },
+    {
+      "date": "2022-05-28",
+      "exact_match": true,
+      "nonzero_count_groups": 0
+    },
+    {
+      "date": "2022-06-01",
+      "exact_match": true,
+      "nonzero_count_groups": 0
+    },
+    {
+      "date": "2022-06-04",
+      "exact_match": true,
+      "nonzero_count_groups": 0
+    },
+    {
+      "date": "2022-07-26",
+      "exact_match": true,
+      "nonzero_count_groups": 0
+    },
+    {
+      "date": "2022-08-01",
+      "exact_match": true,
+      "nonzero_count_groups": 0
+    },
+    {
+      "date": "2022-08-02",
+      "exact_match": true,
+      "nonzero_count_groups": 0
+    }
+  ],
+  "seconds": 89.31964391800011
+}

@@ -1,0 +1,82 @@
+{
+  "status": "PASS_INDEPENDENT_E8_RECONSTRUCTION",
+  "E4_regression_checks": 0,
+  "numeric_parent_checks": 159544,
+  "max_absolute_difference": 5.4569682106375694e-12,
+  "common_leaves": 552,
+  "policies": {
+    "E4_local_gate_refit": {
+      "mae": {
+        "gain_gt_1pct": 225,
+        "loss_gt_1pct": 29,
+        "any_loss_beyond_roundoff": 48,
+        "minimum_gain": -0.10322447407270197,
+        "maximum_gain": 0.428779352873053
+      },
+      "rmse": {
+        "gain_gt_1pct": 217,
+        "loss_gt_1pct": 40,
+        "any_loss_beyond_roundoff": 59,
+        "minimum_gain": -0.0838327747335661,
+        "maximum_gain": 0.3733016641327811
+      },
+      "tail05_mean": {
+        "gain_gt_1pct": 183,
+        "loss_gt_1pct": 102,
+        "any_loss_beyond_roundoff": 108,
+        "minimum_gain": -0.12811396389631158,
+        "maximum_gain": 0.438828652682244
+      },
+      "selected_contexts": 139
+    },
+    "guard_frozen": {
+      "mae": {
+        "gain_gt_1pct": 215,
+        "loss_gt_1pct": 25,
+        "any_loss_beyond_roundoff": 41,
+        "minimum_gain": -0.09348859449175051,
+        "maximum_gain": 0.4331862176970197
+      },
+      "rmse": {
+        "gain_gt_1pct": 219,
+        "loss_gt_1pct": 38,
+        "any_loss_beyond_roundoff": 44,
+        "minimum_gain": -0.08324137981467539,
+        "maximum_gain": 0.37486730977741345
+      },
+      "tail05_mean": {
+        "gain_gt_1pct": 198,
+        "loss_gt_1pct": 62,
+        "any_loss_beyond_roundoff": 83,
+        "minimum_gain": -0.12935557129698005,
+        "maximum_gain": 0.3083437456452529
+      },
+      "selected_contexts": 117
+    },
+    "guard_refit": {
+      "mae": {
+        "gain_gt_1pct": 223,
+        "loss_gt_1pct": 17,
+        "any_loss_beyond_roundoff": 33,
+        "minimum_gain": -0.10122589590467768,
+        "maximum_gain": 0.428779352873053
+      },
+      "rmse": {
+        "gain_gt_1pct": 222,
+        "loss_gt_1pct": 38,
+        "any_loss_beyond_roundoff": 45,
+        "minimum_gain": -0.08018098370279625,
+        "maximum_gain": 0.3733016641327811
+      },
+      "tail05_mean": {
+        "gain_gt_1pct": 191,
+        "loss_gt_1pct": 61,
+        "any_loss_beyond_roundoff": 85,
+        "minimum_gain": -0.1202261896081962,
+        "maximum_gain": 0.2744299419672809
+      },
+      "selected_contexts": 117
+    }
+  },
+  "old_problem_context": []
+}
