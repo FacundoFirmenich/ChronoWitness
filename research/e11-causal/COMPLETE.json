@@ -1,0 +1,9 @@
+{
+  "status": "COMPLETE_84_RESERVE_CONTEXTS",
+  "seconds": 557.68154555,
+  "peak_rss_kb": 685916,
+  "contexts": 84,
+  "acquisitions": 14,
+  "selected_policy_sha256": "87ce40de3be76fa8076ecf7f95838772b380bfdb0c17b18d614d39f832df1991",
+  "protocol_sha256": "e3302b6d8b11b056300f4c41c4011388b7ba7e23ec93975e36543cf13a3fccde"
+}

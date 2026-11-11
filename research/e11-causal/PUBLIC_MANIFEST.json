@@ -1,0 +1,195 @@
+{
+  "files": [
+    {
+      "path": "ACQUISITION_RESAMPLING.json",
+      "bytes": 1800,
+      "sha256": "e1284c01dd8a4fc70e8b80b6a84adc64c19be7f29767d7c9e4e6190dd6717ab4"
+    },
+    {
+      "path": "ACQUISITION_RESULTS.json",
+      "bytes": 24829,
+      "sha256": "e96ae7b033f0cb816bd02846c365cf1cd42b0a6133dabd2b6ace17a53e5cf531"
+    },
+    {
+      "path": "ADDITIONAL_CHECKS.json",
+      "bytes": 517,
+      "sha256": "c2e70ebb80eeb852a335889c6870447fa81061e4a94670effbc2035bcef95031"
+    },
+    {
+      "path": "ANALYSIS_COMPLETE.json",
+      "bytes": 79,
+      "sha256": "291072c2626fe004b7570ea4612d5b7d7ff9f4f557ab9a04ee4f6b9670696dc5"
+    },
+    {
+      "path": "ANALYSIS_INCIDENT.json",
+      "bytes": 578,
+      "sha256": "e48c44374fcfb298c67719f0b9c485fe351e05a7ee52b36a27d296fa0c88764c"
+    },
+    {
+      "path": "analyze_reserve.py",
+      "bytes": 8413,
+      "sha256": "232abd8756a6fbcdbddd730fa61d1cc14d399218de5a298c341f1fa354bc6bb9"
+    },
+    {
+      "path": "analyze_reserve_before_empty_fix.py",
+      "bytes": 8370,
+      "sha256": "20ce89ab395984ae58b5515113aa67ea3b53df041e38f473e8004306a529e64c"
+    },
+    {
+      "path": "CHRONOLOGY_ANNOTATION.json",
+      "bytes": 780,
+      "sha256": "91095f3c2af65212701e01fec7a6bd67e0cd813faa319535bb665b4d1503e355"
+    },
+    {
+      "path": "CIERRE_SUSTANTIVO_E11_ES.md",
+      "bytes": 11115,
+      "sha256": "aae3dc6d6cd8ed47eb9dcb169287a443289c6fe4274ab9843f3455855449ce34"
+    },
+    {
+      "path": "COHORTS.json",
+      "bytes": 34682,
+      "sha256": "0cfc1786a31112e7c3e3f347e35d0c9b57f8aaab611fd8fb18d41c52ce40d51b"
+    },
+    {
+      "path": "COMPLETE.json",
+      "bytes": 323,
+      "sha256": "8a4d6b377a455153f3789d83161da34b5d394efb4b2b422ae6df0e0d06bf1fd0"
+    },
+    {
+      "path": "CRITERIO_CAUSAL_Y_DERIVA_ES.md",
+      "bytes": 3936,
+      "sha256": "5b5eef185c8a3490fdb2f79a41e5c6a92ec920c56bf1005832f3ea499c1890cb"
+    },
+    {
+      "path": "DEVELOPMENT_SELECTION.json",
+      "bytes": 10223,
+      "sha256": "46a4fcb63d6fd0498a7c17b33e2a2a03b8430c985b5d0f00dc00036077410b4c"
+    },
+    {
+      "path": "E11_CARTOGRAFIA_UTF8.svg",
+      "bytes": 59481,
+      "sha256": "4f381306467b56fde5f7d3772e1412c3fc73b72f13952a6978f44d44b14501c1"
+    },
+    {
+      "path": "E11_GATE_LEDGER.json",
+      "bytes": 1204,
+      "sha256": "0f8988773045f8a9da629c3dfdf0ca30c6dd19468ed9e7706b9f28b27b36031c"
+    },
+    {
+      "path": "E11_JURISDICCION_LOCAL_UTF8.svg",
+      "bytes": 136034,
+      "sha256": "f3d1130008952aaa4e42e18ca763f20150fe23eaf805e454bd44192d1b9bd520"
+    },
+    {
+      "path": "E11_PROTOCOL.json",
+      "bytes": 4189,
+      "sha256": "e3302b6d8b11b056300f4c41c4011388b7ba7e23ec93975e36543cf13a3fccde"
+    },
+    {
+      "path": "e9_core.py",
+      "bytes": 8139,
+      "sha256": "8949f625933225e7ff27efb40f05e4f75ac03524866c5dad2cd524800c7c0d3b"
+    },
+    {
+      "path": "E9_NUMERICAL_PROTOCOL.json",
+      "bytes": 2816,
+      "sha256": "6edd9be5ba63c4921344c72b854a6cc07bfb16b004ba7e732b8e0cbcf8f4b64f"
+    },
+    {
+      "path": "EMPTY_SUBSET_REGRESSION.json",
+      "bytes": 316,
+      "sha256": "4011dbc8f84f29e130e281ef62e40b964932436bb6b04e1f2f9529a682401672"
+    },
+    {
+      "path": "ENVIRONMENT_RECEIPT.json",
+      "bytes": 221,
+      "sha256": "5e03f5b26d9b4f10c9965e73609338d16f7c64df9c1bc1df003e6c74cd01ab75"
+    },
+    {
+      "path": "IMPLEMENTATION_FREEZE.json",
+      "bytes": 970,
+      "sha256": "428446489732d4d948379a0b80bf44855a549a7215c98c6a1e3f572873cc105d"
+    },
+    {
+      "path": "LOCAL_CASE_SELECTION.json",
+      "bytes": 385,
+      "sha256": "f959d6439b1282f810290f8590039de3df6c5531d439cc7d854b2cd09b881757"
+    },
+    {
+      "path": "MODEL_SELECTION.json",
+      "bytes": 40457,
+      "sha256": "6015fd269fa22884c7efef285f79c78c108bbca25904da9a3be2dfcf520fb9f0"
+    },
+    {
+      "path": "plot_acquisitions.py",
+      "bytes": 1207,
+      "sha256": "9b8ab6910417def60859b6111a06947c9c2b51099c5ba239a0db8fcb68c6fe4a"
+    },
+    {
+      "path": "plot_local_case.py",
+      "bytes": 3297,
+      "sha256": "1c54f1f1914a216129be11b259176faf52755b19ed7ba66726e487068da13f8e"
+    },
+    {
+      "path": "policy.py",
+      "bytes": 3184,
+      "sha256": "2c9ea747e2d0721750054f4b0d9774afc318c3e56e3ee137e27eb26ebbe77ce4"
+    },
+    {
+      "path": "preflight.py",
+      "bytes": 2201,
+      "sha256": "3f402dd4341d7f44dc466eaa5caf1f1c74f889b92a5328f2e7ad192aa3e472cd"
+    },
+    {
+      "path": "PREFLIGHT_COMPLETE.json",
+      "bytes": 242,
+      "sha256": "0f4f8027612b0b62801a495c8ef85ee5828ff5e55cd1ba6f484888975532b880"
+    },
+    {
+      "path": "README.md",
+      "bytes": 7144,
+      "sha256": "12bf86e90d951bebe96630f3c564dd7d178a296c2040efc08141869c0ea58688"
+    },
+    {
+      "path": "RESERVE_CAUSAL_AUDIT.json",
+      "bytes": 37794,
+      "sha256": "5521c09bc830dbf727f32d37219661715a44f033d1860dcd102972e4ec3997d0"
+    },
+    {
+      "path": "RESERVE_LAUNCH.json",
+      "bytes": 147,
+      "sha256": "422a21c5f9e3096f87e699866e74ffb376c77f8eb9ae355acf1e629a5a05e7cd"
+    },
+    {
+      "path": "RESERVE_SUMMARY.json",
+      "bytes": 277205,
+      "sha256": "a73e1eb4d55661915d8db0ac976ca71b6e4b49036744d1017bfeace4dd691a68"
+    },
+    {
+      "path": "RESULTS.json",
+      "bytes": 5592,
+      "sha256": "d389799ef3dbcc95b5a64f47ac79a41fd5c3c086e4355ec9e40192b390d8cc06"
+    },
+    {
+      "path": "run_e11.py",
+      "bytes": 8616,
+      "sha256": "c27b0a192d0dd9ca9820bd3caf42354a6cae3dce069c38d6ba74224771fe25c2"
+    },
+    {
+      "path": "SELECTED_POLICY.json",
+      "bytes": 1593,
+      "sha256": "87ce40de3be76fa8076ecf7f95838772b380bfdb0c17b18d614d39f832df1991"
+    },
+    {
+      "path": "SENSITIVITY.json",
+      "bytes": 4515,
+      "sha256": "55f9b6b5badcf92689e2fd97c6b4076c55659060b8fb5f6689d06f45eb0c19b0"
+    },
+    {
+      "path": "VERIFICATION.json",
+      "bytes": 27484,
+      "sha256": "0c49394f38d04239463b794016162985f9e719c5f8ddd3ee13329c29b93505a9"
+    }
+  ],
+  "scope": "Public code and evaluation report; private manuscript material excluded."
+}

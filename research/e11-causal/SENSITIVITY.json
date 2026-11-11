@@ -1,0 +1,218 @@
+[
+  {
+    "model": "fixed_guard",
+    "tolerance": 0.0,
+    "kind": "parent",
+    "supported": 84,
+    "harms": 28,
+    "hidden_harms": 0,
+    "hidden_parent_contexts": 0
+  },
+  {
+    "model": "fixed_guard",
+    "tolerance": 0.0,
+    "kind": "pulse_band+value_band",
+    "supported": 756,
+    "harms": 303,
+    "hidden_harms": 198,
+    "hidden_parent_contexts": 56
+  },
+  {
+    "model": "fixed_guard",
+    "tolerance": 0.0,
+    "kind": "segment",
+    "supported": 252,
+    "harms": 100,
+    "hidden_harms": 51,
+    "hidden_parent_contexts": 35
+  },
+  {
+    "model": "fixed_guard",
+    "tolerance": 0.0,
+    "kind": "segment+pulse_band+value_band",
+    "supported": 2268,
+    "harms": 810,
+    "hidden_harms": 527,
+    "hidden_parent_contexts": 56
+  },
+  {
+    "model": "fixed_guard",
+    "tolerance": 0.01,
+    "kind": "parent",
+    "supported": 84,
+    "harms": 0,
+    "hidden_harms": 0,
+    "hidden_parent_contexts": 0
+  },
+  {
+    "model": "fixed_guard",
+    "tolerance": 0.01,
+    "kind": "pulse_band+value_band",
+    "supported": 756,
+    "harms": 64,
+    "hidden_harms": 64,
+    "hidden_parent_contexts": 43
+  },
+  {
+    "model": "fixed_guard",
+    "tolerance": 0.01,
+    "kind": "segment",
+    "supported": 252,
+    "harms": 0,
+    "hidden_harms": 0,
+    "hidden_parent_contexts": 0
+  },
+  {
+    "model": "fixed_guard",
+    "tolerance": 0.01,
+    "kind": "segment+pulse_band+value_band",
+    "supported": 2268,
+    "harms": 266,
+    "hidden_harms": 266,
+    "hidden_parent_contexts": 75
+  },
+  {
+    "model": "fixed_guard",
+    "tolerance": 0.05,
+    "kind": "parent",
+    "supported": 84,
+    "harms": 0,
+    "hidden_harms": 0,
+    "hidden_parent_contexts": 0
+  },
+  {
+    "model": "fixed_guard",
+    "tolerance": 0.05,
+    "kind": "pulse_band+value_band",
+    "supported": 756,
+    "harms": 0,
+    "hidden_harms": 0,
+    "hidden_parent_contexts": 0
+  },
+  {
+    "model": "fixed_guard",
+    "tolerance": 0.05,
+    "kind": "segment",
+    "supported": 252,
+    "harms": 0,
+    "hidden_harms": 0,
+    "hidden_parent_contexts": 0
+  },
+  {
+    "model": "fixed_guard",
+    "tolerance": 0.05,
+    "kind": "segment+pulse_band+value_band",
+    "supported": 2268,
+    "harms": 6,
+    "hidden_harms": 6,
+    "hidden_parent_contexts": 6
+  },
+  {
+    "model": "causal_selected",
+    "tolerance": 0.0,
+    "kind": "parent",
+    "supported": 84,
+    "harms": 3,
+    "hidden_harms": 0,
+    "hidden_parent_contexts": 0
+  },
+  {
+    "model": "causal_selected",
+    "tolerance": 0.0,
+    "kind": "pulse_band+value_band",
+    "supported": 756,
+    "harms": 142,
+    "hidden_harms": 129,
+    "hidden_parent_contexts": 43
+  },
+  {
+    "model": "causal_selected",
+    "tolerance": 0.0,
+    "kind": "segment",
+    "supported": 252,
+    "harms": 28,
+    "hidden_harms": 20,
+    "hidden_parent_contexts": 19
+  },
+  {
+    "model": "causal_selected",
+    "tolerance": 0.0,
+    "kind": "segment+pulse_band+value_band",
+    "supported": 2268,
+    "harms": 453,
+    "hidden_harms": 426,
+    "hidden_parent_contexts": 73
+  },
+  {
+    "model": "causal_selected",
+    "tolerance": 0.01,
+    "kind": "parent",
+    "supported": 84,
+    "harms": 0,
+    "hidden_harms": 0,
+    "hidden_parent_contexts": 0
+  },
+  {
+    "model": "causal_selected",
+    "tolerance": 0.01,
+    "kind": "pulse_band+value_band",
+    "supported": 756,
+    "harms": 6,
+    "hidden_harms": 6,
+    "hidden_parent_contexts": 6
+  },
+  {
+    "model": "causal_selected",
+    "tolerance": 0.01,
+    "kind": "segment",
+    "supported": 252,
+    "harms": 1,
+    "hidden_harms": 1,
+    "hidden_parent_contexts": 1
+  },
+  {
+    "model": "causal_selected",
+    "tolerance": 0.01,
+    "kind": "segment+pulse_band+value_band",
+    "supported": 2268,
+    "harms": 81,
+    "hidden_harms": 81,
+    "hidden_parent_contexts": 45
+  },
+  {
+    "model": "causal_selected",
+    "tolerance": 0.05,
+    "kind": "parent",
+    "supported": 84,
+    "harms": 0,
+    "hidden_harms": 0,
+    "hidden_parent_contexts": 0
+  },
+  {
+    "model": "causal_selected",
+    "tolerance": 0.05,
+    "kind": "pulse_band+value_band",
+    "supported": 756,
+    "harms": 0,
+    "hidden_harms": 0,
+    "hidden_parent_contexts": 0
+  },
+  {
+    "model": "causal_selected",
+    "tolerance": 0.05,
+    "kind": "segment",
+    "supported": 252,
+    "harms": 0,
+    "hidden_harms": 0,
+    "hidden_parent_contexts": 0
+  },
+  {
+    "model": "causal_selected",
+    "tolerance": 0.05,
+    "kind": "segment+pulse_band+value_band",
+    "supported": 2268,
+    "harms": 1,
+    "hidden_harms": 1,
+    "hidden_parent_contexts": 1
+  }
+]

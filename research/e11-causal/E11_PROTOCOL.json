@@ -1,0 +1,29 @@
+{
+  "version": "E11-causal-1",
+  "frozen_utc": "2026-11-11T14:21:35.158997+00:00",
+  "objective": "Develop a bounded-memory causal local correction on E9/E10, then evaluate ONE selected policy on 14 outcome-unscored interval acquisitions.",
+  "exposure": "E9/E10 response scores known; interval input prefixes and source metadata known. No interval predictive scores inspected before this protocol.",
+  "source_sha256": "ca2bee5a5ac5f3b4d51d794faa9dcd75410a2512fa29f26155f3aaba15fd2317",
+  "model_selection_sha256": "6015fd269fa22884c7efef285f79c78c108bbca25904da9a3be2dfcf520fb9f0",
+  "inherited_protocol_sha256": "6edd9be5ba63c4921344c72b854a6cc07bfb16b004ba7e732b8e0cbcf8f4b64f",
+  "policy_source_sha256": "2c9ea747e2d0721750054f4b0d9774afc318c3e56e3ee137e27eb26ebbe77ce4",
+  "development": "48 binary files on four already examined days. These are development, never reclassified as untouched tests.",
+  "reserve": "14 interval files on distinct dates, disjoint from all E9/E10 dates. One date-conflicting record is quarantined, not scored; no date resolution invented.",
+  "prediction": "E9 frozen history_input and history_no_input coefficients/cuts; no refit. Inherit horizons 5,10,20; offsets 0,1; target nuclear/image signal; five-minute origins; eligibility and 35/65 percent stages from E9.",
+  "feedback": "At origin t, use ONLY base-model errors with target timestamp s+h<t, within the same cell. Inputs to base predictor include scheduled future pulses as in E9; this is input-conditioned prediction, not forecasting unknown future interventions.",
+  "candidates": "8: lookback 180 or 360 minutes x cell-only or nested x shrink 0.25 or 0.5. Up to 12 newest eligible non-overlapping forecast intervals, >=6; split chronologically into two blocks of >=3.",
+  "nesting": "cell+pulse_band+TRAIN_value_band -> cell+pulse_band -> cell. Select most specific level with >=6 eligible errors. If sign or tail gate fails at that supported level, abstain; do not fall back to force a correction.",
+  "correction": "Require means of older/recent blocks with same nonzero sign. c=shrink*sign(mean_recent)*min(abs(mean_older),abs(mean_recent)). Each block must have q95(abs(error-c))<=1.01*q95(abs(error)). Otherwise c=0.",
+  "meaning": "Historical empirical admissibility only, not a valid interval for the future mean or a prospective no-harm guarantee. Nonoverlapping forecast intervals do not make cellular/history observations independent.",
+  "selection": "Before reserve scoring: eligible if active on >=1% of late windows in EACH development day and mean context RMSE/base <=1.05 in EACH day. Rank eligible candidates lexicographically by worst-day mean supported pulse-band x value-band q95 harm fraction >1%, then equal-day mean of that fraction, then equal-day mean log RMSE/base, then candidate id. If none eligible, stop and retain reserve unscored.",
+  "comparisons": "Same late support: base history_input, history_no_input, persistence, inherited fixed local guard, selected causal policy. All horizons/alignments retained. Feedback updates during late period use matured labels, never future labels.",
+  "gates": "Whole archive hash; 62 full schemas; no duplicate track/time; stimulus consensus; frozen coefficient and policy hashes; independent reference checks on actual data; future-residual masking invariance; nonoverlap and maturation; model selection freeze before reserve; atomic metric and nested conservation; full remote custody.",
+  "locality": "Parent, cell, pulse x TRAIN-signal intersections, three equal-duration late-origin segments, segment x pulse x signal. Preserve LOW_SUPPORT <20 windows; not an inferential sample-size guarantee.",
+  "uncertainty": "Report acquisition-specific results and descriptive sensitivity thresholds 0,1,5 percent. Optional paired acquisition resampling uses observed data only and is labeled descriptive stability, never iid-window significance.",
+  "stop": "No refit or selection changes after reserve outcomes; failures and abstentions retained. No FD7/FD8 intervention claim; no lab/contact.",
+  "dependency_versions": {
+    "numpy": "2.2.6",
+    "pandas": "2.2.3",
+    "numba": "0.61.2"
+  }
+}

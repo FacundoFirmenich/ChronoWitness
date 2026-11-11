@@ -1,0 +1,28 @@
+{
+  "scope": "E11; no statement of global manuscript completion",
+  "source_hash_and_62_schemas": "PASS",
+  "development_48_files_4_dates": "PASS",
+  "single_policy_frozen_before_reserve": "PASS",
+  "reserve_84_contexts_14_dates": "PASS",
+  "reference_and_future_mask_checks": {
+    "development": {
+      "contexts": 288,
+      "reference_comparisons": 21120,
+      "future_mask_checks": 2640
+    },
+    "reserve": {
+      "contexts": 84,
+      "reference_comparisons": 6720,
+      "future_mask_checks": 840
+    }
+  },
+  "atomic_maturation_nested_audit": "PASS_AFTER_DOCUMENTED_EMPTY_SELECTION_FIX",
+  "remote_full_package_readback": "PASS_250091898_BYTES",
+  "uniform_local_no_harm": "NOT_MET: 6/756 pulse-signal and 81/2268 fine nodes exceed 1%; one fine node exceeds 5%",
+  "quarantined_acquisition_date": "UNRESOLVED_NOT_SCORED",
+  "independent_effect_of_nesting": "NOT_IDENTIFIED",
+  "future_mean_confidence_interval": "NOT_ESTABLISHED",
+  "direct_FD7_FD8_cellular_intervention": "NOT_EVALUATED_BY_THIS_DATASET",
+  "public_byte_verification": "RECORDED_SEPARATELY_IN_PUBLICATION_RECEIPT",
+  "private_manuscript_integration": "NEXT_EDITORIAL_STEP_NOT_CLAIMED_COMPLETE"
+}

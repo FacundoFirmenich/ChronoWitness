@@ -1,0 +1,12 @@
+{
+  "scope": "Post-evaluation descriptive adverse-case selection; not a new test or a representative case",
+  "criterion": "Maximum causal/base q95 ratio among supported pulse-band x TRAIN-value-band nodes",
+  "context": "min3_mean50_h20_a0",
+  "ratio": 1.0131401976319931,
+  "parent_ratio": 0.9958151619823826,
+  "labels": {
+    "pulse_band": 0,
+    "value_band": 0
+  },
+  "n": 2379
+}

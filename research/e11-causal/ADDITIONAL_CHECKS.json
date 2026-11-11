@@ -1,0 +1,21 @@
+{
+  "strict_rmse_wins": {
+    "history_input": 80,
+    "fixed_guard": 79,
+    "history_no_input": 56,
+    "persistence": 84
+  },
+  "causality": {
+    "development": {
+      "contexts": 288,
+      "reference_comparisons": 21120,
+      "future_mask_checks": 2640
+    },
+    "reserve": {
+      "contexts": 84,
+      "reference_comparisons": 6720,
+      "future_mask_checks": 840
+    }
+  },
+  "scope": "Reference and masking checks on actual observations; not independent experimental replicates."
+}

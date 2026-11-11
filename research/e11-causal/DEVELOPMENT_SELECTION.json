@@ -1,0 +1,362 @@
+[
+  {
+    "candidate": {
+      "id": "w180_nested_s25",
+      "lookback": 180,
+      "nested": true,
+      "shrink": 0.25
+    },
+    "eligible": true,
+    "rank_key": [
+      0.20023148148148148,
+      0.13285108024691356,
+      -0.003267203474756971,
+      "w180_nested_s25"
+    ],
+    "days": [
+      {
+        "date": "2019-09-03",
+        "activity": 0.4502231218659429,
+        "mean_rmse_ratio": 0.9967285919724247,
+        "mean_local_harm_fraction": 0.05648148148148148,
+        "mean_log_rmse_ratio": -0.0032973254678725877
+      },
+      {
+        "date": "2021-04-07",
+        "activity": 0.4673264634710025,
+        "mean_rmse_ratio": 0.9961104268682416,
+        "mean_local_harm_fraction": 0.20023148148148148,
+        "mean_log_rmse_ratio": -0.003982136861560078
+      },
+      {
+        "date": "2021-05-01",
+        "activity": 0.47322277962946485,
+        "mean_rmse_ratio": 0.9966837731297551,
+        "mean_local_harm_fraction": 0.12037037037037036,
+        "mean_log_rmse_ratio": -0.0034143086918312273
+      },
+      {
+        "date": "2021-05-02",
+        "activity": 0.4921956158691336,
+        "mean_rmse_ratio": 0.9978180434098078,
+        "mean_local_harm_fraction": 0.15432098765432095,
+        "mean_log_rmse_ratio": -0.0023750428777639904
+      }
+    ]
+  },
+  {
+    "candidate": {
+      "id": "w360_nested_s25",
+      "lookback": 360,
+      "nested": true,
+      "shrink": 0.25
+    },
+    "eligible": true,
+    "rank_key": [
+      0.20061728395061726,
+      0.14211033950617283,
+      -0.014185113409848911,
+      "w360_nested_s25"
+    ],
+    "days": [
+      {
+        "date": "2019-09-03",
+        "activity": 0.5129542695184128,
+        "mean_rmse_ratio": 0.9708368714028095,
+        "mean_local_harm_fraction": 0.03796296296296296,
+        "mean_log_rmse_ratio": -0.029898576098896797
+      },
+      {
+        "date": "2021-04-07",
+        "activity": 0.4673264634710025,
+        "mean_rmse_ratio": 0.9961104268682416,
+        "mean_local_harm_fraction": 0.20023148148148148,
+        "mean_log_rmse_ratio": -0.003982136861560078
+      },
+      {
+        "date": "2021-05-01",
+        "activity": 0.5372109257903129,
+        "mean_rmse_ratio": 0.9897399291477049,
+        "mean_local_harm_fraction": 0.12962962962962962,
+        "mean_log_rmse_ratio": -0.010539853450089863
+      },
+      {
+        "date": "2021-05-02",
+        "activity": 0.5617874472365774,
+        "mean_rmse_ratio": 0.9883453777480405,
+        "mean_local_harm_fraction": 0.20061728395061726,
+        "mean_log_rmse_ratio": -0.01231988722884891
+      }
+    ]
+  },
+  {
+    "candidate": {
+      "id": "w180_cell_s25",
+      "lookback": 180,
+      "nested": false,
+      "shrink": 0.25
+    },
+    "eligible": true,
+    "rank_key": [
+      0.20601851851851852,
+      0.1130787037037037,
+      0.0015021101854869692,
+      "w180_cell_s25"
+    ],
+    "days": [
+      {
+        "date": "2019-09-03",
+        "activity": 0.3556078495692578,
+        "mean_rmse_ratio": 1.0012137817491924,
+        "mean_local_harm_fraction": 0.07962962962962965,
+        "mean_log_rmse_ratio": 0.0012122059906245744
+      },
+      {
+        "date": "2021-04-07",
+        "activity": 0.4012289621795046,
+        "mean_rmse_ratio": 1.00202387312577,
+        "mean_local_harm_fraction": 0.20601851851851852,
+        "mean_log_rmse_ratio": 0.002017229721917979
+      },
+      {
+        "date": "2021-05-01",
+        "activity": 0.37615065052390956,
+        "mean_rmse_ratio": 1.001875827065522,
+        "mean_local_harm_fraction": 0.058641975308641965,
+        "mean_log_rmse_ratio": 0.0018734469039854236
+      },
+      {
+        "date": "2021-05-02",
+        "activity": 0.3958012807868818,
+        "mean_rmse_ratio": 1.0009069413199585,
+        "mean_local_harm_fraction": 0.10802469135802469,
+        "mean_log_rmse_ratio": 0.0009055581254198994
+      }
+    ]
+  },
+  {
+    "candidate": {
+      "id": "w360_cell_s25",
+      "lookback": 360,
+      "nested": false,
+      "shrink": 0.25
+    },
+    "eligible": true,
+    "rank_key": [
+      0.20601851851851852,
+      0.11554783950617284,
+      0.0014204345213723408,
+      "w360_cell_s25"
+    ],
+    "days": [
+      {
+        "date": "2019-09-03",
+        "activity": 0.37416066774543905,
+        "mean_rmse_ratio": 1.0012560798238206,
+        "mean_local_harm_fraction": 0.09259259259259259,
+        "mean_log_rmse_ratio": 0.00125452444531743
+      },
+      {
+        "date": "2021-04-07",
+        "activity": 0.4012289621795046,
+        "mean_rmse_ratio": 1.00202387312577,
+        "mean_local_harm_fraction": 0.20601851851851852,
+        "mean_log_rmse_ratio": 0.002017229721917979
+      },
+      {
+        "date": "2021-05-01",
+        "activity": 0.3852360844004298,
+        "mean_rmse_ratio": 1.0017619169392789,
+        "mean_local_harm_fraction": 0.0617283950617284,
+        "mean_log_rmse_ratio": 0.0017600105994911544
+      },
+      {
+        "date": "2021-05-02",
+        "activity": 0.40749470722053466,
+        "mean_rmse_ratio": 1.000650951819043,
+        "mean_local_harm_fraction": 0.10185185185185185,
+        "mean_log_rmse_ratio": 0.0006499733187628001
+      }
+    ]
+  },
+  {
+    "candidate": {
+      "id": "w360_cell_s50",
+      "lookback": 360,
+      "nested": false,
+      "shrink": 0.5
+    },
+    "eligible": true,
+    "rank_key": [
+      0.31828703703703703,
+      0.21159336419753086,
+      0.003443855194914725,
+      "w360_cell_s50"
+    ],
+    "days": [
+      {
+        "date": "2019-09-03",
+        "activity": 0.32046840590377856,
+        "mean_rmse_ratio": 1.0027020038705703,
+        "mean_local_harm_fraction": 0.17314814814814816,
+        "mean_log_rmse_ratio": 0.0026957946948764524
+      },
+      {
+        "date": "2021-04-07",
+        "activity": 0.3478479567144294,
+        "mean_rmse_ratio": 1.0053577204560555,
+        "mean_local_harm_fraction": 0.31828703703703703,
+        "mean_log_rmse_ratio": 0.0053284616067683435
+      },
+      {
+        "date": "2021-05-01",
+        "activity": 0.331031461950682,
+        "mean_rmse_ratio": 1.0036503295020056,
+        "mean_local_harm_fraction": 0.15432098765432095,
+        "mean_log_rmse_ratio": 0.003642685312837188
+      },
+      {
+        "date": "2021-05-02",
+        "activity": 0.3481925651241995,
+        "mean_rmse_ratio": 1.0021126872954609,
+        "mean_local_harm_fraction": 0.20061728395061726,
+        "mean_log_rmse_ratio": 0.0021084791651769155
+      }
+    ]
+  },
+  {
+    "candidate": {
+      "id": "w180_cell_s50",
+      "lookback": 180,
+      "nested": false,
+      "shrink": 0.5
+    },
+    "eligible": true,
+    "rank_key": [
+      0.31828703703703703,
+      0.22903163580246913,
+      0.0036772883535606924,
+      "w180_cell_s50"
+    ],
+    "days": [
+      {
+        "date": "2019-09-03",
+        "activity": 0.3066700536652592,
+        "mean_rmse_ratio": 1.0026920113651794,
+        "mean_local_harm_fraction": 0.1564814814814815,
+        "mean_log_rmse_ratio": 0.0026855125123150803
+      },
+      {
+        "date": "2021-04-07",
+        "activity": 0.3478479567144294,
+        "mean_rmse_ratio": 1.0053577204560555,
+        "mean_local_harm_fraction": 0.31828703703703703,
+        "mean_log_rmse_ratio": 0.0053284616067683435
+      },
+      {
+        "date": "2021-05-01",
+        "activity": 0.3264630799449741,
+        "mean_rmse_ratio": 1.0040106011768946,
+        "mean_local_harm_fraction": 0.17901234567901236,
+        "mean_log_rmse_ratio": 0.004000322684842936
+      },
+      {
+        "date": "2021-05-02",
+        "activity": 0.3427847252357095,
+        "mean_rmse_ratio": 1.0027014771184226,
+        "mean_local_harm_fraction": 0.2623456790123456,
+        "mean_log_rmse_ratio": 0.0026948566103164088
+      }
+    ]
+  },
+  {
+    "candidate": {
+      "id": "w360_nested_s50",
+      "lookback": 360,
+      "nested": true,
+      "shrink": 0.5
+    },
+    "eligible": true,
+    "rank_key": [
+      0.3483796296296296,
+      0.24280478395061728,
+      -0.020889410576096303,
+      "w360_nested_s50"
+    ],
+    "days": [
+      {
+        "date": "2019-09-03",
+        "activity": 0.48046208528435785,
+        "mean_rmse_ratio": 0.9512923924901268,
+        "mean_local_harm_fraction": 0.061111111111111116,
+        "mean_log_rmse_ratio": -0.05085612589205638
+      },
+      {
+        "date": "2021-04-07",
+        "activity": 0.42283368226433565,
+        "mean_rmse_ratio": 0.9956177212876544,
+        "mean_local_harm_fraction": 0.3483796296296296,
+        "mean_log_rmse_ratio": -0.004663608736511986
+      },
+      {
+        "date": "2021-05-01",
+        "activity": 0.5032919726513041,
+        "mean_rmse_ratio": 0.9878809815761669,
+        "mean_local_harm_fraction": 0.26543209876543217,
+        "mean_log_rmse_ratio": -0.013116884571430511
+      },
+      {
+        "date": "2021-05-02",
+        "activity": 0.5309709784738386,
+        "mean_rmse_ratio": 0.9878357437500591,
+        "mean_local_harm_fraction": 0.2962962962962962,
+        "mean_log_rmse_ratio": -0.014921023104386342
+      }
+    ]
+  },
+  {
+    "candidate": {
+      "id": "w180_nested_s50",
+      "lookback": 180,
+      "nested": true,
+      "shrink": 0.5
+    },
+    "eligible": true,
+    "rank_key": [
+      0.3483796296296296,
+      0.26340663580246915,
+      -0.0022739323474129424,
+      "w180_nested_s50"
+    ],
+    "days": [
+      {
+        "date": "2019-09-03",
+        "activity": 0.4168778540296949,
+        "mean_rmse_ratio": 0.9957108230640891,
+        "mean_local_harm_fraction": 0.11574074074074076,
+        "mean_log_rmse_ratio": -0.0043600180561319726
+      },
+      {
+        "date": "2021-04-07",
+        "activity": 0.42283368226433565,
+        "mean_rmse_ratio": 0.9956177212876544,
+        "mean_local_harm_fraction": 0.3483796296296296,
+        "mean_log_rmse_ratio": -0.004663608736511986
+      },
+      {
+        "date": "2021-05-01",
+        "activity": 0.43892740550122167,
+        "mean_rmse_ratio": 0.9985927186175216,
+        "mean_local_harm_fraction": 0.28703703703703703,
+        "mean_log_rmse_ratio": -0.001804060502294022
+      },
+      {
+        "date": "2021-05-02",
+        "activity": 0.460435651636488,
+        "mean_rmse_ratio": 1.002707396580934,
+        "mean_local_harm_fraction": 0.30246913580246915,
+        "mean_log_rmse_ratio": 0.0017319579052862107
+      }
+    ]
+  }
+]

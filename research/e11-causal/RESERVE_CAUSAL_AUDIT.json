@@ -1,0 +1,1598 @@
+[
+  {
+    "context": "min30_optmean_rep1_h5_a0",
+    "file": "min30_optmean_rep1.csv",
+    "date": "2021-04-21",
+    "family": "interval_min_gap",
+    "horizon": 5,
+    "alignment": 0,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min30_optmean_rep1_h5_a1",
+    "file": "min30_optmean_rep1.csv",
+    "date": "2021-04-21",
+    "family": "interval_min_gap",
+    "horizon": 5,
+    "alignment": 1,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min30_optmean_rep1_h10_a0",
+    "file": "min30_optmean_rep1.csv",
+    "date": "2021-04-21",
+    "family": "interval_min_gap",
+    "horizon": 10,
+    "alignment": 0,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min30_optmean_rep1_h10_a1",
+    "file": "min30_optmean_rep1.csv",
+    "date": "2021-04-21",
+    "family": "interval_min_gap",
+    "horizon": 10,
+    "alignment": 1,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min30_optmean_rep1_h20_a0",
+    "file": "min30_optmean_rep1.csv",
+    "date": "2021-04-21",
+    "family": "interval_min_gap",
+    "horizon": 20,
+    "alignment": 0,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min30_optmean_rep1_h20_a1",
+    "file": "min30_optmean_rep1.csv",
+    "date": "2021-04-21",
+    "family": "interval_min_gap",
+    "horizon": 20,
+    "alignment": 1,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min25_optmean_rep2_h5_a0",
+    "file": "min25_optmean_rep2.csv",
+    "date": "2021-09-10",
+    "family": "interval_min_gap",
+    "horizon": 5,
+    "alignment": 0,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min25_optmean_rep2_h5_a1",
+    "file": "min25_optmean_rep2.csv",
+    "date": "2021-09-10",
+    "family": "interval_min_gap",
+    "horizon": 5,
+    "alignment": 1,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min25_optmean_rep2_h10_a0",
+    "file": "min25_optmean_rep2.csv",
+    "date": "2021-09-10",
+    "family": "interval_min_gap",
+    "horizon": 10,
+    "alignment": 0,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min25_optmean_rep2_h10_a1",
+    "file": "min25_optmean_rep2.csv",
+    "date": "2021-09-10",
+    "family": "interval_min_gap",
+    "horizon": 10,
+    "alignment": 1,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min25_optmean_rep2_h20_a0",
+    "file": "min25_optmean_rep2.csv",
+    "date": "2021-09-10",
+    "family": "interval_min_gap",
+    "horizon": 20,
+    "alignment": 0,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min25_optmean_rep2_h20_a1",
+    "file": "min25_optmean_rep2.csv",
+    "date": "2021-09-10",
+    "family": "interval_min_gap",
+    "horizon": 20,
+    "alignment": 1,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min25_optmean_rep1_h5_a0",
+    "file": "min25_optmean_rep1.csv",
+    "date": "2021-09-09",
+    "family": "interval_min_gap",
+    "horizon": 5,
+    "alignment": 0,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min25_optmean_rep1_h5_a1",
+    "file": "min25_optmean_rep1.csv",
+    "date": "2021-09-09",
+    "family": "interval_min_gap",
+    "horizon": 5,
+    "alignment": 1,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min25_optmean_rep1_h10_a0",
+    "file": "min25_optmean_rep1.csv",
+    "date": "2021-09-09",
+    "family": "interval_min_gap",
+    "horizon": 10,
+    "alignment": 0,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min25_optmean_rep1_h10_a1",
+    "file": "min25_optmean_rep1.csv",
+    "date": "2021-09-09",
+    "family": "interval_min_gap",
+    "horizon": 10,
+    "alignment": 1,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min25_optmean_rep1_h20_a0",
+    "file": "min25_optmean_rep1.csv",
+    "date": "2021-09-09",
+    "family": "interval_min_gap",
+    "horizon": 20,
+    "alignment": 0,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min25_optmean_rep1_h20_a1",
+    "file": "min25_optmean_rep1.csv",
+    "date": "2021-09-09",
+    "family": "interval_min_gap",
+    "horizon": 20,
+    "alignment": 1,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min20_optmean_rep2_h5_a0",
+    "file": "min20_optmean_rep2.csv",
+    "date": "2019-11-09",
+    "family": "interval_min_gap",
+    "horizon": 5,
+    "alignment": 0,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min20_optmean_rep2_h5_a1",
+    "file": "min20_optmean_rep2.csv",
+    "date": "2019-11-09",
+    "family": "interval_min_gap",
+    "horizon": 5,
+    "alignment": 1,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min20_optmean_rep2_h10_a0",
+    "file": "min20_optmean_rep2.csv",
+    "date": "2019-11-09",
+    "family": "interval_min_gap",
+    "horizon": 10,
+    "alignment": 0,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min20_optmean_rep2_h10_a1",
+    "file": "min20_optmean_rep2.csv",
+    "date": "2019-11-09",
+    "family": "interval_min_gap",
+    "horizon": 10,
+    "alignment": 1,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min20_optmean_rep2_h20_a0",
+    "file": "min20_optmean_rep2.csv",
+    "date": "2019-11-09",
+    "family": "interval_min_gap",
+    "horizon": 20,
+    "alignment": 0,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min20_optmean_rep2_h20_a1",
+    "file": "min20_optmean_rep2.csv",
+    "date": "2019-11-09",
+    "family": "interval_min_gap",
+    "horizon": 20,
+    "alignment": 1,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min20_optmean_rep1_h5_a0",
+    "file": "min20_optmean_rep1.csv",
+    "date": "2019-11-14",
+    "family": "interval_min_gap",
+    "horizon": 5,
+    "alignment": 0,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min20_optmean_rep1_h5_a1",
+    "file": "min20_optmean_rep1.csv",
+    "date": "2019-11-14",
+    "family": "interval_min_gap",
+    "horizon": 5,
+    "alignment": 1,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min20_optmean_rep1_h10_a0",
+    "file": "min20_optmean_rep1.csv",
+    "date": "2019-11-14",
+    "family": "interval_min_gap",
+    "horizon": 10,
+    "alignment": 0,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min20_optmean_rep1_h10_a1",
+    "file": "min20_optmean_rep1.csv",
+    "date": "2019-11-14",
+    "family": "interval_min_gap",
+    "horizon": 10,
+    "alignment": 1,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min20_optmean_rep1_h20_a0",
+    "file": "min20_optmean_rep1.csv",
+    "date": "2019-11-14",
+    "family": "interval_min_gap",
+    "horizon": 20,
+    "alignment": 0,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min20_optmean_rep1_h20_a1",
+    "file": "min20_optmean_rep1.csv",
+    "date": "2019-11-14",
+    "family": "interval_min_gap",
+    "horizon": 20,
+    "alignment": 1,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min15_optmean_rep2_h5_a0",
+    "file": "min15_optmean_rep2.csv",
+    "date": "2021-04-26",
+    "family": "interval_min_gap",
+    "horizon": 5,
+    "alignment": 0,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min15_optmean_rep2_h5_a1",
+    "file": "min15_optmean_rep2.csv",
+    "date": "2021-04-26",
+    "family": "interval_min_gap",
+    "horizon": 5,
+    "alignment": 1,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min15_optmean_rep2_h10_a0",
+    "file": "min15_optmean_rep2.csv",
+    "date": "2021-04-26",
+    "family": "interval_min_gap",
+    "horizon": 10,
+    "alignment": 0,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min15_optmean_rep2_h10_a1",
+    "file": "min15_optmean_rep2.csv",
+    "date": "2021-04-26",
+    "family": "interval_min_gap",
+    "horizon": 10,
+    "alignment": 1,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min15_optmean_rep2_h20_a0",
+    "file": "min15_optmean_rep2.csv",
+    "date": "2021-04-26",
+    "family": "interval_min_gap",
+    "horizon": 20,
+    "alignment": 0,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min15_optmean_rep2_h20_a1",
+    "file": "min15_optmean_rep2.csv",
+    "date": "2021-04-26",
+    "family": "interval_min_gap",
+    "horizon": 20,
+    "alignment": 1,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min10_optmean_rep2_h5_a0",
+    "file": "min10_optmean_rep2.csv",
+    "date": "2021-04-06",
+    "family": "interval_min_gap",
+    "horizon": 5,
+    "alignment": 0,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min10_optmean_rep2_h5_a1",
+    "file": "min10_optmean_rep2.csv",
+    "date": "2021-04-06",
+    "family": "interval_min_gap",
+    "horizon": 5,
+    "alignment": 1,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min10_optmean_rep2_h10_a0",
+    "file": "min10_optmean_rep2.csv",
+    "date": "2021-04-06",
+    "family": "interval_min_gap",
+    "horizon": 10,
+    "alignment": 0,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min10_optmean_rep2_h10_a1",
+    "file": "min10_optmean_rep2.csv",
+    "date": "2021-04-06",
+    "family": "interval_min_gap",
+    "horizon": 10,
+    "alignment": 1,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min10_optmean_rep2_h20_a0",
+    "file": "min10_optmean_rep2.csv",
+    "date": "2021-04-06",
+    "family": "interval_min_gap",
+    "horizon": 20,
+    "alignment": 0,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min10_optmean_rep2_h20_a1",
+    "file": "min10_optmean_rep2.csv",
+    "date": "2021-04-06",
+    "family": "interval_min_gap",
+    "horizon": 20,
+    "alignment": 1,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min10_optmean_rep1_h5_a0",
+    "file": "min10_optmean_rep1.csv",
+    "date": "2020-01-31",
+    "family": "interval_min_gap",
+    "horizon": 5,
+    "alignment": 0,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min10_optmean_rep1_h5_a1",
+    "file": "min10_optmean_rep1.csv",
+    "date": "2020-01-31",
+    "family": "interval_min_gap",
+    "horizon": 5,
+    "alignment": 1,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min10_optmean_rep1_h10_a0",
+    "file": "min10_optmean_rep1.csv",
+    "date": "2020-01-31",
+    "family": "interval_min_gap",
+    "horizon": 10,
+    "alignment": 0,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min10_optmean_rep1_h10_a1",
+    "file": "min10_optmean_rep1.csv",
+    "date": "2020-01-31",
+    "family": "interval_min_gap",
+    "horizon": 10,
+    "alignment": 1,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min10_optmean_rep1_h20_a0",
+    "file": "min10_optmean_rep1.csv",
+    "date": "2020-01-31",
+    "family": "interval_min_gap",
+    "horizon": 20,
+    "alignment": 0,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min10_optmean_rep1_h20_a1",
+    "file": "min10_optmean_rep1.csv",
+    "date": "2020-01-31",
+    "family": "interval_min_gap",
+    "horizon": 20,
+    "alignment": 1,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min3_mean50_h5_a0",
+    "file": "min3_mean50.csv",
+    "date": "2019-10-03",
+    "family": "interval",
+    "horizon": 5,
+    "alignment": 0,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min3_mean50_h5_a1",
+    "file": "min3_mean50.csv",
+    "date": "2019-10-03",
+    "family": "interval",
+    "horizon": 5,
+    "alignment": 1,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min3_mean50_h10_a0",
+    "file": "min3_mean50.csv",
+    "date": "2019-10-03",
+    "family": "interval",
+    "horizon": 10,
+    "alignment": 0,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min3_mean50_h10_a1",
+    "file": "min3_mean50.csv",
+    "date": "2019-10-03",
+    "family": "interval",
+    "horizon": 10,
+    "alignment": 1,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min3_mean50_h20_a0",
+    "file": "min3_mean50.csv",
+    "date": "2019-10-03",
+    "family": "interval",
+    "horizon": 20,
+    "alignment": 0,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min3_mean50_h20_a1",
+    "file": "min3_mean50.csv",
+    "date": "2019-10-03",
+    "family": "interval",
+    "horizon": 20,
+    "alignment": 1,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min3_mean40_h5_a0",
+    "file": "min3_mean40.csv",
+    "date": "2021-03-30",
+    "family": "interval",
+    "horizon": 5,
+    "alignment": 0,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min3_mean40_h5_a1",
+    "file": "min3_mean40.csv",
+    "date": "2021-03-30",
+    "family": "interval",
+    "horizon": 5,
+    "alignment": 1,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min3_mean40_h10_a0",
+    "file": "min3_mean40.csv",
+    "date": "2021-03-30",
+    "family": "interval",
+    "horizon": 10,
+    "alignment": 0,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min3_mean40_h10_a1",
+    "file": "min3_mean40.csv",
+    "date": "2021-03-30",
+    "family": "interval",
+    "horizon": 10,
+    "alignment": 1,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min3_mean40_h20_a0",
+    "file": "min3_mean40.csv",
+    "date": "2021-03-30",
+    "family": "interval",
+    "horizon": 20,
+    "alignment": 0,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min3_mean40_h20_a1",
+    "file": "min3_mean40.csv",
+    "date": "2021-03-30",
+    "family": "interval",
+    "horizon": 20,
+    "alignment": 1,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min3_mean35_h5_a0",
+    "file": "min3_mean35.csv",
+    "date": "2019-10-08",
+    "family": "interval",
+    "horizon": 5,
+    "alignment": 0,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min3_mean35_h5_a1",
+    "file": "min3_mean35.csv",
+    "date": "2019-10-08",
+    "family": "interval",
+    "horizon": 5,
+    "alignment": 1,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min3_mean35_h10_a0",
+    "file": "min3_mean35.csv",
+    "date": "2019-10-08",
+    "family": "interval",
+    "horizon": 10,
+    "alignment": 0,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min3_mean35_h10_a1",
+    "file": "min3_mean35.csv",
+    "date": "2019-10-08",
+    "family": "interval",
+    "horizon": 10,
+    "alignment": 1,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min3_mean35_h20_a0",
+    "file": "min3_mean35.csv",
+    "date": "2019-10-08",
+    "family": "interval",
+    "horizon": 20,
+    "alignment": 0,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min3_mean35_h20_a1",
+    "file": "min3_mean35.csv",
+    "date": "2019-10-08",
+    "family": "interval",
+    "horizon": 20,
+    "alignment": 1,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min3_mean30_h5_a0",
+    "file": "min3_mean30.csv",
+    "date": "2021-03-18",
+    "family": "interval",
+    "horizon": 5,
+    "alignment": 0,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min3_mean30_h5_a1",
+    "file": "min3_mean30.csv",
+    "date": "2021-03-18",
+    "family": "interval",
+    "horizon": 5,
+    "alignment": 1,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min3_mean30_h10_a0",
+    "file": "min3_mean30.csv",
+    "date": "2021-03-18",
+    "family": "interval",
+    "horizon": 10,
+    "alignment": 0,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min3_mean30_h10_a1",
+    "file": "min3_mean30.csv",
+    "date": "2021-03-18",
+    "family": "interval",
+    "horizon": 10,
+    "alignment": 1,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min3_mean30_h20_a0",
+    "file": "min3_mean30.csv",
+    "date": "2021-03-18",
+    "family": "interval",
+    "horizon": 20,
+    "alignment": 0,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min3_mean30_h20_a1",
+    "file": "min3_mean30.csv",
+    "date": "2021-03-18",
+    "family": "interval",
+    "horizon": 20,
+    "alignment": 1,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min3_mean25_h5_a0",
+    "file": "min3_mean25.csv",
+    "date": "2019-10-18",
+    "family": "interval",
+    "horizon": 5,
+    "alignment": 0,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min3_mean25_h5_a1",
+    "file": "min3_mean25.csv",
+    "date": "2019-10-18",
+    "family": "interval",
+    "horizon": 5,
+    "alignment": 1,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min3_mean25_h10_a0",
+    "file": "min3_mean25.csv",
+    "date": "2019-10-18",
+    "family": "interval",
+    "horizon": 10,
+    "alignment": 0,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min3_mean25_h10_a1",
+    "file": "min3_mean25.csv",
+    "date": "2019-10-18",
+    "family": "interval",
+    "horizon": 10,
+    "alignment": 1,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min3_mean25_h20_a0",
+    "file": "min3_mean25.csv",
+    "date": "2019-10-18",
+    "family": "interval",
+    "horizon": 20,
+    "alignment": 0,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min3_mean25_h20_a1",
+    "file": "min3_mean25.csv",
+    "date": "2019-10-18",
+    "family": "interval",
+    "horizon": 20,
+    "alignment": 1,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min3_mean20_h5_a0",
+    "file": "min3_mean20.csv",
+    "date": "2021-03-15",
+    "family": "interval",
+    "horizon": 5,
+    "alignment": 0,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min3_mean20_h5_a1",
+    "file": "min3_mean20.csv",
+    "date": "2021-03-15",
+    "family": "interval",
+    "horizon": 5,
+    "alignment": 1,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min3_mean20_h10_a0",
+    "file": "min3_mean20.csv",
+    "date": "2021-03-15",
+    "family": "interval",
+    "horizon": 10,
+    "alignment": 0,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min3_mean20_h10_a1",
+    "file": "min3_mean20.csv",
+    "date": "2021-03-15",
+    "family": "interval",
+    "horizon": 10,
+    "alignment": 1,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min3_mean20_h20_a0",
+    "file": "min3_mean20.csv",
+    "date": "2021-03-15",
+    "family": "interval",
+    "horizon": 20,
+    "alignment": 0,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  },
+  {
+    "context": "min3_mean20_h20_a1",
+    "file": "min3_mean20.csv",
+    "date": "2021-03-15",
+    "family": "interval",
+    "horizon": 20,
+    "alignment": 1,
+    "checks": [
+      {
+        "track": 0,
+        "queries": 10,
+        "candidate_checks": 80,
+        "future_mask_checks": 10,
+        "status": "PASS"
+      }
+    ],
+    "matured_targets_strictly_before_origins": true,
+    "prediction_linear_algebra_match": true
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "python": "3.13.18",
+  "platform": "Linux-6.6.159+-x86_64-with-glibc2.39",
+  "logical_cpu_count": 2,
+  "packages": {
+    "numpy": "2.2.6",
+    "pandas": "2.2.3",
+    "numba": "0.61.2",
+    "matplotlib": "3.10.0"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "issue": "Empty mapped boolean subset inferred object dtype, treated as column selection; hidden.context then missing.",
+  "stage": "After reserve predictions; tabulation of sensitivity diagnostics",
+  "old_analysis_sha256": "20ce89ab395984ae58b5515113aa67ea3b53df041e38f473e8004306a529e64c",
+  "change": "Explicit boolean mask plus .loc; preserve columns for empty subsets.",
+  "scope": "No model, protocol, selection, raw inputs, predictions or causal decisions changed.",
+  "corrected_analysis_sha256": "232abd8756a6fbcdbddd730fa61d1cc14d399218de5a298c341f1fa354bc6bb9"
+}

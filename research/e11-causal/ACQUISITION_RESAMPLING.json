@@ -1,0 +1,42 @@
+[
+  {
+    "metric": "mean_log_rmse_ratio",
+    "comparator": "history_input",
+    "observed_equal_day_difference": -0.027678081912865384,
+    "percentile_2_5": -0.03633955133745395,
+    "percentile_97_5": -0.01966220114274805,
+    "resamples": 10000,
+    "unit": "acquisition_date",
+    "scope": "Descriptive paired resampling stability across observed heterogeneous acquisitions; no window-independence or population-representativeness claim."
+  },
+  {
+    "metric": "mean_log_rmse_ratio",
+    "comparator": "fixed_guard",
+    "observed_equal_day_difference": -0.027526493564039706,
+    "percentile_2_5": -0.03604453408022826,
+    "percentile_97_5": -0.019615601653127212,
+    "resamples": 10000,
+    "unit": "acquisition_date",
+    "scope": "Descriptive paired resampling stability across observed heterogeneous acquisitions; no window-independence or population-representativeness claim."
+  },
+  {
+    "metric": "mean_local_harm_fraction",
+    "comparator": "history_input",
+    "observed_equal_day_difference": 0.007936507936507936,
+    "percentile_2_5": 0.0026455026455026454,
+    "percentile_97_5": 0.01455026455026455,
+    "resamples": 10000,
+    "unit": "acquisition_date",
+    "scope": "Descriptive paired resampling stability across observed heterogeneous acquisitions; no window-independence or population-representativeness claim."
+  },
+  {
+    "metric": "mean_local_harm_fraction",
+    "comparator": "fixed_guard",
+    "observed_equal_day_difference": -0.07671957671957673,
+    "percentile_2_5": -0.11111111111111109,
+    "percentile_97_5": -0.046296296296296294,
+    "resamples": 10000,
+    "unit": "acquisition_date",
+    "scope": "Descriptive paired resampling stability across observed heterogeneous acquisitions; no window-independence or population-representativeness claim."
+  }
+]

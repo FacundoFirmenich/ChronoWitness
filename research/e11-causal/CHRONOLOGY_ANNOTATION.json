@@ -1,0 +1,24 @@
+{
+  "recorded_utc": "2026-11-11T14:37:48.903548+00:00",
+  "stage": "Before reserve scoring; metadata-only annotation; no selection rule change",
+  "latest_development_date": "2021-05-02",
+  "reserve_dates_after_development": [
+    "2021-09-10",
+    "2021-09-09"
+  ],
+  "reserve_dates_before_development": [
+    "2021-04-21",
+    "2019-11-09",
+    "2019-11-14",
+    "2021-04-26",
+    "2021-04-06",
+    "2020-01-31",
+    "2019-10-03",
+    "2021-03-30",
+    "2019-10-08",
+    "2021-03-18",
+    "2019-10-18",
+    "2021-03-15"
+  ],
+  "interpretation": "Two September acquisitions are later in calendar time than all development days; both use min25 protocols, so time and protocol family are confounded. Other reserve acquisitions test retrospective transfer."
+}

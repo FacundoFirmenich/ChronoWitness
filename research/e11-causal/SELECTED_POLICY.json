@@ -1,0 +1,50 @@
+{
+  "status": "FROZEN_BEFORE_RESERVE",
+  "frozen_utc": "2026-11-11T14:37:29.135999+00:00",
+  "candidate": {
+    "id": "w180_nested_s25",
+    "lookback": 180,
+    "nested": true,
+    "shrink": 0.25
+  },
+  "rank_key": [
+    0.20023148148148148,
+    0.13285108024691356,
+    -0.003267203474756971,
+    "w180_nested_s25"
+  ],
+  "development_days": [
+    {
+      "date": "2019-09-03",
+      "activity": 0.4502231218659429,
+      "mean_rmse_ratio": 0.9967285919724247,
+      "mean_local_harm_fraction": 0.05648148148148148,
+      "mean_log_rmse_ratio": -0.0032973254678725877
+    },
+    {
+      "date": "2021-04-07",
+      "activity": 0.4673264634710025,
+      "mean_rmse_ratio": 0.9961104268682416,
+      "mean_local_harm_fraction": 0.20023148148148148,
+      "mean_log_rmse_ratio": -0.003982136861560078
+    },
+    {
+      "date": "2021-05-01",
+      "activity": 0.47322277962946485,
+      "mean_rmse_ratio": 0.9966837731297551,
+      "mean_local_harm_fraction": 0.12037037037037036,
+      "mean_log_rmse_ratio": -0.0034143086918312273
+    },
+    {
+      "date": "2021-05-02",
+      "activity": 0.4921956158691336,
+      "mean_rmse_ratio": 0.9978180434098078,
+      "mean_local_harm_fraction": 0.15432098765432095,
+      "mean_log_rmse_ratio": -0.0023750428777639904
+    }
+  ],
+  "protocol_sha256": "e3302b6d8b11b056300f4c41c4011388b7ba7e23ec93975e36543cf13a3fccde",
+  "policy_source_sha256": "2c9ea747e2d0721750054f4b0d9774afc318c3e56e3ee137e27eb26ebbe77ce4",
+  "selection_table_sha256": "46a4fcb63d6fd0498a7c17b33e2a2a03b8430c985b5d0f00dc00036077410b4c",
+  "development_seconds": 523.472357704
+}

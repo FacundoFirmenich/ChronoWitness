@@ -1,0 +1,15 @@
+{
+  "frozen_utc": "2026-11-11T14:32:27.598496+00:00",
+  "stage": "Before reserve outcome scoring; development underway",
+  "files": {
+    "policy.py": "2c9ea747e2d0721750054f4b0d9774afc318c3e56e3ee137e27eb26ebbe77ce4",
+    "run_e11.py": "c27b0a192d0dd9ca9820bd3caf42354a6cae3dce069c38d6ba74224771fe25c2",
+    "analyze_reserve.py": "20ce89ab395984ae58b5515113aa67ea3b53df041e38f473e8004306a529e64c",
+    "preflight.py": "3f402dd4341d7f44dc466eaa5caf1f1c74f889b92a5328f2e7ad192aa3e472cd",
+    "e9_core.py": "8949f625933225e7ff27efb40f05e4f75ac03524866c5dad2cd524800c7c0d3b",
+    "MODEL_SELECTION.json": "6015fd269fa22884c7efef285f79c78c108bbca25904da9a3be2dfcf520fb9f0",
+    "E9_NUMERICAL_PROTOCOL.json": "6edd9be5ba63c4921344c72b854a6cc07bfb16b004ba7e732b8e0cbcf8f4b64f",
+    "COHORTS.json": "0cfc1786a31112e7c3e3f347e35d0c9b57f8aaab611fd8fb18d41c52ce40d51b",
+    "E11_PROTOCOL.json": "e3302b6d8b11b056300f4c41c4011388b7ba7e23ec93975e36543cf13a3fccde"
+  }
+}
