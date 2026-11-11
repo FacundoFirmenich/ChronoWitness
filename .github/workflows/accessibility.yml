@@ -1,0 +1,50 @@
+name: Cross-platform access and container reproduction
+on:
+  push:
+    branches: ["Ulalito's-Island"]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  example:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-24.04, windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-python@e797f83bcb11b83ae66e0230d6156d7c80228e7c
+        with:
+          python-version: '3.12'
+      - run: python launch.py --mode doctor
+      - if: runner.os == 'Windows'
+        shell: cmd
+        env:
+          CW_NO_PAUSE: '1'
+        run: Start-Windows.cmd
+      - if: runner.os == 'macOS'
+        run: sh Start-macOS.command
+      - if: runner.os == 'Linux'
+        run: sh start-linux.sh
+      - run: python tools/build_evidence.py --check
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: exact-example-${{ matrix.os }}
+          path: research/results/DESIGN_TUTORIAL.json
+  container:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-python@e797f83bcb11b83ae66e0230d6156d7c80228e7c
+        with:
+          python-version: '3.12'
+      - run: python launch.py --mode full
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: container-verification
+          path: research/results/PUBLIC_VERIFICATION.json
+          if-no-files-found: error

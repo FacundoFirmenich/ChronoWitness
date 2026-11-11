@@ -1,5 +1,12 @@
 # ChronoWitness
 
+[EspaÃ±ol / English quick start](docs/GETTING_STARTED.md) Â· [Interactive epistemic graph](docs/epistemic-graph.html) Â· [Evidence ledger](docs/EVIDENCE_LEDGER.json)
+
+**Start:** download and extract the latest source ZIP. Windows: `Start-Windows.cmd`; macOS: `sh Start-macOS.command`; Linux: `sh start-linux.sh`. The exact example uses Python only. Complete core reproduction: `python launch.py --mode full` with Docker running.
+
+**Current public evidence:** E9 fixes temporal prediction, E10 tests transport to additional acquisitions, and E11 evaluates a selected causal calibration policy on 14 reserved acquisitions. Each retains local tail harms and unsupported jurisdictions. [E9](research/e9-execution/CIERRE_SUSTANTIVO_E9_ES.md) Â· [E10](research/e10-transport/README.md) Â· [E11](research/e11-causal/README.md).
+
+
 **Temporal input design for testing models of cellular memory.**
 
 ChronoWitness turns carefully matched input histories into quantitative tests of dynamical models. Its FD7 schedules share the same symbol counts, short-word statistics, run lengths and autocorrelations. Within the two-state promoter class, they must produce the same periodic mean response for every admissible choice of switching rates. A measured difference can therefore challenge that model class once delivery, observation and sampling have been accounted for.
@@ -56,7 +63,7 @@ These results qualify observation and calibration. The source dataset used its o
 
 ## New frontier: nested evidence and extended input identities
 
-The [E6–E8 and FD8 campaign](research/e6-e8-fd8/README.md) adds ten acquisition dates and a certified 32-pulse extension. The early guard reduces local upper-tail losses from 102 to 62 on the same 552 supported jurisdictions, while retaining adverse transfers and non-estimable strata. These overlapping jurisdictions are not independent replicates.
+The [E6Ã¢â‚¬â€œE8 and FD8 campaign](research/e6-e8-fd8/README.md) adds ten acquisition dates and a certified 32-pulse extension. The early guard reduces local upper-tail losses from 102 to 62 on the same 552 supported jurisdictions, while retaining adverse transfers and non-estimable strata. These overlapping jurisdictions are not independent replicates.
 
 The FD8-32 pair preserves the three-state deterministic profile-law null and yields a 60.33% larger contrast for the same kinetic witness at fixed total period, using shorter pulses. A separate phase-law check demonstrates why equal means alone are insufficient. The input audit of the cellular acquisitions does not establish a direct FD7 intervention.
 
@@ -86,7 +93,7 @@ Its protocol fixes the parameter domain, objective, seeds and evaluation budget.
 
 - **Understand the method:** [scientific results](docs/SCIENTIFIC_RESULTS.md) and [worked example](docs/WORKED_EXAMPLE.md).
 - **Design an observation:** [assay requirements and decision path](docs/ASSAY_GUIDE.md).
-- **Inspect the evidence:** [data dictionary](research/supplement-v010/DATA_DICTIONARY.md), Data S1–S11 in their versioned directories, [Data S12](research/supplement-v011/data/) and [Data S13](research/supplement-v012/data/).
+- **Inspect the evidence:** [data dictionary](research/supplement-v010/DATA_DICTIONARY.md), Data S1Ã¢â‚¬â€œS11 in their versioned directories, [Data S12](research/supplement-v011/data/) and [Data S13](research/supplement-v012/data/).
 - **Extend the calculation:** exact reader code in `research/analysis/`, observation bounds in `research/finite_reporter/` and `research/input_robustness/`, count envelopes in `research/count_tails/` and `research/translation_counts/`, and tests in `research/statistical_inference/`.
 - **Audit a release:** `RELEASE_MANIFEST.json` records file hashes; release assets include the source distribution and its checksum.
 
@@ -94,6 +101,6 @@ The repository supplies theoretical and computational research, including second
 
 ## Cite and reuse
 
-Research and software by **Facundo Firmenich**. Citation metadata is available in [CITATION.cff](CITATION.cff); release metadata is supplied for GitHub–Zenodo archiving.
+Research and software by **Facundo Firmenich**. Citation metadata is available in [CITATION.cff](CITATION.cff); release metadata is supplied for GitHubÃ¢â‚¬â€œZenodo archiving.
 
 The code is distributed under the **MIT License**. See [LICENSE](LICENSE). The academic manuscript and supplementary document are maintained separately.

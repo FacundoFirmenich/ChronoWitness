@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "updated": "2026-11-11",
+  "release": "0.14.3",
+  "scope": "Public evidence through E11; mathematical certificates and retrospective cellular observations are distinct. E12 is not included in this public ledger.",
+  "nodes": [
+    {
+      "id": "fd7",
+      "title": "FD7 input identity",
+      "status": "EXACT",
+      "source": "research/sources/FD7_CERTIFICATE_v0.7.0.json",
+      "meaning": "Equal cyclic word counts through order 7; stated occupation identity."
+    },
+    {
+      "id": "reader",
+      "title": "Reader thresholds",
+      "status": "EXACT",
+      "source": "docs/SCIENTIFIC_RESULTS.md",
+      "meaning": "Thresholds are specific to the declared reader and observable classes."
+    },
+    {
+      "id": "kinetic",
+      "title": "Kinetic separation",
+      "status": "CERTIFIED",
+      "source": "research/design_frontier/SEARCH_RESULT.json",
+      "meaning": "Existence and certified contrast; not optimality over every generator."
+    },
+    {
+      "id": "reporter",
+      "title": "Reporter and acquisition",
+      "status": "CONDITIONAL",
+      "source": "docs/ASSAY_GUIDE.md",
+      "meaning": "Common stable linear cascade; finite windows require endpoint or transient control."
+    },
+    {
+      "id": "statistics",
+      "title": "Sequential inference",
+      "status": "CONDITIONAL",
+      "source": "docs/TRAJECTORY_ASSAY.md",
+      "meaning": "Conditional range and mean budgets govern optional stopping."
+    },
+    {
+      "id": "e4",
+      "title": "Local calibration E4",
+      "status": "OBSERVED",
+      "source": "research/e4-local/README.md",
+      "meaning": "Local gains coexist with upper-tail harms and low support."
+    },
+    {
+      "id": "e8",
+      "title": "Nested transport E6–E8",
+      "status": "OBSERVED",
+      "source": "research/e6-e8-fd8/README.md",
+      "meaning": "Overlapping jurisdictions retain support and adverse transfers."
+    },
+    {
+      "id": "e9",
+      "title": "Frozen temporal prediction E9",
+      "status": "OBSERVED",
+      "source": "research/e9-execution/CIERRE_SUSTANTIVO_E9_ES.md",
+      "meaning": "Temporal split and fixed prediction coefficients."
+    },
+    {
+      "id": "e10",
+      "title": "External acquisition transport E10",
+      "status": "OBSERVED",
+      "source": "research/e10-transport/README.md",
+      "meaning": "Two transport dates; no uniform local benefit."
+    },
+    {
+      "id": "e11",
+      "title": "Reserved acquisitions E11",
+      "status": "OBSERVED",
+      "source": "research/e11-causal/E11_GATE_LEDGER.json",
+      "meaning": "Four development dates; 14 reserved acquisition dates. Retrospective transport."
+    },
+    {
+      "id": "harm",
+      "title": "Uniform local no-harm",
+      "status": "NOT_MET",
+      "source": "research/e11-causal/E11_GATE_LEDGER.json",
+      "meaning": "6/756 pulse-signal and 81/2268 fine nodes exceed the 1% harm tolerance."
+    },
+    {
+      "id": "physical",
+      "title": "Paired cellular FD7/FD8",
+      "status": "NOT_EVALUATED",
+      "source": "research/e11-causal/E11_GATE_LEDGER.json",
+      "meaning": "Public cellular records use other stimulation schedules."
+    },
+    {
+      "id": "date",
+      "title": "Conflicting acquisition date",
+      "status": "UNRESOLVED",
+      "source": "research/e11-causal/README.md",
+      "meaning": "The conflicting record remains quarantined and unscored."
+    }
+  ],
+  "edges": [
+    {
+      "from": "fd7",
+      "to": "reader",
+      "relation": "constrains"
+    },
+    {
+      "from": "reader",
+      "to": "kinetic",
+      "relation": "admits separating witness"
+    },
+    {
+      "from": "fd7",
+      "to": "reporter",
+      "relation": "transports under assumptions"
+    },
+    {
+      "from": "reporter",
+      "to": "statistics",
+      "relation": "supplies bias budget"
+    },
+    {
+      "from": "e4",
+      "to": "e8",
+      "relation": "extends analysis"
+    },
+    {
+      "from": "e8",
+      "to": "e9",
+      "relation": "motivates temporal validation"
+    },
+    {
+      "from": "e9",
+      "to": "e10",
+      "relation": "frozen-model transport"
+    },
+    {
+      "from": "e10",
+      "to": "e11",
+      "relation": "development precedes reserved evaluation"
+    },
+    {
+      "from": "e11",
+      "to": "harm",
+      "relation": "retains adverse evidence"
+    },
+    {
+      "from": "e11",
+      "to": "physical",
+      "relation": "does not evaluate"
+    },
+    {
+      "from": "e11",
+      "to": "date",
+      "relation": "excludes conflicting record"
+    }
+  ]
+}
