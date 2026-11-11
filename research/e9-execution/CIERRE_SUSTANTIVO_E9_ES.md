@@ -12,6 +12,8 @@ El banco primario contiene 30 archivos separados por días completos: dos días 
 
 La protección reduce los daños de la corrección temprana, pero no demuestra beneficio uniforme frente al modelo base. Mejora estrictamente el RMSE base en 4 de 72 contextos. La peor intersección protegida conserva una razón de percentiles 95 de 1,1138627424: empeoramiento del 11,39%.
 
+La reconstrucción anidada identifica 67 daños locales de q95 superiores al 1% dentro de 38 contextos cuyo q95 agregado no supera el 1% de empeoramiento. Estas jurisdicciones no quedarían señaladas por aplicar ese mismo umbral solamente al agregado. Es una comprobación descriptiva de los residuos ya obtenidos, no una muestra independiente ni un nuevo ensayo.
+
 Las 360 intersecciones cruzan tiempo desde el último pulso y banda de señal actual, conservando día, protocolo, campo, horizonte y alineamiento. Cada una tiene al menos 20 ventanas para el resumen descriptivo; ese umbral no transforma ventanas solapadas en réplicas independientes. Los nodos por célula y otros nodos de menor soporte también se conservaron, con su estado, en el paquete.
 
 El predictor con historia de entrada supera al predictor sin entrada en 21 de los 72 contextos. Este resultado se refiere a esta familia lineal regularizada, este observable y estas ventanas. No demuestra que la vía ERK carezca de memoria ni que los estímulos no tengan efecto.

@@ -1,0 +1,610 @@
+{
+  "local_harms_with_parent_below_1pct_harm": 67,
+  "affected_parent_contexts": 38,
+  "scope": "Descriptive nested reconstruction on existing E9 residuals; not a new independent experiment",
+  "nodes": [
+    {
+      "context": [
+        "binary_rep5_pos02_period3.csv",
+        5,
+        0
+      ],
+      "local_node": "('15_plus', np.int64(0))",
+      "ratio": 1.0118700560622487
+    },
+    {
+      "context": [
+        "binary_rep5_pos02_period15.csv",
+        5,
+        0
+      ],
+      "local_node": "('15_plus', np.int64(0))",
+      "ratio": 1.0123223150784861
+    },
+    {
+      "context": [
+        "binary_rep5_pos02_period15.csv",
+        5,
+        0
+      ],
+      "local_node": "('5_14', np.int64(0))",
+      "ratio": 1.0152790975225516
+    },
+    {
+      "context": [
+        "binary_rep5_pos02_period15.csv",
+        5,
+        0
+      ],
+      "local_node": "('5_14', np.int64(1))",
+      "ratio": 1.0284510864481717
+    },
+    {
+      "context": [
+        "binary_rep5_pos02_period10.csv",
+        5,
+        0
+      ],
+      "local_node": "('15_plus', np.int64(1))",
+      "ratio": 1.0165960966425702
+    },
+    {
+      "context": [
+        "binary_rep5_pos01_period3.csv",
+        5,
+        0
+      ],
+      "local_node": "('15_plus', np.int64(1))",
+      "ratio": 1.0111564660354984
+    },
+    {
+      "context": [
+        "binary_rep5_pos01_period15.csv",
+        5,
+        0
+      ],
+      "local_node": "('0_4', np.int64(0))",
+      "ratio": 1.0104719543841754
+    },
+    {
+      "context": [
+        "binary_rep5_pos01_period15.csv",
+        5,
+        0
+      ],
+      "local_node": "('0_4', np.int64(1))",
+      "ratio": 1.0219361726017104
+    },
+    {
+      "context": [
+        "binary_rep5_pos01_period10.csv",
+        5,
+        0
+      ],
+      "local_node": "('15_plus', np.int64(1))",
+      "ratio": 1.0417086900268715
+    },
+    {
+      "context": [
+        "binary_rep4_pos02_period15.csv",
+        5,
+        0
+      ],
+      "local_node": "('5_14', np.int64(1))",
+      "ratio": 1.0122915036054734
+    },
+    {
+      "context": [
+        "binary_rep4_pos01_period10.csv",
+        5,
+        0
+      ],
+      "local_node": "('15_plus', np.int64(2))",
+      "ratio": 1.0103954846217613
+    },
+    {
+      "context": [
+        "binary_rep5_pos02_period3.csv",
+        5,
+        1
+      ],
+      "local_node": "('15_plus', np.int64(0))",
+      "ratio": 1.0111324880121433
+    },
+    {
+      "context": [
+        "binary_rep5_pos02_period15.csv",
+        5,
+        1
+      ],
+      "local_node": "('15_plus', np.int64(1))",
+      "ratio": 1.0192828318915212
+    },
+    {
+      "context": [
+        "binary_rep5_pos02_period15.csv",
+        5,
+        1
+      ],
+      "local_node": "('5_14', np.int64(0))",
+      "ratio": 1.0200474588200292
+    },
+    {
+      "context": [
+        "binary_rep5_pos02_period15.csv",
+        5,
+        1
+      ],
+      "local_node": "('5_14', np.int64(1))",
+      "ratio": 1.0383788314269047
+    },
+    {
+      "context": [
+        "binary_rep5_pos02_period10.csv",
+        5,
+        1
+      ],
+      "local_node": "('15_plus', np.int64(1))",
+      "ratio": 1.017291927371268
+    },
+    {
+      "context": [
+        "binary_rep5_pos01_period3.csv",
+        5,
+        1
+      ],
+      "local_node": "('15_plus', np.int64(1))",
+      "ratio": 1.0378840678282861
+    },
+    {
+      "context": [
+        "binary_rep5_pos01_period3.csv",
+        5,
+        1
+      ],
+      "local_node": "('15_plus', np.int64(2))",
+      "ratio": 1.0179578498182027
+    },
+    {
+      "context": [
+        "binary_rep5_pos01_period10.csv",
+        5,
+        1
+      ],
+      "local_node": "('15_plus', np.int64(1))",
+      "ratio": 1.0119377961216847
+    },
+    {
+      "context": [
+        "binary_rep4_pos02_period15.csv",
+        5,
+        1
+      ],
+      "local_node": "('5_14', np.int64(1))",
+      "ratio": 1.0184814928152803
+    },
+    {
+      "context": [
+        "binary_rep5_pos02_period10.csv",
+        10,
+        0
+      ],
+      "local_node": "('15_plus', np.int64(1))",
+      "ratio": 1.0115456384822177
+    },
+    {
+      "context": [
+        "binary_rep5_pos02_period10.csv",
+        10,
+        0
+      ],
+      "local_node": "('15_plus', np.int64(2))",
+      "ratio": 1.022119119641318
+    },
+    {
+      "context": [
+        "binary_rep5_pos01_period15.csv",
+        10,
+        0
+      ],
+      "local_node": "('0_4', np.int64(0))",
+      "ratio": 1.021026438962577
+    },
+    {
+      "context": [
+        "binary_rep5_pos01_period15.csv",
+        10,
+        0
+      ],
+      "local_node": "('15_plus', np.int64(0))",
+      "ratio": 1.028119867831956
+    },
+    {
+      "context": [
+        "binary_rep5_pos01_period15.csv",
+        10,
+        0
+      ],
+      "local_node": "('15_plus', np.int64(2))",
+      "ratio": 1.0109799020301686
+    },
+    {
+      "context": [
+        "binary_rep5_pos01_period10.csv",
+        10,
+        0
+      ],
+      "local_node": "('15_plus', np.int64(1))",
+      "ratio": 1.012430458374163
+    },
+    {
+      "context": [
+        "binary_rep4_pos02_period3.csv",
+        10,
+        0
+      ],
+      "local_node": "('15_plus', np.int64(0))",
+      "ratio": 1.0228405378336398
+    },
+    {
+      "context": [
+        "binary_rep4_pos02_period3.csv",
+        10,
+        0
+      ],
+      "local_node": "('15_plus', np.int64(1))",
+      "ratio": 1.018039433371909
+    },
+    {
+      "context": [
+        "binary_rep4_pos02_period3.csv",
+        10,
+        0
+      ],
+      "local_node": "('15_plus', np.int64(2))",
+      "ratio": 1.0169968614078462
+    },
+    {
+      "context": [
+        "binary_rep4_pos02_period15.csv",
+        10,
+        0
+      ],
+      "local_node": "('5_14', np.int64(0))",
+      "ratio": 1.0569714336591294
+    },
+    {
+      "context": [
+        "binary_rep4_pos02_period15.csv",
+        10,
+        0
+      ],
+      "local_node": "('5_14', np.int64(1))",
+      "ratio": 1.0127091458867106
+    },
+    {
+      "context": [
+        "binary_rep4_pos01_period15.csv",
+        10,
+        0
+      ],
+      "local_node": "('15_plus', np.int64(2))",
+      "ratio": 1.0347048335902265
+    },
+    {
+      "context": [
+        "binary_rep4_pos01_period10.csv",
+        10,
+        0
+      ],
+      "local_node": "('15_plus', np.int64(1))",
+      "ratio": 1.0147913094605667
+    },
+    {
+      "context": [
+        "binary_rep5_pos02_period3.csv",
+        10,
+        1
+      ],
+      "local_node": "('15_plus', np.int64(1))",
+      "ratio": 1.0199039910646914
+    },
+    {
+      "context": [
+        "binary_rep5_pos02_period15.csv",
+        10,
+        1
+      ],
+      "local_node": "('5_14', np.int64(0))",
+      "ratio": 1.0109435516432428
+    },
+    {
+      "context": [
+        "binary_rep5_pos02_period10.csv",
+        10,
+        1
+      ],
+      "local_node": "('15_plus', np.int64(1))",
+      "ratio": 1.011349517481346
+    },
+    {
+      "context": [
+        "binary_rep5_pos02_period10.csv",
+        10,
+        1
+      ],
+      "local_node": "('15_plus', np.int64(2))",
+      "ratio": 1.0235323359276791
+    },
+    {
+      "context": [
+        "binary_rep5_pos01_period15.csv",
+        10,
+        1
+      ],
+      "local_node": "('0_4', np.int64(0))",
+      "ratio": 1.0419757858802174
+    },
+    {
+      "context": [
+        "binary_rep5_pos01_period15.csv",
+        10,
+        1
+      ],
+      "local_node": "('15_plus', np.int64(0))",
+      "ratio": 1.0158487881341478
+    },
+    {
+      "context": [
+        "binary_rep4_pos02_period3.csv",
+        10,
+        1
+      ],
+      "local_node": "('15_plus', np.int64(0))",
+      "ratio": 1.0124398681547129
+    },
+    {
+      "context": [
+        "binary_rep4_pos02_period3.csv",
+        10,
+        1
+      ],
+      "local_node": "('15_plus', np.int64(2))",
+      "ratio": 1.0164314502306468
+    },
+    {
+      "context": [
+        "binary_rep4_pos02_period15.csv",
+        10,
+        1
+      ],
+      "local_node": "('15_plus', np.int64(0))",
+      "ratio": 1.0250616280178513
+    },
+    {
+      "context": [
+        "binary_rep4_pos02_period15.csv",
+        10,
+        1
+      ],
+      "local_node": "('5_14', np.int64(0))",
+      "ratio": 1.0591527614338845
+    },
+    {
+      "context": [
+        "binary_rep4_pos02_period15.csv",
+        10,
+        1
+      ],
+      "local_node": "('5_14', np.int64(1))",
+      "ratio": 1.018594643221732
+    },
+    {
+      "context": [
+        "binary_rep4_pos01_period15.csv",
+        10,
+        1
+      ],
+      "local_node": "('0_4', np.int64(0))",
+      "ratio": 1.0160295085175584
+    },
+    {
+      "context": [
+        "binary_rep4_pos01_period15.csv",
+        10,
+        1
+      ],
+      "local_node": "('15_plus', np.int64(0))",
+      "ratio": 1.0157647717445757
+    },
+    {
+      "context": [
+        "binary_rep4_pos01_period15.csv",
+        10,
+        1
+      ],
+      "local_node": "('15_plus', np.int64(2))",
+      "ratio": 1.0279049532824598
+    },
+    {
+      "context": [
+        "binary_rep4_pos01_period10.csv",
+        10,
+        1
+      ],
+      "local_node": "('15_plus', np.int64(2))",
+      "ratio": 1.0125984363885718
+    },
+    {
+      "context": [
+        "binary_rep5_pos02_period3.csv",
+        20,
+        0
+      ],
+      "local_node": "('15_plus', np.int64(0))",
+      "ratio": 1.0877142724673707
+    },
+    {
+      "context": [
+        "binary_rep5_pos02_period3.csv",
+        20,
+        0
+      ],
+      "local_node": "('15_plus', np.int64(2))",
+      "ratio": 1.0204269876104308
+    },
+    {
+      "context": [
+        "binary_rep5_pos02_period15.csv",
+        20,
+        0
+      ],
+      "local_node": "('0_4', np.int64(0))",
+      "ratio": 1.0487523811608277
+    },
+    {
+      "context": [
+        "binary_rep5_pos02_period15.csv",
+        20,
+        0
+      ],
+      "local_node": "('15_plus', np.int64(0))",
+      "ratio": 1.0318469024582515
+    },
+    {
+      "context": [
+        "binary_rep5_pos02_period15.csv",
+        20,
+        0
+      ],
+      "local_node": "('5_14', np.int64(1))",
+      "ratio": 1.0332751141944945
+    },
+    {
+      "context": [
+        "binary_rep5_pos01_period15.csv",
+        20,
+        0
+      ],
+      "local_node": "('0_4', np.int64(1))",
+      "ratio": 1.1058402856238176
+    },
+    {
+      "context": [
+        "binary_rep4_pos01_period15.csv",
+        20,
+        0
+      ],
+      "local_node": "('0_4', np.int64(0))",
+      "ratio": 1.0140177850553558
+    },
+    {
+      "context": [
+        "binary_rep5_pos02_period3.csv",
+        20,
+        1
+      ],
+      "local_node": "('15_plus', np.int64(0))",
+      "ratio": 1.0793165595075662
+    },
+    {
+      "context": [
+        "binary_rep5_pos02_period3.csv",
+        20,
+        1
+      ],
+      "local_node": "('15_plus', np.int64(2))",
+      "ratio": 1.0188596087372015
+    },
+    {
+      "context": [
+        "binary_rep5_pos02_period15.csv",
+        20,
+        1
+      ],
+      "local_node": "('0_4', np.int64(0))",
+      "ratio": 1.0777802418915639
+    },
+    {
+      "context": [
+        "binary_rep5_pos02_period15.csv",
+        20,
+        1
+      ],
+      "local_node": "('15_plus', np.int64(0))",
+      "ratio": 1.0363093391411955
+    },
+    {
+      "context": [
+        "binary_rep5_pos02_period15.csv",
+        20,
+        1
+      ],
+      "local_node": "('5_14', np.int64(1))",
+      "ratio": 1.031528899860495
+    },
+    {
+      "context": [
+        "binary_rep5_pos01_period15.csv",
+        20,
+        1
+      ],
+      "local_node": "('0_4', np.int64(1))",
+      "ratio": 1.0821637809436593
+    },
+    {
+      "context": [
+        "binary_rep4_pos02_period15.csv",
+        20,
+        1
+      ],
+      "local_node": "('0_4', np.int64(0))",
+      "ratio": 1.0350049573310451
+    },
+    {
+      "context": [
+        "binary_rep4_pos02_period15.csv",
+        20,
+        1
+      ],
+      "local_node": "('15_plus', np.int64(0))",
+      "ratio": 1.0329657764431117
+    },
+    {
+      "context": [
+        "binary_rep4_pos02_period15.csv",
+        20,
+        1
+      ],
+      "local_node": "('15_plus', np.int64(1))",
+      "ratio": 1.014687120034337
+    },
+    {
+      "context": [
+        "binary_rep4_pos02_period15.csv",
+        20,
+        1
+      ],
+      "local_node": "('5_14', np.int64(0))",
+      "ratio": 1.0476902187794634
+    },
+    {
+      "context": [
+        "binary_rep4_pos01_period15.csv",
+        20,
+        1
+      ],
+      "local_node": "('0_4', np.int64(0))",
+      "ratio": 1.0158343167670314
+    },
+    {
+      "context": [
+        "binary_rep4_pos01_period15.csv",
+        20,
+        1
+      ],
+      "local_node": "('15_plus', np.int64(2))",
+      "ratio": 1.0101865571861743
+    }
+  ]
+}
