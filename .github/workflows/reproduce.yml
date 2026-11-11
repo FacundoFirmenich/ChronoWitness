@@ -1,41 +1,33 @@
-name: Measure E1 and E2 under 3 GB without swap
+name: Reproduce public scientific release
 on:
+  push:
+    branches: ["Ulalito's-Island"]
   workflow_dispatch:
 permissions:
   contents: read
-concurrency:
-  group: e2-memory-verification
-  cancel-in-progress: false
 jobs:
-  memory:
+  science:
     runs-on: ubuntu-24.04
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
-      - name: Execute the real workload with a kernel memory limit
-        shell: bash
-        run: |
-          set -uo pipefail
-          mkdir -p research/e2-memory-check/resource_results
-          docker pull python:3.12-slim
-          docker image inspect python:3.12-slim --format '{{json .RepoDigests}}' > research/e2-memory-check/resource_results/IMAGE_DIGEST.json
-          set +e
-          docker run --name cw-e2-memory --cpus=2 --memory=3000000000 --memory-swap=3000000000 \
-            -e OPENBLAS_NUM_THREADS=1 -e OMP_NUM_THREADS=1 -e GITHUB_SHA="$GITHUB_SHA" \
-            -v "$PWD:/work" -w /work/research/e2-memory-check python:3.12-slim \
-            sh -c 'python -m pip install --no-cache-dir numpy==2.2.6 scipy==1.15.3 && python measure.py' \
-            2>&1 | tee research/e2-memory-check/resource_results/EXECUTION.log
-          code=${PIPESTATUS[0]}
-          docker inspect cw-e2-memory --format '{{json .State}}' > research/e2-memory-check/resource_results/CONTAINER_STATE.json
-          docker inspect cw-e2-memory --format '{{json .HostConfig}}' > research/e2-memory-check/resource_results/CONTAINER_LIMITS.json
-          exit "$code"
+      - uses: actions/setup-python@e797f83bcb11b83ae66e0230d6156d7c80228e7c
+        with:
+          python-version: '3.12'
+      - name: Install pinned assay dependencies
+        run: python -m pip install -r requirements-assay.txt
+      - name: Reproduce and verify the scientific release
+        run: OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python reproduce_release.py
+      - name: Verify local calibration evidence and support ledger
+        run: python research/e4-local/verify_and_report.py
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         if: always()
         with:
-          name: e2-memory-${{ github.run_id }}
-          retention-days: 7
+          name: chronowitness-code-data-verification
           path: |
-            research/e2-memory-check/resource_results/
-            research/e2-memory-check/benchmark_results/
-            research/e2-memory-check/e2_results/
+            research/results/PUBLIC_VERIFICATION.json
+            research/results/REPRODUCTION_DIFFERENCES.json
+            research/results/ASSAY*.json
+            research/results/ASSAY*.csv
+            research/results/ASSAY*.txt
           if-no-files-found: error
