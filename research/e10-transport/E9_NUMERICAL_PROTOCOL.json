@@ -1,0 +1,58 @@
+{
+  "version": "E9-numerical-1",
+  "frozen_utc": "2026-11-11T12:35:50.000231+00:00",
+  "stage": "before any E9 prediction score",
+  "source_protocol_commit": "d68b5674aa62dced64dcaee8a4890f10afd4cdb1",
+  "history_minutes": 20,
+  "horizons_minutes": [
+    5,
+    10,
+    20
+  ],
+  "origin_stride_minutes": 5,
+  "alignments": [
+    0,
+    1
+  ],
+  "alignment": "future input features u[t+offset:t+h+offset]; both retained, neither selected by performance",
+  "target": "nuclear ERK-KTR / contemporaneous image ERK-KTR intensity; future image intensity used only to define the measured target, never as a predictor",
+  "eligibility": "finite measured values, image intensity>0 and nuclear area>0 throughout continuous history through target; no interpolation or response-amplitude exclusions",
+  "models": [
+    "persistence",
+    "history_no_input",
+    "history_input"
+  ],
+  "ridge_penalties": [
+    1e-06,
+    0.0001,
+    0.01,
+    1,
+    100
+  ],
+  "fit": "direct prediction of target minus current value; equal weight per training CSV; training-only standardization; intercept unpenalized; select penalty by mean per-CSV MSE on calibration day; fixed list order tie-break",
+  "temporal_calibration": "within each test file, early fit targets <=floor(0.35*(last-first))+first; validation origins >=early_end+20 and targets <=floor(0.65*(last-first))+first; late origins >=validation_end+20; all comparisons on the same late support",
+  "local_policies": "per-cell additive mean residual from early fit; require >=5 early windows; unguarded applies this offset; guarded applies only if >=3 validation windows, validation RMSE improves strictly and validation absolute-error q95 <=1.01 times baseline; otherwise retain baseline. No late outcomes enter decisions. Do not reinterpret 1% as significance.",
+  "local_dimensions": [
+    "day",
+    "clock",
+    "field",
+    "cell",
+    "horizon",
+    "alignment",
+    "time_since_last_pulse bins [0,5),[5,15),[15,infinity)",
+    "current target-value bands determined by TRAIN 1/3 and 2/3 quantiles"
+  ],
+  "metrics": [
+    "RMSE",
+    "MAE",
+    "bias",
+    "absolute-error q95",
+    "support",
+    "coverage",
+    "local worsening beyond 1%"
+  ],
+  "units": "days are transport units; cells and overlapping windows not independent replicates; no iid-window p-values",
+  "unknown_input_provenance": "pulse detection code may fall back to programmed input if optical signal missing; no per-file historical flag in export; retain recorded/programmed provenance uncertainty",
+  "scope": "secondary cellular prediction and early-local-calibration evaluation; not a direct FD7/FD8 intervention, not a mechanistic state-number inference",
+  "drive": "persist source archive, frozen source and numerical protocols, audit, atomic residuals and summaries; verify copied bytes"
+}

@@ -1,0 +1,11 @@
+{
+  "status": "COMPLETE_LOCKED_TRANSPORT",
+  "seconds": 650.0034356470001,
+  "peak_rss_kb": 266224,
+  "source_sha256": "ca2bee5a5ac5f3b4d51d794faa9dcd75410a2512fa29f26155f3aaba15fd2317",
+  "protocol_sha256": "599d49ef4429024f7d84351c7c179314f95587fec23a48ef2cbb05bafa059c20",
+  "numpy": "2.4.6",
+  "pandas": "2.2.3",
+  "contexts": 216,
+  "refitted": false
+}

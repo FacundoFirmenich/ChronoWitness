@@ -1,0 +1,58 @@
+[
+  {
+    "date": "2019-09-03",
+    "mode": "ABSTAIN",
+    "cell_contexts": 33032,
+    "windows": 793834,
+    "sum_squared_error_change": 0.0
+  },
+  {
+    "date": "2019-09-03",
+    "mode": "NONHARMFUL",
+    "cell_contexts": 3759,
+    "windows": 103228,
+    "sum_squared_error_change": -15.478050633565058
+  },
+  {
+    "date": "2019-09-03",
+    "mode": "OVERSHOOT",
+    "cell_contexts": 1113,
+    "windows": 32249,
+    "sum_squared_error_change": 5.908457972819667
+  },
+  {
+    "date": "2019-09-03",
+    "mode": "SIGN_REVERSAL",
+    "cell_contexts": 2660,
+    "windows": 70591,
+    "sum_squared_error_change": 26.947734714096054
+  },
+  {
+    "date": "2021-04-07",
+    "mode": "ABSTAIN",
+    "cell_contexts": 30339,
+    "windows": 230103,
+    "sum_squared_error_change": 0.0
+  },
+  {
+    "date": "2021-04-07",
+    "mode": "NONHARMFUL",
+    "cell_contexts": 6126,
+    "windows": 48205,
+    "sum_squared_error_change": -11.410657432111545
+  },
+  {
+    "date": "2021-04-07",
+    "mode": "OVERSHOOT",
+    "cell_contexts": 3834,
+    "windows": 30116,
+    "sum_squared_error_change": 15.876721349294765
+  },
+  {
+    "date": "2021-04-07",
+    "mode": "SIGN_REVERSAL",
+    "cell_contexts": 7701,
+    "windows": 59366,
+    "sum_squared_error_change": 205.77078677641904
+  }
+]

@@ -1,0 +1,39 @@
+{
+  "version": "E10-locked-transport-1",
+  "frozen_utc": "2026-11-11T13:35:46.916290+00:00",
+  "objective": "Transport the unchanged E9 models and early local policies to all 36 ancillary binary records; diagnose exact local risk without selecting a replacement policy.",
+  "scope": "Retrospective external acquisition/protocol transport within one laboratory; no direct FD intervention and no new-laboratory validation.",
+  "known": "E9 outcomes known. Ancillary input metadata inspected in discovery; prediction scores not inspected before this freeze.",
+  "source_sha256": "ca2bee5a5ac5f3b4d51d794faa9dcd75410a2512fa29f26155f3aaba15fd2317",
+  "inherited_protocol_sha256": "6edd9be5ba63c4921344c72b854a6cc07bfb16b004ba7e732b8e0cbcf8f4b64f",
+  "model_selection_sha256": "6015fd269fa22884c7efef285f79c78c108bbca25904da9a3be2dfcf520fb9f0",
+  "model_rule": "Use all 12 frozen E9 model coefficient sets and their TRAIN standardizers/cuts. No refit, penalty selection, or alignment selection.",
+  "acquisition_units": [
+    "2019-09-03",
+    "2021-04-07"
+  ],
+  "clocks_minutes": [
+    5,
+    7,
+    20,
+    30
+  ],
+  "expected_contexts": 216,
+  "dependence": "Same-day files and consecutive clock segments may share cells. Namespaced cell IDs do not imply independence; report each day/clock/horizon/alignment separately.",
+  "temporal_rule": "Inherit E9 35% early, 65% validation, 20-minute origin purge, five-minute stride, horizons 5/10/20, both alignments. Report empty stages, do not alter cutoffs.",
+  "jurisdiction_rule": "Context > cell and context > pulse-age x TRAIN signal-band; retain their intersections with three equal duration LATE-origin segments. Segment cutpoints use timestamps only. Preserve all low-support nodes.",
+  "effect_rule": "Same atomic late support; thresholds 0%,1%,5% are descriptive sensitivity, not statistical significance. Report RMSE, MAE, q95 and exact squared-error difference.",
+  "mechanism": "For constant cell correction c and mean baseline error mu: deltaMSE=c*c-2*c*mu. Sign reversal c*mu<=0 and overshoot c*mu>0 but abs(c)>2*abs(mu) partition harmful nonzero corrections. This algebra is not biological causal attribution.",
+  "prospective_limit": "A future mean interval [L,U] would allow minimax c=projection of zero onto [L,U]. No valid future interval is assumed or estimated from these test outcomes; no oracle policy deployed.",
+  "gates": {
+    "G0": "source and frozen model hashes",
+    "G1": "date disjointness, 36 records, within-day dependence",
+    "G2": "all file schemas and consensus inputs, no duplicate track/time",
+    "G3": "same inherited window and causal features",
+    "G4": "no refit; all 216 contexts or explicit NOT_ESTIMABLE",
+    "G5": "atomic algebra and nested conservation; both alignments and local harms",
+    "G6": "independent metric reconstruction and numerical identities",
+    "G7": "Drive complete readback, public code/report without manuscripts",
+    "G8": "conditional future-policy guarantee unavailable without a justified future-mean bound; direct FD gate not met"
+  }
+}

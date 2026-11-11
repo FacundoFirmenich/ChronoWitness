@@ -1,0 +1,98 @@
+[
+  {
+    "tolerance": 0.0,
+    "kind": "parent",
+    "supported": 216,
+    "q95_harms": 148,
+    "harms_in_unflagged_parents": 0,
+    "distinct_unflagged_parents": 0
+  },
+  {
+    "tolerance": 0.0,
+    "kind": "pulse_band+value_band",
+    "supported": 1656,
+    "q95_harms": 705,
+    "harms_in_unflagged_parents": 198,
+    "distinct_unflagged_parents": 66
+  },
+  {
+    "tolerance": 0.0,
+    "kind": "late_segment",
+    "supported": 648,
+    "q95_harms": 429,
+    "harms_in_unflagged_parents": 89,
+    "distinct_unflagged_parents": 60
+  },
+  {
+    "tolerance": 0.0,
+    "kind": "late_segment+pulse_band+value_band",
+    "supported": 3750,
+    "q95_harms": 1530,
+    "harms_in_unflagged_parents": 378,
+    "distinct_unflagged_parents": 68
+  },
+  {
+    "tolerance": 0.01,
+    "kind": "parent",
+    "supported": 216,
+    "q95_harms": 79,
+    "harms_in_unflagged_parents": 0,
+    "distinct_unflagged_parents": 0
+  },
+  {
+    "tolerance": 0.01,
+    "kind": "pulse_band+value_band",
+    "supported": 1656,
+    "q95_harms": 483,
+    "harms_in_unflagged_parents": 196,
+    "distinct_unflagged_parents": 94
+  },
+  {
+    "tolerance": 0.01,
+    "kind": "late_segment",
+    "supported": 648,
+    "q95_harms": 253,
+    "harms_in_unflagged_parents": 67,
+    "distinct_unflagged_parents": 53
+  },
+  {
+    "tolerance": 0.01,
+    "kind": "late_segment+pulse_band+value_band",
+    "supported": 3750,
+    "q95_harms": 1125,
+    "harms_in_unflagged_parents": 448,
+    "distinct_unflagged_parents": 120
+  },
+  {
+    "tolerance": 0.05,
+    "kind": "parent",
+    "supported": 216,
+    "q95_harms": 53,
+    "harms_in_unflagged_parents": 0,
+    "distinct_unflagged_parents": 0
+  },
+  {
+    "tolerance": 0.05,
+    "kind": "pulse_band+value_band",
+    "supported": 1656,
+    "q95_harms": 276,
+    "harms_in_unflagged_parents": 106,
+    "distinct_unflagged_parents": 50
+  },
+  {
+    "tolerance": 0.05,
+    "kind": "late_segment",
+    "supported": 648,
+    "q95_harms": 152,
+    "harms_in_unflagged_parents": 33,
+    "distinct_unflagged_parents": 27
+  },
+  {
+    "tolerance": 0.05,
+    "kind": "late_segment+pulse_band+value_band",
+    "supported": 3750,
+    "q95_harms": 662,
+    "harms_in_unflagged_parents": 219,
+    "distinct_unflagged_parents": 66
+  }
+]
