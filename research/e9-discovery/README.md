@@ -1,5 +1,7 @@
 # E9: independent-domain discovery and input eligibility
 
+**Historical discovery checkpoint.** The statements below describe the frozen pre-evaluation stage. E9 execution subsequently completed; see `../e9-execution/COMPLETE.json`. E10 and E11 extend the evaluation. This discovery record is preserved without rewriting its original evidential jurisdiction.
+
 **Selected next domain:** human MCF-10A optoFGFR/ERK signaling, Nałęcz-Jawecki et al., Zenodo 7808385 v1.1. Sources and acquisition-day splits are fixed before predictive evaluation. E9 outcome evaluation has not run.
 
 Read [the substantive assessment and decision in Spanish](CIERRE_SUSTANTIVO_Y_DECISION_E9_ES.md), [source protocol](E9_SOURCE_PROTOCOL.json), [cohort manifest](E9_COHORT_MANIFEST.json) and [candidate registry](CANDIDATE_REGISTRY.json).

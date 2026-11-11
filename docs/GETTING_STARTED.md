@@ -2,7 +2,11 @@
 
 Download the source ZIP from the latest release, extract it, and keep the folder intact. You do not need Git or an account. Code: MIT; external datasets keep their original licences.
 
-## A first result, without installing scientific packages
+## Standalone desktop example
+
+The release assets include platform-specific `ChronoWitness-<system>-<architecture>.zip` packages. Extract the archive and run `ChronoWitness` (`ChronoWitness.exe` on Windows). These bundles include their own Python runtime. They run the exact example and open a persistent HTML result; no scientific-package installation or account is needed. The complete campaign uses the Docker route below. Bundles are unsigned; if the operating system blocks them, use the source route rather than disabling security.
+
+## A first result from source, without installing scientific packages
 
 Install Python 3.12 from https://www.python.org/downloads/ if it is not already installed. On Windows select “Add Python to PATH”.
 
