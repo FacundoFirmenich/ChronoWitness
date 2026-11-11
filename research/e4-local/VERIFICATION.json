@@ -1,0 +1,542 @@
+{
+  "status": "PASS_FULL_READBACK_DECISION_AND_PARTITION_VERIFICATION",
+  "manifest_files": 17,
+  "archive_sha256": "870e954822863727b65dbf5cc9966e5598de87a01a7f892fe391de28a907b27c",
+  "rows": 5184,
+  "jurisdictions": 648,
+  "local_support": 270,
+  "summary": [
+    {
+      "policy": "global_affine",
+      "labels": {
+        "LOCAL_OBSERVED_GAIN": 189,
+        "LOCAL_OBSERVED_LOSS": 187,
+        "NOT_ESTIMABLE": 151,
+        "PRACTICAL_TIE": 121
+      },
+      "common_support_labels": {
+        "LOCAL_OBSERVED_GAIN": 117,
+        "PRACTICAL_TIE": 96,
+        "LOCAL_OBSERVED_LOSS": 57
+      }
+    },
+    {
+      "policy": "global_gate_E3",
+      "labels": {
+        "LOCAL_OBSERVED_GAIN": 117,
+        "LOCAL_OBSERVED_LOSS": 51,
+        "NOT_ESTIMABLE": 151,
+        "PRACTICAL_TIE": 329
+      },
+      "common_support_labels": {
+        "LOCAL_OBSERVED_GAIN": 93,
+        "PRACTICAL_TIE": 174,
+        "LOCAL_OBSERVED_LOSS": 3
+      }
+    },
+    {
+      "policy": "global_offset",
+      "labels": {
+        "LOCAL_OBSERVED_LOSS": 102,
+        "LOCAL_OBSERVED_GAIN": 184,
+        "NOT_ESTIMABLE": 151,
+        "PRACTICAL_TIE": 211
+      },
+      "common_support_labels": {
+        "LOCAL_OBSERVED_LOSS": 56,
+        "LOCAL_OBSERVED_GAIN": 108,
+        "PRACTICAL_TIE": 106
+      }
+    },
+    {
+      "policy": "local_affine",
+      "labels": {
+        "LOCAL_OBSERVED_GAIN": 160,
+        "OUT_OF_SUPPORT": 227,
+        "NOT_ESTIMABLE": 151,
+        "PRACTICAL_TIE": 35,
+        "LOCAL_OBSERVED_LOSS": 75
+      },
+      "common_support_labels": {
+        "LOCAL_OBSERVED_GAIN": 160,
+        "PRACTICAL_TIE": 35,
+        "LOCAL_OBSERVED_LOSS": 75
+      }
+    },
+    {
+      "policy": "local_equalmix",
+      "labels": {
+        "LOCAL_OBSERVED_GAIN": 170,
+        "OUT_OF_SUPPORT": 227,
+        "NOT_ESTIMABLE": 151,
+        "PRACTICAL_TIE": 59,
+        "LOCAL_OBSERVED_LOSS": 41
+      },
+      "common_support_labels": {
+        "LOCAL_OBSERVED_GAIN": 170,
+        "PRACTICAL_TIE": 59,
+        "LOCAL_OBSERVED_LOSS": 41
+      }
+    },
+    {
+      "policy": "local_gate",
+      "labels": {
+        "LOCAL_OBSERVED_GAIN": 129,
+        "PRACTICAL_TIE": 141,
+        "OUT_OF_SUPPORT": 227,
+        "NOT_ESTIMABLE": 151
+      },
+      "common_support_labels": {
+        "LOCAL_OBSERVED_GAIN": 129,
+        "PRACTICAL_TIE": 141
+      }
+    },
+    {
+      "policy": "local_offset",
+      "labels": {
+        "PRACTICAL_TIE": 63,
+        "LOCAL_OBSERVED_LOSS": 80,
+        "OUT_OF_SUPPORT": 227,
+        "LOCAL_OBSERVED_GAIN": 127,
+        "NOT_ESTIMABLE": 151
+      },
+      "common_support_labels": {
+        "PRACTICAL_TIE": 63,
+        "LOCAL_OBSERVED_LOSS": 80,
+        "LOCAL_OBSERVED_GAIN": 127
+      }
+    },
+    {
+      "policy": "raw",
+      "labels": {
+        "PRACTICAL_TIE": 497,
+        "NOT_ESTIMABLE": 151
+      },
+      "common_support_labels": {
+        "PRACTICAL_TIE": 270
+      }
+    }
+  ],
+  "local_gate_mae_min_gain": 0.0,
+  "local_gate_tail_increases": [
+    {
+      "jurisdiction": [
+        "2022-04-15",
+        1,
+        6,
+        180,
+        "01",
+        "middle"
+      ],
+      "mae_gain": 0.0240423123490624,
+      "tail_relative_increase": 0.0035684905209216744
+    },
+    {
+      "jurisdiction": [
+        "2022-04-15",
+        1,
+        6,
+        180,
+        "10",
+        "low"
+      ],
+      "mae_gain": 0.6117698768400596,
+      "tail_relative_increase": 0.0013209013288000282
+    },
+    {
+      "jurisdiction": [
+        "2022-04-15",
+        1,
+        6,
+        180,
+        "11",
+        "middle"
+      ],
+      "mae_gain": 0.0323753293411736,
+      "tail_relative_increase": 0.0259375136737936
+    },
+    {
+      "jurisdiction": [
+        "2022-04-21",
+        1,
+        6,
+        132,
+        "00",
+        "high"
+      ],
+      "mae_gain": 0.1635079542974308,
+      "tail_relative_increase": 0.06205049108122851
+    },
+    {
+      "jurisdiction": [
+        "2022-04-21",
+        1,
+        6,
+        156,
+        "00",
+        "high"
+      ],
+      "mae_gain": 0.2206106755955749,
+      "tail_relative_increase": 0.07307562310049809
+    },
+    {
+      "jurisdiction": [
+        "2022-04-21",
+        1,
+        6,
+        180,
+        "00",
+        "high"
+      ],
+      "mae_gain": 0.22873208439182602,
+      "tail_relative_increase": 0.016128486531431285
+    },
+    {
+      "jurisdiction": [
+        "2022-04-23",
+        1,
+        6,
+        156,
+        "00",
+        "middle"
+      ],
+      "mae_gain": 0.04665877720941036,
+      "tail_relative_increase": 0.008121546888040232
+    },
+    {
+      "jurisdiction": [
+        "2022-04-23",
+        1,
+        6,
+        180,
+        "00",
+        "middle"
+      ],
+      "mae_gain": 0.021308134746880758,
+      "tail_relative_increase": 0.014838914624670574
+    },
+    {
+      "jurisdiction": [
+        "2022-04-15",
+        1,
+        12,
+        132,
+        "11",
+        "middle"
+      ],
+      "mae_gain": 0.11289723471060775,
+      "tail_relative_increase": 0.009707011210275951
+    },
+    {
+      "jurisdiction": [
+        "2022-04-15",
+        1,
+        12,
+        180,
+        "01",
+        "middle"
+      ],
+      "mae_gain": 0.04143087278543656,
+      "tail_relative_increase": 0.010212911758411991
+    },
+    {
+      "jurisdiction": [
+        "2022-04-15",
+        1,
+        12,
+        180,
+        "11",
+        "middle"
+      ],
+      "mae_gain": 0.04834508826055761,
+      "tail_relative_increase": 0.02737661358208321
+    },
+    {
+      "jurisdiction": [
+        "2022-04-21",
+        1,
+        12,
+        132,
+        "00",
+        "high"
+      ],
+      "mae_gain": 0.09786652077680602,
+      "tail_relative_increase": 0.07951102376374752
+    },
+    {
+      "jurisdiction": [
+        "2022-04-21",
+        1,
+        12,
+        156,
+        "00",
+        "high"
+      ],
+      "mae_gain": 0.12671400488869033,
+      "tail_relative_increase": 0.07574904458422971
+    },
+    {
+      "jurisdiction": [
+        "2022-04-21",
+        1,
+        12,
+        180,
+        "00",
+        "high"
+      ],
+      "mae_gain": 0.13654268300707362,
+      "tail_relative_increase": 0.05067010545242234
+    },
+    {
+      "jurisdiction": [
+        "2022-04-15",
+        1,
+        24,
+        180,
+        "01",
+        "middle"
+      ],
+      "mae_gain": 0.04603804210202478,
+      "tail_relative_increase": 0.046754548152764475
+    },
+    {
+      "jurisdiction": [
+        "2022-04-15",
+        0,
+        6,
+        156,
+        "01",
+        "middle"
+      ],
+      "mae_gain": 0.06597544682132328,
+      "tail_relative_increase": 0.0013719218957555235
+    },
+    {
+      "jurisdiction": [
+        "2022-04-15",
+        0,
+        6,
+        180,
+        "01",
+        "middle"
+      ],
+      "mae_gain": 0.02634756272623473,
+      "tail_relative_increase": 0.01381418590000738
+    },
+    {
+      "jurisdiction": [
+        "2022-04-15",
+        0,
+        6,
+        180,
+        "10",
+        "middle"
+      ],
+      "mae_gain": 0.019559561911583034,
+      "tail_relative_increase": 0.009668867925645808
+    },
+    {
+      "jurisdiction": [
+        "2022-04-15",
+        0,
+        6,
+        180,
+        "11",
+        "middle"
+      ],
+      "mae_gain": 0.03472657486536335,
+      "tail_relative_increase": 0.02818227803959017
+    },
+    {
+      "jurisdiction": [
+        "2022-04-21",
+        0,
+        6,
+        132,
+        "00",
+        "high"
+      ],
+      "mae_gain": 0.1696172407011427,
+      "tail_relative_increase": 0.03298418004411685
+    },
+    {
+      "jurisdiction": [
+        "2022-04-21",
+        0,
+        6,
+        156,
+        "00",
+        "high"
+      ],
+      "mae_gain": 0.22160527279276876,
+      "tail_relative_increase": 0.058473291017107965
+    },
+    {
+      "jurisdiction": [
+        "2022-04-21",
+        0,
+        6,
+        180,
+        "00",
+        "high"
+      ],
+      "mae_gain": 0.21723801746842586,
+      "tail_relative_increase": 0.014201711945951212
+    },
+    {
+      "jurisdiction": [
+        "2022-04-23",
+        0,
+        6,
+        156,
+        "00",
+        "middle"
+      ],
+      "mae_gain": 0.05671856437493983,
+      "tail_relative_increase": 0.008181689457889885
+    },
+    {
+      "jurisdiction": [
+        "2022-04-23",
+        0,
+        6,
+        180,
+        "00",
+        "middle"
+      ],
+      "mae_gain": 0.019379491938464666,
+      "tail_relative_increase": 0.024894058725582813
+    },
+    {
+      "jurisdiction": [
+        "2022-04-15",
+        0,
+        12,
+        132,
+        "11",
+        "middle"
+      ],
+      "mae_gain": 0.10058793389852982,
+      "tail_relative_increase": 0.00912966024234807
+    },
+    {
+      "jurisdiction": [
+        "2022-04-15",
+        0,
+        12,
+        156,
+        "01",
+        "middle"
+      ],
+      "mae_gain": 0.05884344823823884,
+      "tail_relative_increase": 0.0063647766732610744
+    },
+    {
+      "jurisdiction": [
+        "2022-04-15",
+        0,
+        12,
+        156,
+        "11",
+        "middle"
+      ],
+      "mae_gain": 0.08824470202324808,
+      "tail_relative_increase": 0.009703800294578846
+    },
+    {
+      "jurisdiction": [
+        "2022-04-15",
+        0,
+        12,
+        180,
+        "01",
+        "middle"
+      ],
+      "mae_gain": 0.043458834360525445,
+      "tail_relative_increase": 0.01853561004154436
+    },
+    {
+      "jurisdiction": [
+        "2022-04-15",
+        0,
+        12,
+        180,
+        "11",
+        "middle"
+      ],
+      "mae_gain": 0.04448338691859499,
+      "tail_relative_increase": 0.03546526359647606
+    },
+    {
+      "jurisdiction": [
+        "2022-04-23",
+        0,
+        12,
+        132,
+        "00",
+        "low"
+      ],
+      "mae_gain": 0.12823567604510988,
+      "tail_relative_increase": 0.04365494037482409
+    },
+    {
+      "jurisdiction": [
+        "2022-04-15",
+        0,
+        24,
+        180,
+        "00",
+        "middle"
+      ],
+      "mae_gain": 0.0931922605063602,
+      "tail_relative_increase": 0.04426710064892947
+    }
+  ],
+  "primary": [
+    {
+      "date": "2022-04-15",
+      "mae_gain_percent": 5.857196596795866,
+      "rmse_gain_percent": 2.225122132726254,
+      "tail_change_percent": 1.0893867539489177
+    },
+    {
+      "date": "2022-04-21",
+      "mae_gain_percent": 1.6312351161029248,
+      "rmse_gain_percent": 0.7809266882457977,
+      "tail_change_percent": 0.49016610964387475
+    },
+    {
+      "date": "2022-04-23",
+      "mae_gain_percent": 0.5115941952301917,
+      "rmse_gain_percent": 0.2770680876419074,
+      "tail_change_percent": -0.011868932933156717
+    }
+  ],
+  "execution": {
+    "status": "COMPLETE_E4_COLAB",
+    "source_commit": "0962ca196892f2a1e62aeca08ba87c4ef120e15b",
+    "started_unix": 1794363687.5009394,
+    "cpu_count": 2,
+    "meminfo": [
+      "MemTotal:       13286932 kB",
+      "MemFree:         9708200 kB",
+      "MemAvailable:   12278044 kB"
+    ],
+    "stages": [
+      {
+        "stage": "environment",
+        "seconds": 1.9232621569999537
+      },
+      {
+        "stage": "download_verify",
+        "seconds": 50.76011647699988
+      },
+      {
+        "stage": "E4_science",
+        "seconds": 10.535861065000063
+      }
+    ],
+    "elapsed_seconds": 63.43267657000024,
+    "maximum_child_rss_kib": 476172
+  }
+}
