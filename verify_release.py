@@ -40,7 +40,8 @@ def compare_assay(old,fresh,name):
 
 def main():
     manifest=json.loads((ROOT/'RELEASE_MANIFEST.json').read_text())
-    assert manifest['version']=='0.13.0' and len(manifest['files'])>70
+    version=manifest['version']
+    assert version.count('.')==2 and all(x.isdigit() for x in version.split('.')) and len(manifest['files'])>70
     actual={p.relative_to(ROOT).as_posix() for p in ROOT.rglob('*') if p.is_file() and '.git' not in p.parts and '__pycache__' not in p.parts and not p.is_relative_to(R/'results')}
     assert actual==set(manifest['files'])|{'RELEASE_MANIFEST.json'},sorted(actual-set(manifest['files'])-{'RELEASE_MANIFEST.json'})
     for name,h in manifest['files'].items():
@@ -48,8 +49,9 @@ def main():
         assert not any(x in name.lower() for x in ['manuscript','supplementary_information','typeset','editorial','complete.zip','completo.zip']),name
         assert Path(name).suffix.lower() not in {'.pdf','.tex','.docx','.doc','.tar','.gz'},name
         if name.endswith('.zip'): assert manifest.get('reviewed_computational_archives',{}).get(name)==h,name
-    meta=json.loads((ROOT/'.zenodo.json').read_text());assert meta['license']=='MIT' and meta['version']=='0.13.0' and meta['upload_type']=='software'
-    assert 'MIT' in (ROOT/'CITATION.cff').read_text()
+    meta=json.loads((ROOT/'.zenodo.json').read_text());assert meta['license']=='MIT' and meta['version']==version and meta['upload_type']=='software'
+    citation=(ROOT/'CITATION.cff').read_text()
+    assert 'MIT' in citation and ('version: '+version+'\n') in citation
     execution=json.loads((R/'results/EXECUTION.json').read_text());assert execution['status']=='PASS_EXACT_MATHEMATICAL_RESULTS' and len(execution['commands'])==11 and all(x['exit_code']==0 for x in execution['commands'])
     compared=[];numerical_comparisons=[]
     for old in sorted((ROOT/'expected/core').iterdir()):
@@ -76,7 +78,7 @@ def main():
     power=json.loads((R/'results/DESIGN_POWER.json').read_text());assert power['status']=='PASS_EXACT_DECLARED_POWER' and power['rows']==120
     tutorial=json.loads((R/'results/DESIGN_TUTORIAL.json').read_text());assert tutorial['fixed_horizon_design']['sufficient_blocks_certified']==200326
     assay=json.loads((R/'results/ASSAY_AUDIT.json').read_text());assert assay['status']=='PASS_FROZEN_TRAJECTORY_CAMPAIGN' and len(assay['power'])==72
-    out=dict(numerical_reference_comparisons=numerical_comparisons,assay_settings=72,design_contrast=cert['absolute_contrast'],power_rows=power['rows'],status='PASS_PUBLIC_CODE_DATA_REPRODUCTION',version='0.13.0',manifest_files=len(manifest['files']),compared_results=len(compared),compared_names=compared,kinetic_counts=audit['counts'],publication_scope='Software and mathematical data; manuscripts excluded',license='MIT')
+    out=dict(numerical_reference_comparisons=numerical_comparisons,assay_settings=72,design_contrast=cert['absolute_contrast'],power_rows=power['rows'],status='PASS_PUBLIC_CODE_DATA_REPRODUCTION',version=version,manifest_files=len(manifest['files']),compared_results=len(compared),compared_names=compared,kinetic_counts=audit['counts'],publication_scope='Software and mathematical data; manuscripts excluded',license='MIT')
     (R/'results/PUBLIC_VERIFICATION.json').write_text(json.dumps(out,indent=2)+'\n')
     print(json.dumps(out,indent=2))
 if __name__=='__main__':main()
