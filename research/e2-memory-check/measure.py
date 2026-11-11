@@ -27,7 +27,13 @@ def main():
     OUT.mkdir(exist_ok=True)
     p=json.loads((HERE/'E2_PROTOCOL.json').read_text())
     limit=int(counter('memory.max')); swap=int(counter('memory.swap.max'))
-    assert limit==p['resource_gate']['memory_limit_bytes'] and swap==0
+    preflight=dict(memory_max=limit,swap_max=swap,cpu_max=counter('cpu.max'),
+        page_size=os.sysconf('SC_PAGE_SIZE'),requested_memory=p['resource_gate']['memory_limit_bytes'])
+    (OUT/'PREFLIGHT.json').write_text(json.dumps(preflight,indent=2)+'\n')
+    print(json.dumps(preflight),flush=True)
+    # Linux rounds byte limits down to a whole memory page; never accept a larger limit.
+    requested=p['resource_gate']['memory_limit_bytes']
+    assert 0 <= requested-limit < preflight['page_size'] and swap==0, preflight
     quota,period=map(int,counter('cpu.max').split());assert quota/period==2
     start=time.monotonic();stages=[]; verified=False
     try:
