@@ -57,7 +57,7 @@
       "id": "e9",
       "title": "Frozen temporal prediction E9",
       "status": "OBSERVED",
-      "source": "research/e9-execution/CIERRE_SUSTANTIVO_E9_ES.md",
+      "source": "research/e9-execution/E9_NUMERICAL_PROTOCOL.json",
       "meaning": "Temporal split and fixed prediction coefficients."
     },
     {

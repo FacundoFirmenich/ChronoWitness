@@ -24,19 +24,23 @@ def compare_assay(old,fresh,name):
         assert len(a)==len(b)
         error=max(abs(x-y) for x,y in zip(a,b));assert error<=2e-13,(name,error)
         return dict(file=name,maximum_absolute_difference=error,tolerance=2e-13)
-    a=stable(json.loads(old.read_text()));b=stable(json.loads(fresh.read_text()))
+    a=stable(json.loads(old.read_text()));b=stable(json.loads(fresh.read_text()));environment={}
     if name=='ASSAY_AUDIT.json':
         # Each run's file hashes remain exact integrity checks of its own bytes.
         for key,folder,prefix in [('output_sha256',R/'results',''),('source_sha256',R/'assay_frontier','')]:
             for n,h in b[key].items():assert sha((folder/(prefix+n)).read_bytes())==h,(name,n)
         for n,h in a['output_sha256'].items():assert sha((old.parent/('Data_S13_'+n.lower())).read_bytes())==h,(name,n)
         a.pop('output_sha256');b.pop('output_sha256')
+        # Compiler identity is provenance, not a scientific result. Retain both
+        # identities in the report; counts, source hashes and tolerances stay exact.
+        environment={'reference_compiler':a.pop('compiler'),'observed_compiler':b.pop('compiler')}
+        assert all(isinstance(v,str) and v.strip() for v in environment.values())
     delta=differences(a,b);error=0.
     for path,x,y in delta:
         # Counts, seeds, pass/fail flags, protocol and source hashes stay exact.
         assert type(x) is float and type(y) is float,(name,path,x,y)
         error=max(error,abs(x-y));assert abs(x-y)<=2e-10,(name,path,x,y)
-    return dict(file=name,maximum_absolute_difference=error,tolerance=2e-10)
+    return dict(file=name,maximum_absolute_difference=error,tolerance=2e-10,**environment)
 
 def main():
     manifest=json.loads((ROOT/'RELEASE_MANIFEST.json').read_text())

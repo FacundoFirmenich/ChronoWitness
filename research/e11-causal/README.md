@@ -1,54 +1,52 @@
-# E11 · Calibración causal con jurisdicciones anidadas
+# E11 · Causal calibration across nested jurisdictions
 
-E11 desarrolla una corrección temporal sobre E9/E10 y reserva 14 adquisiciones con estímulos por intervalos para evaluar una sola política seleccionada. La historia de estímulo y el predictor base permanecen congelados; la modificación afecta exclusivamente a la corrección de sus errores.
+E11 develops a temporal correction on E9/E10 and reserves 14 interval-stimulation acquisitions to evaluate one selected policy. The input history and base predictor remain frozen; the intervention changes only error calibration.
 
-## Regla causal
+## Causal update
 
-En el instante de predicción t se admiten únicamente errores del mismo identificador celular cuyo objetivo ya fue observado: s+h<t. Se conserva una memoria de 180 o 360 minutos y se toman como máximo los 12 intervalos de predicción más recientes que no se solapan en su interior. Esto evita reutilizar indefinidamente un sesgo inicial, pero no hace independientes las observaciones ni sus historias.
+At prediction time t, admissible errors belong to the same cell and have already observed targets: s+h<t. The policy retains a 180- or 360-minute memory and at most the 12 most recent prediction intervals with non-overlapping interiors. This prevents indefinite reuse of an initial bias; it does not make observations or their histories independent.
 
-La variante anidada busca soporte en célula × fase de pulso × banda de señal, después en célula × fase de pulso y finalmente en célula. Las bandas de señal proceden exclusivamente del TRAIN de E9. La variante de control utiliza solamente el nivel celular. Se exige un mínimo de seis errores maduros; los dos bloques cronológicos contienen al menos tres cada uno.
+The nested variant seeks support in cell × pulse phase × signal band, then cell × pulse phase, then cell. Signal bands come exclusively from E9 TRAIN. The control variant uses the cell level only. At least six mature errors are required, with at least three in each of two chronological blocks.
 
-Si las medias de error de ambos bloques tienen el mismo signo no nulo, se propone
+When the two block means have the same nonzero sign, the proposal is
 
 `c = shrink * sign(mu_recent) * min(abs(mu_older), abs(mu_recent))`,
 
-con shrink igual a 0,25 o 0,5. La corrección se acepta únicamente si en cada bloque el percentil 95 del error absoluto corregido no supera 1,01 veces el original. En caso contrario se conserva la predicción base. Si una jurisdicción tiene soporte suficiente pero falla ese criterio, no se retrocede a una jurisdicción más amplia para forzar una corrección.
+with shrink 0.25 or 0.5. The proposal is admitted only when the corrected absolute-error 95th percentile in each historical block is at most 1.01 times its original value. Otherwise the base prediction is retained. A supported jurisdiction that fails this criterion cannot fall back to a broader jurisdiction merely to force a correction.
 
-El acuerdo y el control de colas son criterios históricos de admisión. No constituyen una banda de confianza para la media futura ni una garantía prospectiva de ausencia de daño. Los residuos utilizados como realimentación son siempre los del predictor base, no los del predictor ya corregido.
+Agreement and tail checks are historical admission rules. They are neither future-mean confidence bounds nor prospective no-harm guarantees. Feedback always uses the base predictor's residuals, not the corrected predictor's residuals.
 
-## Desarrollo y evaluación
+## Development and reserved evaluation
 
-Las ocho combinaciones se comparan sobre cuatro días ya examinados de E9/E10. Se descartan las que no actúan en al menos el 1% de las ventanas de cada día o cuyo RMSE medio relativo por día supera 1,05. Entre las admisibles, la selección prioriza la peor fracción diaria media de jurisdicciones pulso/señal con daño de q95 superior al 1%; después, su media entre días; después, la media entre días del logaritmo de la razón de RMSE. Los empates se resuelven por identificador. Estos son criterios de diseño, no pruebas de significación.
+Eight combinations are compared on four acquisition dates already examined in E9/E10. Candidates are rejected if they act on fewer than 1% of windows on any date or if their mean daily relative RMSE exceeds 1.05. Among admissible candidates, selection first minimizes the worst daily mean fraction of pulse/signal jurisdictions with q95 harm above 1%, then its mean across dates, then the mean daily log RMSE ratio. Identifiers break ties. These are design criteria, not significance tests.
 
-`SELECTED_POLICY.json` se genera antes de ejecutar la reserva. Si ninguna candidata cumple la admisión, la reserva permanece sin puntuar. Una vez seleccionada, la candidata se compara sobre idénticas ventanas tardías con el predictor base, el predictor sin historia de entrada, la persistencia y la protección fija de E9. Durante el tramo tardío puede utilizar resultados anteriores que ya han madurado; se trata de una evaluación secuencial con realimentación.
+`SELECTED_POLICY.json` is generated before the reserve is scored. If no candidate is admissible, the reserve remains unscored. The selected candidate is compared on identical late windows with the base predictor, signal-history-only predictor, persistence and fixed E9 guard. Previously matured late outcomes may enter later updates: this is sequential evaluation with feedback.
 
-Los horizontes siguen siendo 5, 10 y 20 minutos, ambos alineamientos se conservan y no se modifica el predictor con los resultados de la reserva. El predictor base utiliza las futuras entradas programadas, como E9: se evalúa predicción condicionada al estímulo conocido, no predicción de intervenciones futuras desconocidas.
+Horizons remain 5, 10 and 20 minutes; both alignments are retained. The predictor is not changed using reserved outcomes. As in E9, the base predictor uses scheduled future inputs: prediction is conditional on a known stimulation program.
 
-La política revisada utiliza realimentación de errores tardíos anteriores ya maduros, mientras la protección fija mantiene su sesgo temprano. La comparación evalúa el régimen completo de actualización, memoria, contracción y localidad. No identifica aisladamente el efecto causal de la anidación. Las variantes celulares y las otras memorias se comparan para desarrollo y selección; no se puntúan como nuevas alternativas en la reserva.
+The updated policy uses mature late residuals, whereas the fixed guard retains its early bias. Their comparison evaluates the entire update, memory, shrinkage and locality regime; it does not isolate the causal effect of nesting. Cell-only variants and alternative memories are used for development and selection, not scored as additional candidates on the reserve.
 
-Se mantienen padres, células, intersecciones pulso/señal, segmentos temporales e intersecciones de esos segmentos. Los nodos con menos de 20 ventanas se conservan como LOW_SUPPORT. Se reconstruye el MSE del padre desde cada partición disjunta. Los percentiles se calculan desde observaciones atómicas, sin promediar percentiles de hijos.
+Parent views, cells, pulse/signal intersections, temporal segments and their intersections are preserved. Nodes with fewer than 20 windows retain LOW_SUPPORT. Parent MSE is reconstructed from each disjoint partition. Percentiles are calculated from atomic observations, never by averaging child percentiles.
 
-## Procedencia y límites
+## Provenance and scope
 
-Las 14 fechas reservadas son disjuntas de E9/E10 y pertenecen al mismo estudio y laboratorio. Algunas son anteriores al entrenamiento de E9; esta es una evaluación retrospectiva de transporte entre adquisiciones. El archivo min15_optmean_rep1.csv queda en cuarentena por la discrepancia 2020-02-08 / 2020-02-09 de su configuración original. No se inventa una fecha y no se calculan sus resultados predictivos.
+The 14 reserved dates are disjoint from E9/E10 and come from the same study and laboratory. Some precede E9 training: this is retrospective transport between acquisitions. `min15_optmean_rep1.csv` remains quarantined because its source folder indicates 2020-02-08 while its acquisition identifier indicates 2020-02-09. Neither date is invented or silently preferred; predictive outcomes for this record are not calculated.
 
-Los recuentos de archivos, células y ventanas no son recuentos de réplicas independientes. El análisis de estabilidad por remuestreo utiliza pares de resúmenes de adquisición observados; no genera trayectorias celulares ni considera independientes las ventanas. Su intervalo percentil describe estabilidad frente al remuestreo del banco observado y no garantiza representatividad poblacional.
+Files, cells and windows are not independent-replicate counts. The stability resampling uses paired summaries of observed acquisitions. It creates no cellular trajectories and does not treat windows as independent. Its percentile interval describes sensitivity to resampling this observed bank, not population representativeness.
 
-Los registros no implementan los dos brazos físicos FD7/FD8. La evidencia corresponde al transporte de predicción y calibración, separado de los certificados de identidad temporal.
+The inputs do not implement paired physical FD7/FD8 arms. These results concern predictive transport and calibration, separately from temporal-identity certificates. The ledger retains 6/756 pulse/signal and 81/2268 fine nodes with q95 harm above 1%; uniform local no-harm is not established.
 
-## Reproducción
+## Reproduction
 
-Crear `E11_INPUTS.zip` con `e9_core.py`, `MODEL_SELECTION.json`, `E9_NUMERICAL_PROTOCOL.json`, `policy.py`, `COHORTS.json` y `E11_PROTOCOL.json`. Copiar ese ZIP, `preflight.py`, `run_e11.py` y `analyze_reserve.py` a `/content` en Colab CPU.
+Create `E11_INPUTS.zip` containing `e9_core.py`, `MODEL_SELECTION.json`, `E9_NUMERICAL_PROTOCOL.json`, `policy.py`, `COHORTS.json` and `E11_PROTOCOL.json`. Copy it with `preflight.py`, `run_e11.py` and `analyze_reserve.py` to `/content` in a fresh Colab CPU runtime.
 
-1. Ejecutar `python /content/preflight.py`. Instala NumPy 2.2.6, pandas 2.2.3 y Numba 0.61.2; descarga y verifica el archivo fuente; audita los 62 CSV admitidos.
-2. Ejecutar `python /content/run_e11.py development`. Conserva todas las comparaciones y congela una candidata si existe alguna admisible.
-3. Solamente con `SELECTED_POLICY.json` en estado `FROZEN_BEFORE_RESERVE`, ejecutar `python /content/run_e11.py reserve`.
-4. Ejecutar `python /content/analyze_reserve.py` después de completar los 84 contextos reservados. Requiere también matplotlib.
+1. Run `python /content/preflight.py`. It installs NumPy 2.2.6, pandas 2.2.3 and Numba 0.61.2, downloads and verifies the source archive, and audits the 62 admitted CSV inputs.
+2. Run `python /content/run_e11.py development`. It retains all comparisons and freezes one admissible policy, if one exists.
+3. Only after `SELECTED_POLICY.json` records `FROZEN_BEFORE_RESERVE`, run `python /content/run_e11.py reserve`.
+4. After all 84 reserved contexts finish, run `python /content/analyze_reserve.py`; this also requires matplotlib.
 
-Los resultados se escriben en `/content/chronowitness-e11-20261111`. Utilizar un runtime nuevo para una reproducción independiente. La auditoría separada comprueba métricas, identidades y maduración; durante ejecución se contrasta la fórmula del predictor por dos expresiones algebraicas y la política con otra implementación y con enmascaramiento de errores futuros. Esto no constituye un nuevo ajuste independiente de los modelos.
+Outputs reside in `/content/chronowitness-e11-20261111`. Separate audits reconstruct metrics, risk identities and maturation. The predictor is checked through two algebraic expressions; the policy is checked against another implementation and future-error masking. These checks do not constitute an independently fitted predictor. Drive is not mounted automatically; historical custody used an authenticated connector and complete-byte readback.
 
-La custodia de esta campaña se realiza mediante el conector autenticado de Drive con lectura íntegra de los bytes. Los scripts no montan Drive automáticamente.
+## Licences
 
-## Licencias
-
-Código original de ChronoWitness: MIT. Datos de Nałęcz-Jawecki et al.: [Zenodo 7808385 v1.1](https://doi.org/10.5281/zenodo.7808385), CC-BY-4.0. Artículo: [The MAPK/ERK channel capacity exceeds 6 bit/hour](https://doi.org/10.1371/journal.pcbi.1011155). La procedencia de fechas se conserva respecto del commit `03f9a059d91caa2b72873e2317134ea7f7500203` de `pawelnalecz/pulsatile-information`. Las licencias de datos originales se conservan; los manuscritos privados y el anexo comercial no forman parte de esta publicación de código.
+Original code: MIT. Data: [Zenodo 7808385 v1.1](https://doi.org/10.5281/zenodo.7808385), CC-BY-4.0; [primary article](https://doi.org/10.1371/journal.pcbi.1011155). Date attribution retains upstream commit `03f9a059d91caa2b72873e2317134ea7f7500203`. Source licences remain applicable. Private manuscripts and the commercial annex are excluded. Historical receipts remain preserved in their original language.

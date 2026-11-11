@@ -1,4 +1,4 @@
-# Start here / Empezar aquí
+# Getting started
 
 Download the source ZIP from the latest release, extract it, and keep the folder intact. You do not need Git or an account. Code: MIT; external datasets keep their original licences.
 
@@ -26,6 +26,3 @@ The verified Linux reference previously took about five minutes for scientific c
 
 The full core route does not rerun every external-cell campaign. E1–E11 have separate input datasets, acquisition protocols and resource needs, linked in [the evidence ledger](EVIDENCE_LEDGER.json). E11 is the latest public cellular analysis. E12 remains private retrospective development. New records require their own protocol; rerunning an exposed reserve does not create a new holdout.
 
-## Español
-
-Descomprimí el ZIP completo. Para el primer ejemplo basta Python 3.12: doble clic en `Start-Windows.cmd`, o `sh Start-macOS.command` / `sh start-linux.sh`. Para reproducir el núcleo completo, iniciá Docker y ejecutá `python launch.py --mode full`. Los resultados quedan en `research/results/`. El mapa HTML funciona sin servidor ni conexión. Las campañas celulares se reproducen por separado siguiendo sus protocolos; sus unidades independientes son adquisiciones, no ventanas solapadas.

@@ -1,14 +1,14 @@
-# E10 · Transporte temporal y riesgo local
+# E10 · Temporal transport and local risk
 
-E10 evalúa los modelos y políticas congelados de E9 en 36 archivos de otras dos adquisiciones, con relojes de estímulo de 5, 7, 20 y 30 minutos. Conserva 216 combinaciones de archivo, horizonte y alineamiento. La auditoría posterior reconstruye métricas desde residuos, decisiones de protección y descomposición exacta del cambio de error cuadrático.
+E10 evaluates the frozen E9 models and policies on 36 files from two additional acquisitions, with stimulation clocks of 5, 7, 20 and 30 minutes. It retains 216 file–horizon–alignment contexts. The subsequent audit reconstructs metrics from residuals, checks protection decisions and verifies the exact decomposition of squared-error changes.
 
-Las unidades de transporte son dos días, no 216 réplicas. Los campos y los diferentes relojes de una fecha pueden compartir células o segmentos de adquisición. La evaluación es retrospectiva, del mismo laboratorio y con protocolos distintos de FD7/FD8.
+The transport units are two acquisition dates, not 216 independent replicates. Fields and stimulation clocks from one date may share cells or acquisition segments. This is retrospective evaluation within the same laboratory, using input programs other than FD7/FD8.
 
-## Reproducción en Colab CPU
+## Reproduction on Colab CPU
 
-Los archivos necesarios son `e9_core.py`, `MODEL_SELECTION.json`, `E9_NUMERICAL_PROTOCOL.json`, `E10_COHORT.json`, `E10_PROTOCOL.json`, `run_e10.py` y `analyze_e10.py`. Los coeficientes se distribuyen íntegros; no se ajusta un modelo nuevo. El protocolo conserva la suma SHA-256 de esos coeficientes y del protocolo heredado.
+Required files: `e9_core.py`, `MODEL_SELECTION.json`, `E9_NUMERICAL_PROTOCOL.json`, `E10_COHORT.json`, `E10_PROTOCOL.json`, `run_e10.py` and `analyze_e10.py`. The complete coefficients are distributed; no model is refitted. The protocol records SHA-256 hashes of the coefficients and inherited protocol.
 
-En el directorio que contiene estos archivos, crear el paquete de entrada:
+Create the input archive in the directory containing these files:
 
 ```python
 import zipfile
@@ -19,20 +19,20 @@ with zipfile.ZipFile('E10_INPUTS.zip', 'x', zipfile.ZIP_DEFLATED) as z:
         z.write(name, name)
 ```
 
-Copiar el ZIP y ambos scripts a `/content` de Colab. Ejecutar `python /content/run_e10.py`; cuando termine con estado COMPLETE, ejecutar `python /content/analyze_e10.py`. El segundo script requiere NumPy, pandas y matplotlib. `COMPLETE.json` registra versiones efectivamente utilizadas para la evaluación. La fuente original se descarga directamente de Zenodo y se acepta únicamente si su tamaño y SHA-256 coinciden con el protocolo. Los resultados se escriben en `/content/chronowitness-e10-20261111`.
+Copy the archive and both execution scripts to `/content` in Colab. Run `python /content/run_e10.py`. After COMPLETE, run `python /content/analyze_e10.py`; the latter requires NumPy, pandas and matplotlib. `COMPLETE.json` records the versions actually used. The original source is downloaded directly from Zenodo and admitted only when its size and SHA-256 match the protocol. Outputs are written to `/content/chronowitness-e10-20261111`.
 
-Para repetir una ejecución se debe utilizar un runtime nuevo o un directorio propio aislado: no mezclar resultados de campañas distintas. La ejecución no monta Drive por sí sola. La custodia de esta campaña se realiza mediante el conector autenticado y se verifica leyendo los bytes remotos.
+Use a fresh runtime or a separately isolated directory for each reproduction. Do not mix campaign outputs. The scripts do not mount Drive. The historical custody operation used an authenticated connector and complete remote-byte verification; that custody receipt is separate from scientific execution.
 
-## Evidencia y conservación
+## Evidence and retained distinctions
 
-`SCHEMA_AUDIT.json` identifica los archivos admitidos. `SUPPORT.json` conserva la distribución de ventanas por etapa y contexto. Los archivos de residuos contienen identidad de célula y tiempo, observable, objetivo, jurisdicción y error de cada método. Las decisiones por célula conservan soporte temprano, corrección, métricas de validación y aceptación. `VERIFICATION.json` comprueba su reconstrucción sin afirmar un segundo ajuste de modelos.
+`SCHEMA_AUDIT.json` identifies admitted inputs. `SUPPORT.json` retains windows by stage and context. Residual records retain cell and time identity, observable, target, jurisdiction and each method's error. Cell-level decisions retain early support, correction, validation metrics and acceptance. `VERIFICATION.json` checks reconstruction; it does not assert an independent second model fit.
 
-`CELL_RISK_DECOMPOSITION.csv.gz` separa dirección incompatible y exceso de corrección. `NESTED_NODES.csv` conserva padres, intersecciones de pulso/señal y segmentos temporales, incluidos LOW_SUPPORT. Las particiones se reconstruyen individualmente sin sumar observaciones repetidas entre particiones. `THRESHOLD_SENSITIVITY.json` registra umbrales descriptivos de 0%, 1% y 5%.
+`CELL_RISK_DECOMPOSITION.csv.gz` separates incompatible correction direction from excessive correction magnitude. `NESTED_NODES.csv` retains parents, pulse/signal intersections and temporal segments, including LOW_SUPPORT. Each partition is reconstructed separately; repeated observations across partitions are not added as independent data. `THRESHOLD_SENSITIVITY.json` retains descriptive tolerances of 0%, 1% and 5%.
 
-La nota `FRONTERA_MATEMATICA_ES.md` expone el criterio exacto de riesgo y las condiciones adicionales que exigiría una garantía prospectiva. `NEXT_RESERVE_METADATA.json` identifica registros de intervalos todavía no evaluados predictivamente, manteniendo una discrepancia de fechas sin resolver.
+The archived mathematical note specifies the exact risk identity and additional conditions required for a prospective guarantee. `NEXT_RESERVE_METADATA.json` records the interval-stimulation acquisitions that were unscored at the E10 checkpoint, including an unresolved date conflict. E11 subsequently evaluates the 14 concordant acquisitions; the conflict remains unscored. Historical receipts retain their original timestamp and language.
 
-## Atribución y licencia
+## Attribution and licence
 
-Código original de ChronoWitness: MIT, conforme a la licencia del repositorio. Datos de Nałęcz-Jawecki y colaboradores: [Zenodo, versión 1.1](https://doi.org/10.5281/zenodo.7808385), CC-BY-4.0. Referencia científica: [The MAPK/ERK channel capacity exceeds 6 bit/hour](https://doi.org/10.1371/journal.pcbi.1011155). La configuración original utilizada para atribuir fechas corresponde al commit `03f9a059d91caa2b72873e2317134ea7f7500203` de `pawelnalecz/pulsatile-information`.
+ChronoWitness code: MIT. Nałęcz-Jawecki and colleagues' data: [Zenodo v1.1](https://doi.org/10.5281/zenodo.7808385), CC-BY-4.0. Scientific source: [The MAPK/ERK channel capacity exceeds 6 bit/hour](https://doi.org/10.1371/journal.pcbi.1011155). Acquisition-date attribution uses commit `03f9a059d91caa2b72873e2317134ea7f7500203` of `pawelnalecz/pulsatile-information`.
 
-Las licencias de las fuentes originales se conservan; MIT no sustituye CC-BY-4.0. Este directorio contiene código y documentación de investigación, no los manuscritos privados ni el anexo comercial.
+MIT does not replace the original data licence. Private manuscripts and the confidential commercial annex are excluded.

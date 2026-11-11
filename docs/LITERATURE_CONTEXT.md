@@ -13,3 +13,10 @@ ChronoWitness complements parameter-estimation and stimulus-design methods with 
 | [Clopper and Pearson, binomial intervals](https://doi.org/10.2307/2331986) | Quantifies Monte Carlo uncertainty in first-crossing proportions; simultaneous intervals use Bonferroni allocation. |
 
 This is targeted primary-source contextualization. It does not establish hardware integration, measured biological power or an exhaustive priority assessment. The simulation study and prospective application specification are described in the [trajectory assay guide](TRAJECTORY_ASSAY.md).
+
+
+## Contemporary experimental context
+
+[Cell-in-the-loop pattern formation (2020)](https://doi.org/10.1038/s41467-020-15166-3) combines living cells with computed signalling. [Temporal MAPK/ERK transmission (2023)](https://doi.org/10.1371/journal.pcbi.1011155) supplies a primary experimental reference and the data used in the external-data studies. [Deep model predictive control (2024)](https://doi.org/10.1038/s41467-024-46361-1) demonstrates feedback control across thousands of single cells. [CytoTape (2026)](https://doi.org/10.1038/s41586-026-10156-9) extends recording of gene-regulatory dynamics across weeks.
+
+These technologies and studies address distinct observational and control targets. ChronoWitness contributes exact temporal-input identities and explicit inferential conditions for a specified reader class. Hardware integration and validation of the paired FD7/FD8 intervention remain separate tasks. See the [53-reference bibliography](REFERENCES.md).

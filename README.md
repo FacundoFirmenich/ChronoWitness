@@ -4,8 +4,10 @@
 
 **Start:** download and extract the latest source ZIP. Windows: `Start-Windows.cmd`; macOS: `sh Start-macOS.command`; Linux: `sh start-linux.sh`. The exact example uses Python only. Complete core reproduction: `python launch.py --mode full` with Docker running.
 
-**Current public evidence:** E9 fixes temporal prediction, E10 tests transport to additional acquisitions, and E11 evaluates a selected causal calibration policy on 14 reserved acquisitions. Each retains local tail harms and unsupported jurisdictions. [E9](research/e9-execution/CIERRE_SUSTANTIVO_E9_ES.md) Â· [E10](research/e10-transport/README.md) Â· [E11](research/e11-causal/README.md).
+**Current public evidence:** E9 fixes temporal prediction, E10 tests transport to additional acquisitions, and E11 evaluates a selected causal calibration policy on 14 reserved acquisitions. Each retains local tail harms and unsupported jurisdictions. [E9](research/e9-execution/E9_NUMERICAL_PROTOCOL.json) Â· [E10](research/e10-transport/README.md) Â· [E11](research/e11-causal/README.md).
 
+
+![Visual abstract: exact temporal identities, qualified observation and local evidence](docs/assets/VISUAL_ABSTRACT_EN.svg)
 
 **Temporal input design for testing models of cellular memory.**
 
