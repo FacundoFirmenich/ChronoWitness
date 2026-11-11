@@ -1,0 +1,90 @@
+{
+  "version": "E9-source-and-cohort-1",
+  "frozen_utc": "2026-11-11T12:10:35.270687+00:00",
+  "status": "SOURCE_AND_COHORT_FROZEN_BEFORE_PREDICTION; E9_OUTCOME_EVALUATION_NOT_RUN",
+  "objective": "Evaluate temporal reconstruction and local calibration across independent acquisition days in human MCF-10A optoFGFR/ERK; separately audit compatibility of recorded stimulus protocols with FD designs.",
+  "source": {
+    "doi": "10.5281/zenodo.7808385",
+    "version": "1.1",
+    "license": "CC-BY-4.0",
+    "bytes": 723609060,
+    "publisher_md5": "4aef737b263424dbdb06e15f827ccad2",
+    "whole_archive_hash_verification_required_before_scoring": true
+  },
+  "code_provenance": {
+    "repository": "https://github.com/pawelnalecz/pulsatile-information",
+    "commit": "03f9a059d91caa2b72873e2317134ea7f7500203",
+    "mapping": "code/core/experiment_manager.py: repeated_pseudorandom_date, experiments and map_to_official_naming"
+  },
+  "primary_split": {
+    "TRAIN": [
+      "2021-04-27",
+      "2021-04-28"
+    ],
+    "CALIBRATION": [
+      "2021-04-29"
+    ],
+    "TEST": [
+      "2021-05-01",
+      "2021-05-02"
+    ]
+  },
+  "primary_counts": {
+    "train_files": 12,
+    "calibration_files": 6,
+    "test_files": 12,
+    "test_days": 2,
+    "clocks_minutes": [
+      3,
+      10,
+      15
+    ],
+    "compressed_member_bytes": 173465795,
+    "uncompressed_member_bytes": 477974660
+  },
+  "grouping": "All positions, cells, pulse schedules, overlapping windows and clock periods from one day stay in the same split. File count and cell count are not independent replicate counts.",
+  "secondary_domains": {
+    "binary_5_7_min": "16 CSV files from 2021-04-07, one day; retain as ancillary protocol transfer, never split rep labels into independent days.",
+    "binary_20_30_min": "20 CSV files from 2019-09-03, one day; multiple periods can be segments of one acquisition.",
+    "interval": "15 CSV files; input prefixes audited. Freeze acquisition mapping and any predictive roles before response scoring."
+  },
+  "data_contract": {
+    "identity": [
+      "source_record",
+      "member",
+      "acquisition_date",
+      "clock",
+      "field",
+      "track_id",
+      "time_in_minutes"
+    ],
+    "input": "is_light_pulse marks a 100 ms flash within the current minute, not sustained illumination during that minute; confirm within-frame alignment from acquisition files before transition scoring.",
+    "output": "Use original nuclear ERK-KTR and contemporaneous image intensity, with structural validity flags and no response-amplitude exclusion. A future prediction cannot use future image intensity as a predictor.",
+    "causality": "Q3 centered and Q4 whole-track normalization are disallowed in prospective prediction. The CSV export uses Q3backw, which is backward-looking; do not mislabel that exported column as future-leaking. Recompute causal variants from source fields and verify correspondence.",
+    "selection": "Retain every structurally usable exported track, including is_preselected=False. Report the 400-track published subset as a sensitivity only. The exported 500 were already selected by duration/nuclear-area stability, so full-population representativeness remains unestablished.",
+    "missingness": "No interpolation, no zero-filling, no response clipping. Report unsupported windows, missing timestamps and conflicting input labels.",
+    "statistical_unit": "Day/acquisition for transport evidence; cells and overlapping windows retain dependence. Two held-out days do not support broad population or clinical claims."
+  },
+  "local_jurisdictions": {
+    "nesting": "domain > acquisition day > clock protocol > field > cell > temporal segment; cross these with horizon, time since pulse, preceding input history and calibration support.",
+    "predefinition": "Define partitions with input/timing/structural metadata or training-only cutpoints. Do not select test jurisdictions by observed benefit.",
+    "edges": "Matched cell/time/support comparisons of baseline, unguarded calibration and guarded local policy; spatial geometric proximity is distinct from a measured biological connection.",
+    "aggregation": "Retain atomic residual identities; reconstruct parent sums and distributions without duplicate membership. Local harms, tails and coverage are primary; global RMSE/MAE are complementary.",
+    "unresolvable": "Keep NOT_ESTIMABLE and OUT_OF_SUPPORT with their support and reason; no zero-effect substitution."
+  },
+  "next_execution_gates": [
+    "Verify complete archive checksum remotely, canonical headers and full input consensus across tracks for each used CSV.",
+    "Reconcile timestamp trimming, experiment onset and pulse-to-image order; freeze alignment/sensitivity without inspecting prediction scores.",
+    "Fit domain-specific reference models on TRAIN only; E. coli coefficients and cuts are not biologically transferable by fiat.",
+    "Freeze horizons, history lengths, local cutpoints, early-fit/validation/late windows, purge intervals, support thresholds and policy choices in a numerical E9 evaluation protocol before evaluating TEST.",
+    "Run paired local comparisons on identical support, retaining adverse and unresolved jurisdictions; record all candidate choices.",
+    "Treat a pulse-block alphabet extension of FD identities as a separate mathematical obligation. Require both delivered arms and acquisition assumptions before calling any dataset direct FD validation."
+  ],
+  "compute": "CPU-only sequential CSV/chunk processing; no full image segmentation for E9. A 4 GB peak-memory claim and runtime estimate require a pilot measurement; neither is asserted here.",
+  "not_changed": [
+    "E6/E8 results",
+    "FD7/FD8 mathematical certificates",
+    "existing manuscript results",
+    "historical adverse findings"
+  ]
+}

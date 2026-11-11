@@ -1,0 +1,73 @@
+[
+  {
+    "id": "ERK_HUMAN_2023",
+    "priority": 1,
+    "decision": "PRIMARY_EXECUTABLE_DOMAIN",
+    "paper": "https://doi.org/10.1371/journal.pcbi.1011155",
+    "data": "https://doi.org/10.5281/zenodo.7808385",
+    "archive_bytes": 723609060,
+    "csv_files": 81,
+    "verified_full_csvs": 2,
+    "verified_full_csv_rows": 199701,
+    "unique_track_ids_are_local_to_file": true,
+    "intervention": "100 ms light pulses; 1 min sampling",
+    "new_authority": "Independent-laboratory cellular signaling domain; temporal/local transport evaluation",
+    "direct_fd_validation": "NOT_ESTABLISHED"
+  },
+  {
+    "id": "SPATIAL_CAMP_ERK_2022",
+    "priority": 2,
+    "decision": "SPATIAL_EXTENSION_PENDING_DATA_ACCESS_AND_REPROCESSING",
+    "paper": "https://doi.org/10.1371/journal.pcbi.1009873",
+    "data": "https://doi.org/10.7272/Q6QC01RN",
+    "code": "https://github.com/mikechevy/emitter-receiver-paper",
+    "archive_bytes": 9242972535,
+    "data_download_api_http": 401,
+    "public_download_http": 403,
+    "small_archives_verified": [
+      "image_load_files.zip",
+      "process_imaging_data_MATLAB_Paper.zip"
+    ],
+    "schema_finding": "Two MATLAB examples contain nuclear coordinates, bPAC labels and nuclear masks; they do not contain a complete matched ERK trajectory/stimulus table. Whole-cell membrane contacts cannot be inferred from nuclear masks.",
+    "license_caution": "No repository code license detected; do not relicense or redistribute as MIT."
+  },
+  {
+    "id": "OPTOCLOCK_2024",
+    "priority": 3,
+    "decision": "SMALL_LOCAL_VS_AGGREGATE_SECONDARY_BENCHMARK",
+    "paper": "https://doi.org/10.7554/eLife.97754",
+    "data": "https://cdn.elifesciences.org/articles/97754/elife-97754-data3-v1.xlsx",
+    "bytes": 125909,
+    "schema_verified": true,
+    "series": "6 synchronization channels, 10 entrainment channels; one sheet per condition",
+    "time_step_min": 9,
+    "stimulus": "Green intervals annotated in hours; background red light, not binary dark/blue assay",
+    "limitations": "The workbook covers figures 4b and 5e. Do not claim that figure 6c half-frequency single-cell traces are present. Small number of experiments; no population-wide inference."
+  },
+  {
+    "id": "YEAST_TRANSFER_2021",
+    "priority": 4,
+    "decision": "RESERVE_FOR_ENDPOINT_DISTRIBUTION_AND_INPUT_FAMILY_DOMAIN",
+    "paper": "https://doi.org/10.1016/j.cels.2021.08.003",
+    "data": "https://doi.org/10.5281/zenodo.5116822",
+    "archive_bytes": 4943265429,
+    "metadata_verified": true,
+    "full_data_inspected": false,
+    "design": "119 optogenetic input conditions; single-cell flow cytometry endpoints",
+    "limitation": "Independent cells at snapshots are not longitudinal trajectories; cannot reuse temporal early/late calibration unchanged."
+  },
+  {
+    "id": "MAMMALIAN_PROMOTERS_2023",
+    "priority": 5,
+    "decision": "MECHANISTIC_REFERENCE_NOT_READY_PUBLIC_TRAJECTORY_BENCHMARK",
+    "paper": "https://doi.org/10.1093/nar/gkad273",
+    "evidence": "Article explicitly states no data deposited in external repositories; supplemental material may support narrower analyses. No author contact performed."
+  },
+  {
+    "id": "YEAST_PP7_2018",
+    "priority": 6,
+    "decision": "RESERVE_RAW_MATCHED_RECORDS_NOT_LOCATED",
+    "paper": "https://doi.org/10.1016/j.molcel.2018.04.012",
+    "evidence": "Nascent transcription and light control are relevant; a public machine-readable matched input/trajectory repository was not located in this search. This is not a proof of nonexistence."
+  }
+]

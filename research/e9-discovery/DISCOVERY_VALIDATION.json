@@ -1,0 +1,14 @@
+{
+  "primary_manifest_files": 30,
+  "split_roles": {
+    "TEST": 12,
+    "CALIBRATION": 6,
+    "TRAIN": 12
+  },
+  "date_overlap_between_primary_splits": false,
+  "interval_input_files": 15,
+  "independent_input_scans_agree": true,
+  "exact_full_cycle_matches_in_inspected_support": 0,
+  "physical_fd_intervention_validation": false,
+  "e9_predictive_results_computed": false
+}

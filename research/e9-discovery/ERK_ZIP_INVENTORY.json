@@ -1,0 +1,518 @@
+[
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/",
+    "bytes": 0,
+    "compressed": 0,
+    "crc": 0
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/interval_encoding_with_minimal_gap/",
+    "bytes": 0,
+    "compressed": 0,
+    "crc": 0
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/interval_encoding_with_minimal_gap/min30_optmean_rep1.csv",
+    "bytes": 56267995,
+    "compressed": 21005897,
+    "crc": 4018232969
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/interval_encoding_with_minimal_gap/min25_optmean_rep2.csv",
+    "bytes": 49246349,
+    "compressed": 18277028,
+    "crc": 3831267393
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/interval_encoding_with_minimal_gap/min25_optmean_rep1.csv",
+    "bytes": 65315241,
+    "compressed": 24556137,
+    "crc": 831239892
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/interval_encoding_with_minimal_gap/min20_optmean_rep2.csv",
+    "bytes": 79396539,
+    "compressed": 29174811,
+    "crc": 2081413666
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/interval_encoding_with_minimal_gap/min20_optmean_rep1.csv",
+    "bytes": 78430085,
+    "compressed": 28736698,
+    "crc": 2577873387
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/interval_encoding_with_minimal_gap/min15_optmean_rep2.csv",
+    "bytes": 77806015,
+    "compressed": 28851572,
+    "crc": 2700075017
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/interval_encoding_with_minimal_gap/min15_optmean_rep1.csv",
+    "bytes": 77840331,
+    "compressed": 28630269,
+    "crc": 2475126149
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/interval_encoding_with_minimal_gap/min10_optmean_rep2.csv",
+    "bytes": 52912033,
+    "compressed": 19796084,
+    "crc": 1223098720
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/interval_encoding_with_minimal_gap/min10_optmean_rep1.csv",
+    "bytes": 62085405,
+    "compressed": 23415830,
+    "crc": 233573906
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/interval_encoding/",
+    "bytes": 0,
+    "compressed": 0,
+    "crc": 0
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/interval_encoding/min3_mean50.csv",
+    "bytes": 80972335,
+    "compressed": 29462883,
+    "crc": 3529633354
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/interval_encoding/min3_mean40.csv",
+    "bytes": 73217483,
+    "compressed": 26843683,
+    "crc": 2263917078
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/interval_encoding/min3_mean35.csv",
+    "bytes": 79008551,
+    "compressed": 28599809,
+    "crc": 2913017764
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/interval_encoding/min3_mean30.csv",
+    "bytes": 72719803,
+    "compressed": 26651692,
+    "crc": 2812329843
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/interval_encoding/min3_mean25.csv",
+    "bytes": 69034039,
+    "compressed": 25050761,
+    "crc": 3101216901
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/interval_encoding/min3_mean20.csv",
+    "bytes": 66050323,
+    "compressed": 24415411,
+    "crc": 1127102885
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/column_descriptions.md",
+    "bytes": 1529,
+    "compressed": 473,
+    "crc": 741955969
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/binary_encoding/",
+    "bytes": 0,
+    "compressed": 0,
+    "crc": 0
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/binary_encoding/binary_rep5_pos02_period3.csv",
+    "bytes": 10577726,
+    "compressed": 3774447,
+    "crc": 817713486
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/binary_encoding/binary_rep5_pos02_period15.csv",
+    "bytes": 21645689,
+    "compressed": 8158980,
+    "crc": 387061034
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/binary_encoding/binary_rep5_pos02_period10.csv",
+    "bytes": 15820677,
+    "compressed": 5663972,
+    "crc": 2221041275
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/binary_encoding/binary_rep5_pos01_period3.csv",
+    "bytes": 10551502,
+    "compressed": 3772276,
+    "crc": 3835351617
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/binary_encoding/binary_rep5_pos01_period15.csv",
+    "bytes": 21504840,
+    "compressed": 8083791,
+    "crc": 1193402813
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/binary_encoding/binary_rep5_pos01_period10.csv",
+    "bytes": 15812445,
+    "compressed": 5655434,
+    "crc": 201713897
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/binary_encoding/binary_rep4_pos02_period7.csv",
+    "bytes": 9510988,
+    "compressed": 3356870,
+    "crc": 3999374892
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/binary_encoding/binary_rep4_pos02_period5.csv",
+    "bytes": 9513947,
+    "compressed": 3350843,
+    "crc": 121443974
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/binary_encoding/binary_rep4_pos02_period3.csv",
+    "bytes": 10546714,
+    "compressed": 3819100,
+    "crc": 3557318771
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/binary_encoding/binary_rep4_pos02_period15.csv",
+    "bytes": 20247447,
+    "compressed": 7645032,
+    "crc": 1319593884
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/binary_encoding/binary_rep4_pos02_period10.csv",
+    "bytes": 14990486,
+    "compressed": 5439871,
+    "crc": 3718470676
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/binary_encoding/binary_rep4_pos01_period7.csv",
+    "bytes": 9510224,
+    "compressed": 3374573,
+    "crc": 4171195802
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/binary_encoding/binary_rep4_pos01_period5.csv",
+    "bytes": 9510966,
+    "compressed": 3352428,
+    "crc": 3109807870
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/binary_encoding/binary_rep4_pos01_period3.csv",
+    "bytes": 10569195,
+    "compressed": 3792287,
+    "crc": 2866724320
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/binary_encoding/binary_rep4_pos01_period15.csv",
+    "bytes": 21720996,
+    "compressed": 8210087,
+    "crc": 3007413545
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/binary_encoding/binary_rep4_pos01_period10.csv",
+    "bytes": 15855802,
+    "compressed": 5716111,
+    "crc": 2124396113
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/binary_encoding/binary_rep3_pos02_period7.csv",
+    "bytes": 9517321,
+    "compressed": 3346163,
+    "crc": 1997772809
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/binary_encoding/binary_rep3_pos02_period5.csv",
+    "bytes": 9509762,
+    "compressed": 3340801,
+    "crc": 3947764918
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/binary_encoding/binary_rep3_pos02_period3.csv",
+    "bytes": 10545899,
+    "compressed": 3658203,
+    "crc": 4118693147
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/binary_encoding/binary_rep3_pos02_period15.csv",
+    "bytes": 21639465,
+    "compressed": 7912271,
+    "crc": 1201520094
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/binary_encoding/binary_rep3_pos02_period10.csv",
+    "bytes": 15782549,
+    "compressed": 5459918,
+    "crc": 586424004
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/binary_encoding/binary_rep3_pos01_period7.csv",
+    "bytes": 9519833,
+    "compressed": 3377913,
+    "crc": 1799304078
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/binary_encoding/binary_rep3_pos01_period5.csv",
+    "bytes": 9503198,
+    "compressed": 3359391,
+    "crc": 2768044510
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/binary_encoding/binary_rep3_pos01_period3.csv",
+    "bytes": 10542048,
+    "compressed": 3648920,
+    "crc": 1280209911
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/binary_encoding/binary_rep3_pos01_period15.csv",
+    "bytes": 21625420,
+    "compressed": 7881740,
+    "crc": 2920429913
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/binary_encoding/binary_rep3_pos01_period10.csv",
+    "bytes": 15776515,
+    "compressed": 5446270,
+    "crc": 3515197242
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/binary_encoding/binary_rep2_pos02_period7.csv",
+    "bytes": 9514790,
+    "compressed": 3354970,
+    "crc": 1254406446
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/binary_encoding/binary_rep2_pos02_period5.csv",
+    "bytes": 9509004,
+    "compressed": 3345799,
+    "crc": 485460318
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/binary_encoding/binary_rep2_pos02_period3.csv",
+    "bytes": 10599114,
+    "compressed": 3751796,
+    "crc": 815147922
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/binary_encoding/binary_rep2_pos02_period15.csv",
+    "bytes": 21741907,
+    "compressed": 8075093,
+    "crc": 1822863684
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/binary_encoding/binary_rep2_pos02_period10.csv",
+    "bytes": 15845740,
+    "compressed": 5607047,
+    "crc": 295587515
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/binary_encoding/binary_rep2_pos01_period7.csv",
+    "bytes": 9497084,
+    "compressed": 3382193,
+    "crc": 703768859
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/binary_encoding/binary_rep2_pos01_period5.csv",
+    "bytes": 9493828,
+    "compressed": 3354050,
+    "crc": 325294184
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/binary_encoding/binary_rep2_pos01_period3.csv",
+    "bytes": 10615084,
+    "compressed": 3751312,
+    "crc": 2192135875
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/binary_encoding/binary_rep2_pos01_period15.csv",
+    "bytes": 21745088,
+    "compressed": 8094408,
+    "crc": 114604712
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/binary_encoding/binary_rep2_pos01_period10.csv",
+    "bytes": 15844655,
+    "compressed": 5625589,
+    "crc": 3196087242
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/binary_encoding/binary_rep1_pos10_period30.csv",
+    "bytes": 17741200,
+    "compressed": 6761575,
+    "crc": 959055375
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/binary_encoding/binary_rep1_pos10_period20.csv",
+    "bytes": 11717926,
+    "compressed": 4417370,
+    "crc": 461415133
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/binary_encoding/binary_rep1_pos09_period30.csv",
+    "bytes": 17249848,
+    "compressed": 6625222,
+    "crc": 111914338
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/binary_encoding/binary_rep1_pos09_period20.csv",
+    "bytes": 13624149,
+    "compressed": 5111075,
+    "crc": 1017873282
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/binary_encoding/binary_rep1_pos08_period30.csv",
+    "bytes": 17368836,
+    "compressed": 6654104,
+    "crc": 4246940296
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/binary_encoding/binary_rep1_pos08_period20.csv",
+    "bytes": 11215836,
+    "compressed": 4236280,
+    "crc": 3912733035
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/binary_encoding/binary_rep1_pos07_period30.csv",
+    "bytes": 15402094,
+    "compressed": 5901142,
+    "crc": 756848668
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/binary_encoding/binary_rep1_pos07_period20.csv",
+    "bytes": 11618023,
+    "compressed": 4389063,
+    "crc": 3265732967
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/binary_encoding/binary_rep1_pos06_period30.csv",
+    "bytes": 16833002,
+    "compressed": 6422959,
+    "crc": 4028128327
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/binary_encoding/binary_rep1_pos06_period20.csv",
+    "bytes": 11777714,
+    "compressed": 4440695,
+    "crc": 856734703
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/binary_encoding/binary_rep1_pos05_period30.csv",
+    "bytes": 16796921,
+    "compressed": 6433473,
+    "crc": 1790027838
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/binary_encoding/binary_rep1_pos05_period20.csv",
+    "bytes": 12915592,
+    "compressed": 4913485,
+    "crc": 2485933611
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/binary_encoding/binary_rep1_pos04_period30.csv",
+    "bytes": 15076163,
+    "compressed": 5743145,
+    "crc": 1696691283
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/binary_encoding/binary_rep1_pos04_period20.csv",
+    "bytes": 11395976,
+    "compressed": 4303439,
+    "crc": 1144043363
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/binary_encoding/binary_rep1_pos03_period30.csv",
+    "bytes": 20886100,
+    "compressed": 7933376,
+    "crc": 2888484366
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/binary_encoding/binary_rep1_pos03_period20.csv",
+    "bytes": 14578321,
+    "compressed": 5524926,
+    "crc": 981435852
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/binary_encoding/binary_rep1_pos02_period7.csv",
+    "bytes": 9514423,
+    "compressed": 3343399,
+    "crc": 2391350364
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/binary_encoding/binary_rep1_pos02_period5.csv",
+    "bytes": 9514353,
+    "compressed": 3330664,
+    "crc": 4043141912
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/binary_encoding/binary_rep1_pos02_period30.csv",
+    "bytes": 15505880,
+    "compressed": 5978312,
+    "crc": 2361550733
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/binary_encoding/binary_rep1_pos02_period3.csv",
+    "bytes": 10564282,
+    "compressed": 3782589,
+    "crc": 3666074828
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/binary_encoding/binary_rep1_pos02_period20.csv",
+    "bytes": 11791223,
+    "compressed": 4478042,
+    "crc": 1749384724
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/binary_encoding/binary_rep1_pos02_period15.csv",
+    "bytes": 21625649,
+    "compressed": 8258116,
+    "crc": 3122380323
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/binary_encoding/binary_rep1_pos02_period10.csv",
+    "bytes": 15721407,
+    "compressed": 5489736,
+    "crc": 3231622211
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/binary_encoding/binary_rep1_pos01_period7.csv",
+    "bytes": 9520999,
+    "compressed": 3402834,
+    "crc": 3127302017
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/binary_encoding/binary_rep1_pos01_period5.csv",
+    "bytes": 9470665,
+    "compressed": 3371673,
+    "crc": 1731773512
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/binary_encoding/binary_rep1_pos01_period30.csv",
+    "bytes": 19328065,
+    "compressed": 7462983,
+    "crc": 1541884101
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/binary_encoding/binary_rep1_pos01_period3.csv",
+    "bytes": 10539341,
+    "compressed": 3726059,
+    "crc": 3669177274
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/binary_encoding/binary_rep1_pos01_period20.csv",
+    "bytes": 13706442,
+    "compressed": 5174495,
+    "crc": 3453584671
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/binary_encoding/binary_rep1_pos01_period15.csv",
+    "bytes": 21615639,
+    "compressed": 8037435,
+    "crc": 3236631333
+  },
+  {
+    "name": "Nalecz-Jawecki_et_al--Source_Data/binary_encoding/binary_rep1_pos01_period10.csv",
+    "bytes": 15761339,
+    "compressed": 5527905,
+    "crc": 2942605274
+  }
+]
