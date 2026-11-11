@@ -46,6 +46,14 @@ The [trajectory assay study](docs/TRAJECTORY_ASSAY.md) connects continuous-time 
 
 Use the same guide to export a paired FD7 stimulus plan or analyze qualified block scores. [Data S13](research/supplement-v012/data/) retains the complete declared campaign, including null cases, alternative mixtures and calibration settings that do not retain a positive guaranteed gap.
 
+## Cellular observations and local calibration
+
+The [external-data studies](docs/CELLULAR_OBSERVATIONS.md) evaluate how input history and early calibration transfer to later fluorescence measurements. They retain the original experimental split of a published optogenetic dataset, separate numerical fitting from retrospective development, and resolve results by temporal segment, programmed input edge and fluorescence band.
+
+The local study identifies 270 jurisdictions with adequate calibration and evaluation support: 129 MAE gains above 1%, 141 practical ties and no losses above that tolerance under early selection. Its fixed-composition comparator gains more often but also loses in 41 jurisdictions. Upper-tail error worsens in 31 supported jurisdictions under selection. The full record includes 378 jurisdictions without sufficient support for the local-calibration conclusion.
+
+These results qualify observation and calibration. The source dataset used its own input programs and does not constitute a paired FD7 intervention. [Inspect all local results and reproduce E4](research/e4-local/README.md).
+
 ## Reproduce the results
 
 The complete verification runs on Linux with Python 3.12 and a C++17 compiler:
@@ -74,7 +82,7 @@ Its protocol fixes the parameter domain, objective, seeds and evaluation budget.
 - **Extend the calculation:** exact reader code in `research/analysis/`, observation bounds in `research/finite_reporter/` and `research/input_robustness/`, count envelopes in `research/count_tails/` and `research/translation_counts/`, and tests in `research/statistical_inference/`.
 - **Audit a release:** `RELEASE_MANIFEST.json` records file hashes; release assets include the source distribution and its checksum.
 
-The repository supplies theoretical and computational research. Applying the test to cells requires the assay-specific rates or bounds, observation model and experimental units described in the guide.
+The repository supplies theoretical and computational research, including secondary analysis of published cellular measurements. Applying the test to cells requires the assay-specific rates or bounds, observation model and experimental units described in the guide.
 
 ## Cite and reuse
 
