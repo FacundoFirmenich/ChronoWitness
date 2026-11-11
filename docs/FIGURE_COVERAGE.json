@@ -1,0 +1,98 @@
+{
+  "figures-e5/E5_ERROR_GEOMETRY_EN.pdf": {
+    "generated": true,
+    "sha256": "1087b8fb4a7d3572b7b9bb2bcc185f179abc50b6828b86464caf0061082d74cc"
+  },
+  "figures-e5/E5_INCLUSION_LATTICE_EN.pdf": {
+    "generated": true,
+    "sha256": "be6120e1479a854e6696f30770c00f64f50f62cf15ab20e07233157c39640154"
+  },
+  "figures-e8/E8_LOCAL_EN.pdf": {
+    "generated": true,
+    "sha256": "c1aadb46dfcd21f42b6a4b23b5911aefab197bbb8df9975c7e9cc0485a5ec6d6"
+  },
+  "figures-e8/FD8_FRONTIER_EN.pdf": {
+    "generated": true,
+    "sha256": "175c7b6b2880801649c90994e2b4b173216f778ad50c029a1720e2c9357dd941"
+  },
+  "figures-integrated/LOCAL_EVIDENCE_EN.pdf": {
+    "generated": true,
+    "sha256": "bea0c28694ef28745ca2454a3d58ccc2259c4ef623e547e2e2119bfd61aa4c09"
+  },
+  "figures-integrated/VISUAL_ABSTRACT_EN.pdf": {
+    "generated": true,
+    "sha256": "a95feb00888b7fb8eda953bb0f1e75fac9e1325503547dfbbca8d3ccec0b7e12"
+  },
+  "figures-v010/FIG11_continuous_time.pdf": {
+    "generated": true,
+    "sha256": "5fdd2b469ae73f9567bdd7dfbac7f59c16c45887129819dc4e91d4bb90030c70"
+  },
+  "figures-v011/FIG12_design_power.pdf": {
+    "generated": true,
+    "sha256": "4927ede0890179cb9ceac69d0ffb2306273930b8f48605f42a73ec2eb20f6c78"
+  },
+  "figures-v011/FIG13_assay_path.pdf": {
+    "generated": true,
+    "sha256": "f775ca25cb4db5404ed3ece83605258ed7c675514e6d1c1f123e04380e4f8585"
+  },
+  "figures-v011/FIG5_evidence_map.pdf": {
+    "generated": true,
+    "sha256": "7cc76431d48cc9217dc65d8ee0005d2025d481ce420c39d15dfc6edc8c1c775f"
+  },
+  "figures-v012/FIG14_trajectory_assay.pdf": {
+    "generated": true,
+    "sha256": "572896e1b40b2c5a35e8aa55273c2da4e5427a6f8b8393c58d0758d19bda6bdc"
+  },
+  "figures-v012/FIG15_calibration_budget.pdf": {
+    "generated": true,
+    "sha256": "92c6be735fe659ce8b4b8c68b41e0d2f77efb82970c09fc8a1470095d89cbe35"
+  },
+  "figures-v013/FIGURE_14.pdf": {
+    "generated": true,
+    "sha256": "bf0d351d7c6a195a5a1e09a0290e9b98ae32db3f93f751e503066840434bb54d"
+  },
+  "figures-v013/FIGURE_S21.pdf": {
+    "generated": true,
+    "sha256": "8db5918c792c389e0ecb1fe4f5084d9f4fbad95e2ad57d1a1b9b6bd24649cd1f"
+  },
+  "figures-v08/FIG1_design.pdf": {
+    "generated": true,
+    "sha256": "503b6d2aae9ae0c99fb0d796edc49439f728a7c6b84ee98cb54d1af69567c091"
+  },
+  "figures-v08/FIG2_phase.pdf": {
+    "generated": true,
+    "sha256": "cf59c7bb405b9c8bd9ab63820a0358545d6baa10e6503b29ceea46962d2244b7"
+  },
+  "figures-v08/FIG3_markov.pdf": {
+    "generated": true,
+    "sha256": "7a86593b8aed20f0f4aa27fde4fcada1dd6a6af5b99a1fb1e3fdba36174f7f8f"
+  },
+  "figures-v08/FIG4_kinetic.pdf": {
+    "generated": true,
+    "sha256": "a7709c45c9aade911c26d31f9fd6ad2547ee7e7ceb2113aa58ed372545c71a30"
+  },
+  "figures-v08/FIG6_finite_reporter.pdf": {
+    "generated": true,
+    "sha256": "f54ca30c44d4c53c14f0213ecd1c85bfb90cd5994801d5d1967226d1183aac9e"
+  },
+  "figures-v08/FIG7_input_robustness.pdf": {
+    "generated": true,
+    "sha256": "930fe7b0636456fb43574114f878dd53c4cbb87bebb17f5759d4ed1abbed9bd3"
+  },
+  "figures-v08/FIG8_statistical_inference.pdf": {
+    "generated": true,
+    "sha256": "0cc18de1f44096bbde51e6b0cbff7e6ffa2908a44b981e13ff05935bee7e626d"
+  },
+  "figures-v08/FIG9_count_tails.pdf": {
+    "generated": true,
+    "sha256": "40c3397503a59c33a63d2e912df0afbf4f1ffd33c43afee0e0a51e494732c9ea"
+  },
+  "figures-v08/FIGS3_coefficients.pdf": {
+    "generated": true,
+    "sha256": "24cfd58b1f271d62b73816956101057a3d87532245c68d7b32658ecf0e61631d"
+  },
+  "figures-v09/FIG10_translation.pdf": {
+    "generated": true,
+    "sha256": "59317eb555666fdabacca23f308253911acf3ffd275f97ce622e79261df97037"
+  }
+}

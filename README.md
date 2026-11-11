@@ -103,6 +103,6 @@ The repository supplies theoretical and computational research, including second
 
 ## Cite and reuse
 
-Research and software by **Facundo Firmenich**. Citation metadata is available in [CITATION.cff](CITATION.cff); release metadata is supplied for GitHubÃ¢â‚¬â€œZenodo archiving.
+Research and software by **Facundo Firmenich**. Archived scientific release v0.14.2: [10.5281/zenodo.24146309](https://doi.org/10.5281/zenodo.24146309). All-version record: [10.5281/zenodo.24117387](https://doi.org/10.5281/zenodo.24117387). The v0.14.3 accessibility update retains the scientific reference outputs. Citation metadata is available in [CITATION.cff](CITATION.cff); release metadata is supplied for GitHubÃ¢â‚¬â€œZenodo archiving.
 
 The code is distributed under the **MIT License**. See [LICENSE](LICENSE). The academic manuscript and supplementary document are maintained separately.
