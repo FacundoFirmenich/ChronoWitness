@@ -15,7 +15,7 @@ python reproduce.py
 python verify.py
 ```
 
-`reproduce.py` uses the standard library, writes a fresh `reproduced-results` directory and checks every derived scientific output against the saved reference; elapsed time and gzip timestamps are excluded from equality. For another run choose `--output ANOTHER_NEW_DIRECTORY`. No reference result is overwritten. `verify.py` additionally needs NumPy; local verification used NumPy 2.3.5. It reconstructs values independently through an incidence matrix and checks intersections, joins and cover relations. Optional figure regeneration uses Matplotlib 3.10.7: `python figures.py`.
+`reproduce.py` uses the standard library, writes a fresh `reproduced-results` directory and checks every derived scientific output against the saved reference. Discrete fields must match exactly; floating values use relative tolerance 2e-12 and absolute tolerance 1e-8, matching the independent reconstruction check. Every floating difference is counted and sampled in the receipt. Elapsed time and gzip timestamps are excluded. The initial Windows-to-Linux run failed a decompressed-CSV byte-equality check; its failure is preserved in the execution history. For another run choose `--output ANOTHER_NEW_DIRECTORY`. No reference result is overwritten. `verify.py` additionally needs NumPy; local verification used NumPy 2.3.5. It reconstructs values independently through an incidence matrix and checks intersections, joins and cover relations. Optional figure regeneration uses Matplotlib 3.10.7: `python figures.py`.
 
 ## Evidence boundaries
 

@@ -29,6 +29,6 @@ jobs:
         with:
           name: chronowitness-e5-reproduction
           path: |
-            e5-reproduction/e5-nested-20261111/reproduced-results/REPRODUCTION_RECEIPT.json
+            e5-reproduction/e5-nested-20261111/reproduced-results/*
             e5-reproduction/e5-nested-20261111/results/INDEPENDENT_VERIFICATION.json
           if-no-files-found: error
