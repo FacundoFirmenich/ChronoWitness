@@ -1,0 +1,18 @@
+{
+  "version": "E2-A-resource-check-1",
+  "purpose": "Measure the actual E1 refit and E2 retrospective calibration workload under a hard 3,000,000,000-byte memory limit with no swap and two CPU equivalents.",
+  "status": "Frozen before E2 execution; E1 evaluation outcomes already examined, so E2 is retrospective development, not a new blind external confirmation.",
+  "archive_sha256": "03a788ddeaa08d3b9ef1511208c8c37263cc5bd55af7e9b41f4f3068ab5ab529",
+  "base_models": ["persistence", "common_relaxation", "history_no_input", "history_input", "history_context"],
+  "offsets": [1, 0],
+  "horizons_frames": [6, 12, 24],
+  "calibration_last_target_frames": [72, 96, 120],
+  "evaluation_first_origin": 132,
+  "calibration_methods": ["raw", "offset", "nonnegative_affine"],
+  "calibration": "For each previously held-out E1 experiment, fit corrections using its own early windows with target frame t+h <= cutoff. Use all eligible windows with equal weight within that experiment. Offset equals mean(target-prediction). Affine slope is max(0, centered covariance/variance), with unpenalized intercept. No hyperparameter tuning or cutoff/method selection using evaluation outcomes. If prediction variance is zero, use slope 1 and the offset correction, explicitly recorded.",
+  "evaluation": "For all three cutoffs use the identical evaluation set with origin t >= 132. Its oldest feature is t-11 >= 121, strictly after every calibration target (<=120). Preserve E1 structural availability and zero-fluorescence rules. Estimate each method separately by experiment. Cells can recur in calibration and evaluation: this is temporal within-experiment adaptation, not new-cell validation. No independence-based confidence intervals.",
+  "interpretation": "Prediction calibration is not a certified FD7 conditional bias bound. No direct FD7 experiment, new state-count inference, new biological observations, or power analysis is claimed. Resource pass does not imply scientific calibration success.",
+  "resource_gate": {"memory_limit_bytes": 3000000000, "swap_limit_bytes": 0, "cpu_equivalents": 2, "target_machine_total_bytes": 4000000000, "target_environment_reserve_bytes": 1000000000},
+  "expected_metric_rows": 810,
+  "expected_calibration_records": 270
+}

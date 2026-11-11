@@ -1,0 +1,38 @@
+{
+  "version": "E1",
+  "stage": "Frozen prospective analysis of already published processed biological data",
+  "source": "10.5281/zenodo.8114649 datasets.zip",
+  "archive_md5": "e43440ebb55f3b23664e1074d6b386ac",
+  "archive_bytes": 357636847,
+  "train_dates": ["2022-04-13", "2022-04-19", "2022-04-22", "2022-04-24"],
+  "test_dates": ["2022-04-15", "2022-04-21", "2022-04-23"],
+  "alignment_offsets": [1, 0],
+  "alignment_definition": "Transition from observation t to t+1 uses stored u[t+offset]. Offset 1 follows the documented acquisition controller; offset 0 is a prespecified one-frame provenance sensitivity. Never select offsets using test performance.",
+  "nominal_minutes_per_frame": 5,
+  "origin_start": 36,
+  "origin_stride": 12,
+  "past_frames": 12,
+  "horizons_frames": [6, 12, 24],
+  "primary_horizon_frames": 12,
+  "availability_rule": "Keep a forecast window only if fluorescence and all required features are finite, area>0 and cell_count>0 at every frame from t-11 through t+h. Keep zero fluorescence when structurally available. No interpolation, clipping or response-amplitude exclusion.",
+  "models": {
+    "persistence": "yhat[t+h]=y[t]",
+    "common_relaxation": "Fit y[t+1]=rho*y[t]+b+g*u[t+offset], 0<=rho<=1, on training one-step transitions; recursively forecast h steps without observing intermediate fluorescence. Coefficients b,g unconstrained. Boundary rho=1 reported as non-strict contraction.",
+    "history_no_input": "Direct ridge prediction of y[t+h]-y[t] from 12 past fluorescence values",
+    "history_input": "Same plus 12 past and h future programmed input values under each declared alignment",
+    "history_context": "Same plus log(area[t]), log(area[t]/area[t-11]), cell_count[t], mean of the 12 past neighboring input values. These are observed-history covariates; no future morphology or future neighbor inputs are used."
+  },
+  "ridge_lambdas": [0.000001, 0.0001, 0.01, 1, 100],
+  "selection": "Each history model/horizon/alignment selects lambda by leave-one-training-experiment-out mean squared error, with equal weight per experiment. Training-only centering/scaling is refitted in each fold. Ties select first lambda. Final fit uses all four training experiments; all three test experiment results are retained.",
+  "relaxation_fit": "Training one-step sufficient statistics, equally weighted by experiment, using all adjacent structurally valid transitions at and after index 36. Fluorescence divided by 4095 for conditioning only, without clipping. Constrained least squares via Cholesky sufficient statistics.",
+  "metrics": ["RMSE in fluorescence arbitrary units", "MAE", "mean prediction minus observation", "eligible and retained windows", "selected regularization", "per-experiment results"],
+  "input_stratification": "At the primary horizon also report each model for complete stored input sequences occurring at least 50 times within an experiment versus all other sequences. This is an observable multiplicity stratum, not a recovered reference-cell identity; no stratum is excluded from the primary analysis.",
+  "prespecified_descriptive_decisions": {
+    "input_information": "history_input RMSE at least 5% below history_no_input at horizon 12 in each of the three test experiments under both offsets",
+    "single_relaxation_adequacy": "history_input RMSE at least 5% below common_relaxation at horizon 12 in each of the three test experiments under both offsets",
+    "context_information": "history_context RMSE at least 5% below history_input at horizon 12 in each of the three test experiments under both offsets"
+  },
+  "interpretation": "The 5% threshold is a prespecified descriptive consistency criterion, not a significance test or physical error tolerance. No p-values or confidence intervals treating cells/windows as independent replicates. No promoter-state count inference. No calibrated FD7 bias bound from predictive residuals alone.",
+  "provenance_limits": "The public controller defines next-frame indexing; exact per-file historical acquisition commits/timestamps are not available in datasets.zip. Both offsets retained. All dataset schema/availability was inspected before this protocol; no forecasting outcome had been calculated.",
+  "execution": "CPU-only GitHub Actions, pinned NumPy/SciPy. Remote download only. No hyperparameter expansion or retuning after test results."
+}
