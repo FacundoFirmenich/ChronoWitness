@@ -54,6 +54,8 @@ def render(out,lang,formats):
     for axis in (ax.xaxis,ax.yaxis,ax.zaxis):
         axis.pane.set_facecolor('#dce6fa');axis.pane.set_alpha(.28)
         axis.label.set_color('#26366e')
+        axis.line.set_color('#576995')
+        axis._axinfo['grid'].update(color='#bdc8df',linewidth=.65)
     ax.tick_params(colors='#26366e')
     fig.text(.10,.92,'FD7  /  Un ciclo, dos trayectorias' if es else 'FD7  /  One cycle, two trajectories',
              color='#252d60',fontsize=23,weight='semibold')
@@ -69,7 +71,11 @@ def render(out,lang,formats):
     out.mkdir(parents=True,exist_ok=True)
     for ext in formats:
         metadata={'Date':None} if ext=='svg' else {'CreationDate':None,'ModDate':None} if ext=='pdf' else {}
-        fig.savefig(out/f'FD7_WITNESS_3D_{lang.upper()}.{ext}',metadata=metadata,dpi=240)
+        target=out/f'FD7_WITNESS_3D_{lang.upper()}.{ext}'
+        fig.savefig(target,metadata=metadata,dpi=240)
+        if ext=='svg':
+            lines=target.read_text(encoding='utf8').splitlines()
+            target.write_text('\n'.join(line.rstrip() for line in lines)+'\n',encoding='utf8',newline='\n')
     plt.close(fig)
 
 

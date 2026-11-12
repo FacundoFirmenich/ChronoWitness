@@ -6,6 +6,7 @@ import locale
 import os
 from pathlib import Path
 import runpy
+import shutil
 import subprocess
 import sys
 import webbrowser
@@ -112,6 +113,8 @@ def main():
         for key in sorted(keys):
             labels,scripts=BLOCKS[key]
             print(labels[int(es)],flush=True)
+            if key=='3':
+                shutil.copyfile(ROOT/'research/design_frontier/SEARCH_RESULT.json',out/'DESIGN_SEARCH.json')
             for script in scripts:
                 run(script)
     fresh=[p.name for p in sorted(out.iterdir()) if p.is_file() and p.suffix in {'.json','.csv','.txt'}

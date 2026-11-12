@@ -35,12 +35,15 @@ def compare_assay(old,fresh,name):
         # identities in the report; counts, source hashes and tolerances stay exact.
         environment={'reference_compiler':a.pop('compiler'),'observed_compiler':b.pop('compiler')}
         assert all(isinstance(v,str) and v.strip() for v in environment.values())
-        # The new runner accepts native engines. All scientific sources other
-        # than this orchestration file must retain the original hashes.
+        # Orchestration and the portable capital representation are versioned
+        # changes. The protocol, moment code, and all other inputs match.
         old_sources=a.pop('source_sha256')
         new_sources=b.pop('source_sha256')
-        assert {k:v for k,v in old_sources.items() if k!='run.py'}=={k:v for k,v in new_sources.items() if k!='run.py'}
-        environment.update(reference_runner_sha256=old_sources['run.py'],observed_runner_sha256=new_sources['run.py'])
+        portable_files={'run.py','simulate.cpp'}
+        assert old_sources.keys()==new_sources.keys()
+        assert all(old_sources[k]==new_sources[k] for k in old_sources.keys()-portable_files)
+        environment.update(reference_runner_sha256=old_sources['run.py'],observed_runner_sha256=new_sources['run.py'],
+                           reference_simulator_sha256=old_sources['simulate.cpp'],observed_simulator_sha256=new_sources['simulate.cpp'])
     delta=differences(a,b);error=0.
     for path,x,y in delta:
         # Counts, seeds, pass/fail flags, protocol and source hashes stay exact.

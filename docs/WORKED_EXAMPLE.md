@@ -1,5 +1,7 @@
 # An exact worked example
 
+[Castellano](EJEMPLO_EXACTO.md)
+
 Run `python research/design_frontier/tutorial.py` from the repository root. The program uses rational arithmetic and the distributed kinetic certificate; it does not generate observations or fit parameters.
 
 1. **Verify FD7.** The forward polynomial construction checks equality of both symbol-conditioned two-state occupation numerators.

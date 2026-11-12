@@ -26,6 +26,7 @@ El paquete nativo incluye Python, dependencias numéricas y motores C++ de la pl
 ## Examinar los resultados y su alcance
 
 - [Guía científica y de reproducción en castellano](docs/GUIA_ES.md), con la identidad exacta, las condiciones de observación, los cálculos y las fuentes.
+- [Resultados científicos](docs/RESULTADOS_CIENTIFICOS.md), [ejemplo exacto](docs/EJEMPLO_EXACTO.md), [observaciones celulares](docs/OBSERVACIONES_CELULARES.md) y [reproducción de figuras](docs/REPRODUCCION_DE_FIGURAS.md).
 - [Diseño certificado](research/supplement-v011/data/), [campaña de ensayo](research/supplement-v012/data/) y [cierre científico E11](research/e11-causal/CIERRE_SUSTANTIVO_E11_ES.md).
 - [Predicción congelada E9](research/e9-execution/E9_NUMERICAL_PROTOCOL.json), [transporte E10](research/e10-transport/README.md) y [adquisiciones reservadas E11](research/e11-causal/README.md).
 

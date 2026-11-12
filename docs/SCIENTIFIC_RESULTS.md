@@ -1,5 +1,7 @@
 # Scientific results and interpretation
 
+[Castellano](RESULTADOS_CIENTIFICOS.md)
+
 ChronoWitness studies what a temporal input can distinguish when the readout is fixed. Its FD7 pair is designed to match several common summaries while separating particular classes of dynamical readers.
 
 ## The central result

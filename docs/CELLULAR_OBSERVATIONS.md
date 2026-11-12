@@ -1,5 +1,7 @@
 # Cellular observations: prediction, transport and local support
 
+[Castellano](OBSERVACIONES_CELULARES.md)
+
 The studies complement the exact temporal-input identity by examining the observation layer. Published measurements originate from Lugagne, Blassick and Dunlop, Nature Communications 15:2148 (2024), https://doi.org/10.1038/s41467-024-46361-1; processed data: https://doi.org/10.5281/zenodo.8114649 (CC-BY-4.0).
 
 E1 retains four original training experiments and three original evaluation experiments. Adding input to fluorescence history yields primary 60-minute RMSE reductions of 4.9729%,17.0950%,17.0921%. The first is approximately 5%; its 0.0271 percentage-point shortfall against the original descriptive criterion is retained in the record. E2 transports early offset/affine calibration to later windows and finds mixed outcomes. E3 selects correction from temporally separate early validation, retaining 13 RMSE gains,3 losses and38 unchanged predictions across54 correlated combinations. E4 resolves transport into local context, support and error distributions.
