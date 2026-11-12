@@ -3,12 +3,13 @@ from pathlib import Path
 from fractions import Fraction as F
 from itertools import product
 from collections import Counter
+from argparse import ArgumentParser
 import csv,json,sys,hashlib
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'analysis'))
 from verify_phase_python import block,steady
 from audit_markov_boundary import numerator
 from verify_markov_boundary import forward
-OUT=Path(__file__).resolve().parent/'data';OUT.mkdir(exist_ok=True)
+OUT=Path(__file__).resolve().parent/'data'
 pair=json.loads((ROOT/'sources/FD7_CERTIFICATE_v0.7.0.json').read_text())['pair']
 words=[pair['sequence_A'],pair['sequence_B']]
 def read(name):return json.loads((ROOT/'results'/name).read_text())
@@ -16,6 +17,11 @@ def write(name,head,rows):
     with (OUT/name).open('w',newline='',encoding='utf-8') as f:
         writer=csv.writer(f);writer.writerow(head);writer.writerows(rows)
 def main():
+    global OUT
+    parser=ArgumentParser(description=__doc__)
+    parser.add_argument('--output',type=Path,default=OUT)
+    OUT=parser.parse_args().output
+    OUT.mkdir(parents=True,exist_ok=True)
     poly=read('MARKOV_BOUNDARY.json');rows=[]
     for z in (0,1):
         a,b=[numerator(w,z) for w in words];assert a==b

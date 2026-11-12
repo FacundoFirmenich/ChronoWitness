@@ -51,6 +51,30 @@ def compare_assay(old,fresh,name):
         error=max(error,abs(x-y));assert abs(x-y)<=2e-10,(name,path,x,y)
     return dict(file=name,maximum_absolute_difference=error,tolerance=2e-10,**environment)
 
+def compare_supplement():
+    reference=R/'supplement-v08/data'
+    fresh=R/'results/supplement-v08'
+    names={p.name for p in reference.iterdir() if p.name[:7] in {'Data_S1','Data_S2','Data_S3','Data_S4','Data_S5'}}
+    sums=dict(line.split('  ',1)[::-1] for line in (fresh/'SHA256SUMS').read_text().splitlines())
+    assert names==set(sums)
+    for name in sorted(names):
+        old=(reference/name).read_bytes()
+        new=(fresh/name).read_bytes()
+        assert sha(new)==sums[name],name
+        if name=='Data_S5_supplement_checks.json':
+            expected,observed=json.loads(old),json.loads(new)
+            old_sources=expected.pop('source_sha256')
+            new_sources=observed.pop('source_sha256')
+            assert expected==observed,name
+            assert old_sources.keys()==new_sources.keys()
+            for path,digest in new_sources.items():
+                assert sha((R/path).read_bytes())==digest,path
+                if path!='supplement-v08/build_supplement.py':
+                    assert old_sources[path]==digest,path
+        else:
+            assert old.replace(b'\r\n',b'\n')==new.replace(b'\r\n',b'\n'),name
+    return sorted(names)
+
 def main():
     manifest=json.loads((ROOT/'RELEASE_MANIFEST.json').read_text())
     version=manifest['version']
@@ -68,7 +92,7 @@ def main():
     execution=json.loads((R/'results/EXECUTION.json').read_text())
     count={'compile_from_source':11,'verified_native':9}[execution['engine_mode']]
     assert execution['status']=='PASS_EXACT_MATHEMATICAL_RESULTS' and len(execution['commands'])==count and all(x['exit_code']==0 for x in execution['commands'])
-    compared=[];numerical_comparisons=[]
+    compared=compare_supplement();numerical_comparisons=[]
     for old in sorted((ROOT/'expected/core').iterdir()):
         fresh=R/'results'/old.name;assert fresh.is_file(),old.name
         if old.suffix=='.json':assert stable(json.loads(old.read_text()))==stable(json.loads(fresh.read_text())),old.name
