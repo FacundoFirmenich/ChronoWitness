@@ -4,24 +4,36 @@ from fractions import Fraction as F
 import subprocess,sys,json,hashlib,csv,math,time
 from scipy.stats import beta
 P=Path(__file__).resolve().parent;R=P.parent;O=R/'results';O.mkdir(exist_ok=True)
+sys.path.insert(0,str(R))
+from native_engines import resolve
 
 def cp(k,n,alpha):
     return [0. if k==0 else float(beta.ppf(alpha/2,k,n-k+1)),1. if k==n else float(beta.ppf(1-alpha/2,k+1,n-k))]
 
-def main():
-    start=time.perf_counter();q=json.loads((P/'PROTOCOL.json').read_text())
-    subprocess.run([sys.executable,str(P/'moments.py')],check=True)
-    subprocess.run([sys.executable,str(P/'calibration.py')],check=True)
+def configuration(q):
     header=['#pragma once', 'const std::string WORDS[2]={'+','.join(json.dumps(x) for x in q['words'])+'};']
     for name,key in [('VALIDATION_SEEDS','validation_seeds'),('POWER_SEEDS','power_seeds')]:header.append('const uint64_t '+name+'[]={'+','.join(str(v)+'ULL' for v in q[key])+'};')
     for name,key in [('VALIDATION_N','validation_per_seed'),('POWER_REPLICATES','power_replicates_per_seed'),('BENCHMARK_N','benchmark_replicates'),('BENCHMARK_SEED','benchmark_seed')]:header.append(f'const int {name}={q[key]};')
     for name,key in [('GAMMAS','reporter_rates'),('TOLERANCES','power_tolerances'),('BENCHMARK_P','benchmark_probabilities'),('BENCHMARK_T','benchmark_tolerances')]:header.append('const double '+name+'[]={'+','.join(repr(float(F(v))) for v in q[key])+'};')
     header.append('const int HORIZONS[]={'+','.join(map(str,q['power_horizons']))+'};')
     header.append('const std::vector<std::vector<double>> STAKES={'+','.join('{'+','.join(repr(float(F(v))) for v in group)+'}' for group in q['power_stakes'])+'};')
-    (O/'assay_config.hpp').write_text('\n'.join(header)+'\n')
-    compiler=subprocess.check_output(['g++','--version'],text=True).splitlines()[0]
-    subprocess.run(['g++','-O3','-std=c++17','-Wall','-Wextra','-Werror','-I',str(O),str(P/'simulate.cpp'),'-o',str(O/'assay_simulate')],check=True)
-    subprocess.run([str(O/'assay_simulate'),str(O/'ASSAY_MODELS.txt'),str(O)],check=True)
+    return '\n'.join(header)+'\n'
+
+
+def main():
+    start=time.perf_counter();q=json.loads((P/'PROTOCOL.json').read_text())
+    subprocess.run([sys.executable,str(P/'moments.py')],check=True)
+    subprocess.run([sys.executable,str(P/'calibration.py')],check=True)
+    config=O/'assay_config.hpp'
+    config.write_text(configuration(q),encoding='utf8',newline='\n')
+    engine=resolve('assay',configuration=config)
+    if engine:
+        binary,compiler=engine
+    else:
+        binary=O/'assay_simulate'
+        compiler=subprocess.check_output(['g++','--version'],text=True).splitlines()[0]
+        subprocess.run(['g++','-O3','-std=c++17','-Wall','-Wextra','-Werror','-I',str(O),str(P/'simulate.cpp'),'-o',str(binary)],check=True)
+    subprocess.run([str(binary),str(O/'ASSAY_MODELS.txt'),str(O)],check=True)
     refs=json.loads((O/'ASSAY_MOMENTS.json').read_text());raw=list(csv.DictReader((O/'ASSAY_VALIDATION_RAW.csv').open()));checks=[]
     fields=['mean','second_moment','raw_slow','raw_fast','endpoint_slow','endpoint_fast'];m=len(raw)*len(fields)
     for row in raw:

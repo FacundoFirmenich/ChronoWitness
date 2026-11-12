@@ -1,32 +1,32 @@
 # Getting started
 
-Download the source ZIP from the latest release, extract it, and keep the folder intact. You do not need Git or an account. Code: MIT; external datasets keep their original licences.
+[Guía completa en castellano](GUIA_ES.md) · [Evidence atlas](https://facundofirmenich.github.io/ChronoWitness/?lang=en)
 
-## Standalone desktop example
+## Native package
 
-The release assets include platform-specific `ChronoWitness-<system>-<architecture>.zip` packages. Extract the archive and run `ChronoWitness` (`ChronoWitness.exe` on Windows). These bundles include their own Python runtime. They run the exact example and open a persistent HTML result; no scientific-package installation or account is needed. The complete campaign uses the Docker route below. Bundles are unsigned; if the operating system blocks them, use the source route rather than disabling security.
+Download the target archive and extract every file. Use the START_HERE script or open the ChronoWitness executable in the extracted folder. Choose language and scope in one prompt: `en all` runs the complete public core, `en 1,3` runs selected blocks, and `en atlas` opens the offline atlas.
 
-## A first result from source, without installing scientific packages
+The native package includes Python, numerical dependencies and the C++ engines built on the target platform. The complete run compares fresh results with the published references. Results are written under `source/research/results`. The run receipt lists the files produced during that run. The binary is unsigned. If your operating system blocks it, use the source route below.
 
-Install Python 3.12 from https://www.python.org/downloads/ if it is not already installed. On Windows select “Add Python to PATH”.
-
-| System | Start the exact worked example |
+| Block | Contents |
 |---|---|
-| Windows | Double-click `Start-Windows.cmd` |
-| macOS | In Terminal, run `sh Start-macOS.command`; a Git checkout also preserves its executable permission |
-| Linux | In Terminal, run `sh start-linux.sh` |
+| 1 | Exact phase-balanced reader identities, stochastic readers and instrument checks |
+| 2 | Finite reporting, delivery, sequential inference, count envelopes and kinetic witness |
+| 3 | Certified design, exact power, worked example and controls |
+| 4 | Frozen trajectory assay, Monte Carlo verification and application interfaces |
+| all | The public core, regenerated and compared with distributed results |
+| atlas | Bilingual offline evidence map, arguments, guided routes and FD7 witness |
 
-Equivalent on every system: `python launch.py` (or `python3 launch.py`). The example needs only the standard library and writes `research/results/DESIGN_TUTORIAL.json`. Success is `PASS_EXACT_TUTORIAL`. This checks exact mathematics; it does not simulate a new cellular experiment.
+## Source package
 
-## Complete core reproduction
+Install Python 3.12 if needed. From the extracted source archive run `Start-Windows.bat`, `Start-macOS.command` or `sh start-linux.sh`. To select without the menu, run `python workbench.py --lang en --blocks example` or `python workbench.py --lang en --blocks 2,3`.
 
-Install and start [Docker Desktop](https://docs.docker.com/desktop/) on Windows/macOS or [Docker Engine](https://docs.docker.com/engine/install/) on Linux. Run `python launch.py --mode full`. This builds an isolated Linux/amd64 environment, compiles the C++ routines, reproduces the core certificates, assay and power calculations, and compares 46 reference outputs. Internet is needed for the first build. Apple Silicon uses amd64 emulation for the same numerical toolchain and may be slower. This is a container route, not a signed standalone native executable.
+For the complete source reproduction, run Docker and select `en all`, or run `python launch.py --mode full`. This recompiles the C++17 engines in the container. Direct reproduction from source needs a C++17 compiler and the dependencies in `requirements-assay.txt`. The external acquisition campaigns have separate data and compute requirements in their own protocols.
 
-The verified Linux reference previously took about five minutes for scientific computation; installation, emulation and hardware change this. Allow 4 GB RAM and several GB free disk for Docker. No GPU, payment, credentials or Drive mount is required. Output stays in `research/results/`; `PUBLIC_VERIFICATION.json` must report `PASS_PUBLIC_CODE_DATA_REPRODUCTION`. A nonzero exit is a failure, not a partial pass.
+## Read the evidence
 
-`python launch.py --mode doctor` reports prerequisites without changing your machine. `--mode graph` opens the offline epistemic map. If macOS security blocks double-clicking a downloaded script, use the documented Terminal command; do not disable system protections.
+Use the [scientific results](SCIENTIFIC_RESULTS.md), [assay guide](ASSAY_GUIDE.md), [worked example](WORKED_EXAMPLE.md) and [trajectory assay](TRAJECTORY_ASSAY.md) for detailed derivations. The [cellular calibration record](CELLULAR_OBSERVATIONS.md) preserves adverse local outcomes. A native calculation reproduces mathematical or computational evidence for the declared protocols. The cellular records are secondary observations under their published input schedules.
 
-## Scope and data
+The atlas has a spatial map and a dependency view. A guided tour chooses reading order. Scientific arrows represent typed relations, and conjunctions retain all required premises. Audit view gives the source hash. The witness view projects the exact FD7 phase, state and arm data. It reports state-3 occupation 3/24 for A and 2/24 for B. The arm axis is categorical.
 
-The full core route does not rerun every external-cell campaign. E1–E11 have separate input datasets, acquisition protocols and resource needs, linked in [the evidence ledger](EVIDENCE_LEDGER.json). E11 is the latest public cellular analysis. E12 remains private retrospective development. New records require their own protocol; rerunning an exposed reserve does not create a new holdout.
-
+Generate the figures from a Python environment with the figure dependencies using `python tools/render_witness_3d.py --formats svg pdf png --output figures`. See [figure reproduction](FIGURE_REPRODUCTION.md) for the earlier figures.

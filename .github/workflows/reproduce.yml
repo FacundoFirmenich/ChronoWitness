@@ -1,12 +1,12 @@
 name: Reproduce public scientific release
 on:
   push:
-    branches: ["Ulalito's-Island"]
   workflow_dispatch:
 permissions:
   contents: read
 jobs:
   science:
+    if: github.event_name == 'workflow_dispatch' || github.ref_name == github.event.repository.default_branch
     runs-on: ubuntu-24.04
     timeout-minutes: 20
     steps:

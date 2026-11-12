@@ -10,9 +10,9 @@ authors:
     given-names: Pau
   - family-names: Firmenich
     given-names: León
-version: 0.14.3
-date-released: 2026-11-11
+version: 0.15.0
+date-released: 2026-11-12
 license: MIT
 repository-code: "https://github.com/FacundoFirmenich/ChronoWitness"
-url: "https://github.com/FacundoFirmenich/ChronoWitness/releases/tag/v0.14.3"
+url: "https://github.com/FacundoFirmenich/ChronoWitness/releases/tag/v0.15.0"
 doi: "10.5281/zenodo.24117387"

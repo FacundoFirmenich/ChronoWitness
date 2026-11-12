@@ -35,6 +35,12 @@ def compare_assay(old,fresh,name):
         # identities in the report; counts, source hashes and tolerances stay exact.
         environment={'reference_compiler':a.pop('compiler'),'observed_compiler':b.pop('compiler')}
         assert all(isinstance(v,str) and v.strip() for v in environment.values())
+        # The new runner accepts native engines. All scientific sources other
+        # than this orchestration file must retain the original hashes.
+        old_sources=a.pop('source_sha256')
+        new_sources=b.pop('source_sha256')
+        assert {k:v for k,v in old_sources.items() if k!='run.py'}=={k:v for k,v in new_sources.items() if k!='run.py'}
+        environment.update(reference_runner_sha256=old_sources['run.py'],observed_runner_sha256=new_sources['run.py'])
     delta=differences(a,b);error=0.
     for path,x,y in delta:
         # Counts, seeds, pass/fail flags, protocol and source hashes stay exact.
@@ -56,12 +62,14 @@ def main():
     meta=json.loads((ROOT/'.zenodo.json').read_text());assert meta['license']=='MIT' and meta['version']==version and meta['upload_type']=='software'
     citation=(ROOT/'CITATION.cff').read_text()
     assert 'MIT' in citation and ('version: '+version+'\n') in citation
-    execution=json.loads((R/'results/EXECUTION.json').read_text());assert execution['status']=='PASS_EXACT_MATHEMATICAL_RESULTS' and len(execution['commands'])==11 and all(x['exit_code']==0 for x in execution['commands'])
+    execution=json.loads((R/'results/EXECUTION.json').read_text())
+    count={'compile_from_source':11,'verified_native':9}[execution['engine_mode']]
+    assert execution['status']=='PASS_EXACT_MATHEMATICAL_RESULTS' and len(execution['commands'])==count and all(x['exit_code']==0 for x in execution['commands'])
     compared=[];numerical_comparisons=[]
     for old in sorted((ROOT/'expected/core').iterdir()):
         fresh=R/'results'/old.name;assert fresh.is_file(),old.name
         if old.suffix=='.json':assert stable(json.loads(old.read_text()))==stable(json.loads(fresh.read_text())),old.name
-        else:assert old.read_bytes()==fresh.read_bytes(),old.name
+        else:assert old.read_bytes().replace(b'\r\n',b'\n')==fresh.read_bytes().replace(b'\r\n',b'\n'),old.name
         compared.append(old.name)
     for prefix,folder in [('Data_S10_','supplement-v09/data'),('Data_S11_','supplement-v010/data'),('Data_S12_','supplement-v011/data'),('Data_S13_','supplement-v012/data')]:
         for old in sorted((R/folder).glob(prefix+'*')):
@@ -75,7 +83,7 @@ def main():
                     (R/'results/REPRODUCTION_DIFFERENCES.json').write_text(json.dumps(dict(file=name,differences=delta),indent=2)+'\n')
                     print(json.dumps(dict(file=name,difference_count=len(delta),first_differences=delta[:20]),indent=2),flush=True)
                 assert not delta,name
-            else:assert old.read_bytes()==fresh.read_bytes(),name
+            else:assert old.read_bytes().replace(b'\r\n',b'\n')==fresh.read_bytes().replace(b'\r\n',b'\n'),name
             compared.append(name)
     audit=json.loads((R/'results/KINETIC_AUDIT.json').read_text());assert audit['status']=='PASS_CERTIFIED_CONTINUOUS_TIME_FD7_WITNESS'
     cert=json.loads((R/'results/DESIGN_CERTIFICATE.json').read_text());assert cert['status']=='PASS_CERTIFIED_DESIGN_FRONTIER'

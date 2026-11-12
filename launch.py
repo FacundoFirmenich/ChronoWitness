@@ -16,7 +16,7 @@ def main():
   print('Result: '+str(ROOT/'research/results/DESIGN_TUTORIAL.json'));return
  if not shutil.which('docker'):p.error('Install and start Docker Desktop (Windows/macOS) or Docker Engine (Linux), then rerun --mode full. See docs/GETTING_STARTED.md.')
  subprocess.run(['docker','info'],stdout=subprocess.DEVNULL,check=True)
- image='chronowitness:0.14.3'
+ image='chronowitness:0.15.0'
  subprocess.run(['docker','build','--platform','linux/amd64','-t',image,str(ROOT)],check=True)
  out=ROOT/'research/results';out.mkdir(parents=True,exist_ok=True)
  subprocess.run(['docker','run','--rm','--platform','linux/amd64','--mount',f'type=bind,source={out},target=/work/research/results',image],check=True)

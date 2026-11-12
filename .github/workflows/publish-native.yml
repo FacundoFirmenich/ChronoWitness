@@ -1,0 +1,54 @@
+name: Publish verified native packages
+on:
+  workflow_dispatch:
+    inputs:
+      run_id:
+        description: Successful native build run at this exact commit
+        required: true
+        type: string
+permissions:
+  actions: read
+  contents: write
+jobs:
+  publish:
+    if: github.ref_name == github.event.repository.default_branch
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    env:
+      GH_TOKEN: ${{ github.token }}
+      BUILD_RUN: ${{ inputs.run_id }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Verify build provenance and archive receipts
+        shell: bash
+        run: |
+          [[ "$BUILD_RUN" =~ ^[0-9]+$ ]]
+          gh api "repos/$GITHUB_REPOSITORY/actions/runs/$BUILD_RUN" > "$RUNNER_TEMP/build.json"
+          jq -e --arg sha "$GITHUB_SHA" '.head_sha == $sha and .conclusion == "success" and .path == ".github/workflows/desktop.yml"' "$RUNNER_TEMP/build.json"
+          gh run download "$BUILD_RUN" --pattern 'desktop-*' --dir "$RUNNER_TEMP/packages"
+          python - "$RUNNER_TEMP/packages" <<'PY'
+          import hashlib, json, sys
+          from pathlib import Path
+
+          directory = Path(sys.argv[1])
+          expected = {("Windows", "amd64"), ("Linux", "x86_64"), ("Darwin", "arm64"), ("Darwin", "x86_64")}
+          receipts = sorted(directory.glob("*/*.verification.json"))
+          assert len(receipts) == 4
+          for path in receipts:
+              receipt = json.loads(path.read_bytes())
+              target = receipt["system"], receipt["machine"].lower()
+              expected.remove(target)
+              assert receipt["full"]["status"] == "PASS_PUBLIC_CODE_DATA_REPRODUCTION"
+              assert receipt["selected"]["mode"] == "2,3"
+              archive = path.with_name(path.name.replace(".verification.json", ".zip"))
+              assert archive.name == receipt["archive"]
+              with archive.open("rb") as stream:
+                  assert hashlib.file_digest(stream, "sha256").hexdigest() == receipt["sha256"]
+          assert not expected
+          PY
+      - name: Publish software release
+        shell: bash
+        run: |
+          version="$(jq -r .version RELEASE_MANIFEST.json)"
+          gh release create "v$version" "$RUNNER_TEMP"/packages/*/*.zip "$RUNNER_TEMP"/packages/*/*.verification.json \
+            --target "$GITHUB_SHA" --title "ChronoWitness v$version" --notes-file docs/NATIVE_RELEASE.md

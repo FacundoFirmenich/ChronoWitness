@@ -1,12 +1,12 @@
 name: Cross-platform access and container reproduction
 on:
   push:
-    branches: ["Ulalito's-Island"]
   workflow_dispatch:
 permissions:
   contents: read
 jobs:
   example:
+    if: github.event_name == 'workflow_dispatch' || github.ref_name == github.event.repository.default_branch
     strategy:
       fail-fast: false
       matrix:
@@ -23,17 +23,18 @@ jobs:
         shell: cmd
         env:
           CW_NO_PAUSE: '1'
-        run: Start-Windows.cmd
+        run: Start-Windows.cmd --blocks example
       - if: runner.os == 'macOS'
-        run: sh Start-macOS.command
+        run: sh Start-macOS.command --blocks example
       - if: runner.os == 'Linux'
-        run: sh start-linux.sh
+        run: sh start-linux.sh --blocks example
       - run: python tools/build_evidence.py --check
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: exact-example-${{ matrix.os }}
           path: research/results/DESIGN_TUTORIAL.json
   container:
+    if: github.event_name == 'workflow_dispatch' || github.ref_name == github.event.repository.default_branch
     runs-on: ubuntu-24.04
     timeout-minutes: 25
     steps:

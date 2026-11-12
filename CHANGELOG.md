@@ -1,3 +1,9 @@
+## 0.15.0
+
+Bilingual spatial evidence atlas and native workbench with complete-core and selected-block execution.
+
+Atlas espacial bilingüe y banco de trabajo nativo con ejecución del núcleo completo o por bloques.
+
 # v0.13.0: cellular observations and local calibration transport
 
 Integrates E1-E4 with the existing exact identities and Monte Carlo evidence. New evidence resolves early calibration by experiment, time segment, input transition and training-defined fluorescence band. Full support failures and tail deterioration remain in the record. The public package contains code and computational results only; the manuscript, supplementary document and confidential commercial assessment remain separate.

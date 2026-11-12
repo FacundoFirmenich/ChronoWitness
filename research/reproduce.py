@@ -1,6 +1,7 @@
 """Reproduce paper mathematics on Linux with Python stdlib and a C++17 compiler."""
 from pathlib import Path
 import hashlib,json,platform,subprocess,sys,time
+from native_engines import resolve
 ROOT=Path(__file__).resolve().parent
 def main():
     out=ROOT/'results';out.mkdir(exist_ok=True)
@@ -20,10 +21,18 @@ def main():
         ([sys.executable,'analysis/verify_markov_boundary.py'],None),
         ([sys.executable,'analysis/audit_general_criterion.py'],None),
     ]
+    phase,instrument=resolve('phase'),resolve('instrument')
+    if phase is not None:
+        assert instrument is not None
+        commands=[entry for entry in commands if entry[0][0]!='g++']
+        commands=[([str(phase[0]),*cmd[1:]],name) if cmd[0]=='./results/phase' else
+                  ([str(instrument[0]),*cmd[1:]],name) if cmd[0]=='./results/instrument' else
+                  (cmd,name) for cmd,name in commands]
     manifest={'status':'RUNNING','python':platform.python_version(),'platform':platform.platform(),
       'source_sha256':{p.relative_to(ROOT).as_posix():hashlib.sha256(p.read_bytes()).hexdigest()
         for p in sorted((ROOT/'analysis').glob('*')) if p.is_file()},'commands':records,
       'biological_validation':False,'external_peer_review':False}
+    manifest['engine_mode']='verified_native' if phase else 'compile_from_source'
     for cmd,destination in commands:
         start=time.monotonic()
         run=subprocess.run(cmd,cwd=ROOT,text=True,capture_output=True)
