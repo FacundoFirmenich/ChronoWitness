@@ -4,6 +4,7 @@ WORKDIR /app
 COPY requirements.txt .
 RUN python -m pip install --no-cache-dir -r requirements.txt
 COPY streamlit_app.py .
+COPY .streamlit/config.toml .streamlit/config.toml
 COPY tools/fd7_demo.py tools/render_witness_3d.py tools/
 COPY research/sources/FD7_CERTIFICATE_v0.7.0.json research/sources/
 COPY expected/core/PHASE_INDEPENDENT_PYTHON.json expected/core/
