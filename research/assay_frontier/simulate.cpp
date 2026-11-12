@@ -56,6 +56,9 @@ struct Capital {
         if (mantissa!=0 && mantissa<0x1p-512L) {
             mantissa=std::ldexp(mantissa,512);
             exponent-=512;
+        } else if (mantissa>0x1p512L) {
+            mantissa=std::ldexp(mantissa,-512);
+            exponent+=512;
         }
     }
     long double value() const { return exponent ? std::ldexp(mantissa,exponent) : mantissa; }
@@ -76,7 +79,15 @@ struct Test{
         if(sum>=20*capital.size())first=n;
     }
 };
-int main(int argc,char** argv){assert(argc==3);std::ifstream input(argv[1]);int count;input>>count;assert(count==2);std::vector<Model> models(count);
+int main(int argc,char** argv){
+#if LDBL_MAX_EXP <= 8192
+    Capital range_check;
+    for(int i=0;i<2400;i++)range_check.multiply(0.5L);
+    assert(range_check.value()==0);
+    for(int i=0;i<2400;i++)range_check.multiply(2.L);
+    assert(range_check.value()==1);
+#endif
+    assert(argc==3);std::ifstream input(argv[1]);int count;input>>count;assert(count==2);std::vector<Model> models(count);
     for(auto& m:models){input>>m.n;assert(m.n==2||m.n==3);for(auto& q:m.q)for(int i=0;i<m.n;i++)for(int j=0;j<m.n;j++)input>>q[i][j];for(auto& p:m.p)for(int i=0;i<m.n;i++)input>>p[i];}assert(input);
     std::string folder=argv[2];std::ofstream validation(folder+"/ASSAY_VALIDATION_RAW.csv"),power(folder+"/ASSAY_POWER_RAW.csv"),benchmark(folder+"/ASSAY_BENCHMARK_RAW.csv");
     validation<<"model,seed,periods,arm,replicates,mean,second_moment,raw_slow,raw_fast,endpoint_slow,endpoint_fast,max_pathwise_error\n"<<std::setprecision(17);

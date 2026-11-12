@@ -1,5 +1,7 @@
 # From the model identity to an assay
 
+[Castellano](GUIA_DEL_ENSAYO.md)
+
 Use this guide to determine which quantities must be supplied before a measured contrast enters the test.
 
 | Decision | Information required | Consequence |

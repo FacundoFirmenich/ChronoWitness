@@ -1,5 +1,7 @@
 # From temporal identity to an assay plan
 
+[Castellano](ENSAYO_DE_TRAYECTORIAS.md)
+
 ChronoWitness separates three design questions: which model predicts equal responses, which observable preserves that equality, and how much data can resolve a qualified contrast. The trajectory study connects them for two explicitly declared kinetic models.
 
 ## What the new study resolves

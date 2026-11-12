@@ -1,5 +1,7 @@
 # Literature context
 
+[Castellano](CONTEXTO_BIBLIOGRAFICO.md)
+
 ChronoWitness complements parameter-estimation and stimulus-design methods with a parameter-uniform reference for a specified class of periodic readers. The distinction concerns the statistical target: it does not remove the need to qualify the physical observation.
 
 | Research contribution | Connection to ChronoWitness |
