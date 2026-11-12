@@ -318,7 +318,7 @@
     "tools/render_figures.py": "6d489bc18f83c4eec36bd2c26b24cbe730c9a83057556688bc59cab4c950ba5b",
     "tools/render_witness_3d.py": "1ba4bf4264415635e72332eadd00e64ae2e4a99247aacd7bb7b92c92d63344d5",
     "tools/spatial_atlas.js": "33b028d49ef639e7026b0e78e27301044a9715273cb14f5d173a48b637c1b8a0",
-    "verify_release.py": "92ddbd703a1370eef52e20aba02e2a41616389c3190ab12e339b31da6b22abc6",
+    "verify_release.py": "2b0f554ec5a0796d526f242bf15376071528a5a4e9878d0d488108ae078a77f0",
     "workbench.py": "52a3f11123ddfee1a75b7e2b6613ba21353f5640cdef763f50adbf4e914ca89c"
   },
   "distribution_scope": "Complete public tree through E11; mathematical core version retained",

@@ -1,6 +1,6 @@
 """Verify the public code/data distribution and freshly reproduced certificates."""
 from pathlib import Path
-import hashlib,json
+import csv,hashlib,json,math
 ROOT=Path(__file__).resolve().parent;R=ROOT/'research'
 sha=lambda b:hashlib.sha256(b).hexdigest()
 def stable(x):
@@ -75,6 +75,25 @@ def compare_supplement():
             assert old.replace(b'\r\n',b'\n')==new.replace(b'\r\n',b'\n'),name
     return sorted(names)
 
+def compare_validation_csv(old,fresh):
+    continuous={'mean','second_moment','raw_slow','raw_fast','endpoint_slow','endpoint_fast','max_pathwise_error'}
+    with old.open(newline='',encoding='utf8') as f, fresh.open(newline='',encoding='utf8') as g:
+        reference,observed=csv.DictReader(f),csv.DictReader(g)
+        assert reference.fieldnames==observed.fieldnames
+        assert continuous.issubset(reference.fieldnames)
+        maxima={k:0. for k in sorted(continuous)}
+        for index,(a,b) in enumerate(zip(reference,observed,strict=True),start=2):
+            assert a.keys()==b.keys() and None not in a
+            for k in a.keys()-continuous:
+                assert a[k]==b[k],(fresh.name,index,k,a[k],b[k])
+            for k in continuous:
+                x,y=float(a[k]),float(b[k])
+                error=abs(x-y)
+                assert math.isfinite(x) and math.isfinite(y) and error<=2e-10,(fresh.name,index,k,x,y)
+                maxima[k]=max(maxima[k],error)
+    return dict(file=fresh.name,maximum_absolute_difference=max(maxima.values()),
+                maximum_by_field=maxima,tolerance=2e-10)
+
 def main():
     manifest=json.loads((ROOT/'RELEASE_MANIFEST.json').read_text())
     version=manifest['version']
@@ -104,6 +123,10 @@ def main():
             assert fresh.is_file(),name
             if name in {'ASSAY_AUDIT.json','ASSAY_MOMENTS.json','ASSAY_MODELS.txt'}:
                 numerical_comparisons.append(compare_assay(old,fresh,name))
+            elif name=='ASSAY_VALIDATION_RAW.csv':
+                # The samples and row identities are fixed. ABI-dependent
+                # floating-point summaries use the same bound as the audit.
+                numerical_comparisons.append(compare_validation_csv(old,fresh))
             elif old.suffix=='.json':
                 delta=differences(stable(json.loads(old.read_text())),stable(json.loads(fresh.read_text())))
                 if delta:
