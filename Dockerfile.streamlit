@@ -1,0 +1,16 @@
+FROM python:3.12.12-slim-bookworm
+
+WORKDIR /app
+COPY requirements.txt .
+RUN python -m pip install --no-cache-dir -r requirements.txt
+COPY streamlit_app.py .
+COPY .streamlit/config.toml .streamlit/config.toml
+COPY tools/fd7_demo.py tools/render_witness_3d.py tools/
+COPY research/sources/FD7_CERTIFICATE_v0.7.0.json research/sources/
+COPY expected/core/PHASE_INDEPENDENT_PYTHON.json expected/core/
+
+RUN useradd --system --uid 10001 --create-home demo
+USER demo
+EXPOSE 8501
+HEALTHCHECK --interval=20s --timeout=3s --start-period=10s CMD ["python", "-c", "from urllib.request import urlopen; urlopen('http://127.0.0.1:8501/_stcore/health', timeout=2).read()"]
+ENTRYPOINT ["python", "-m", "streamlit", "run", "streamlit_app.py", "--server.address=0.0.0.0", "--server.port=8501", "--server.headless=true", "--browser.gatherUsageStats=false"]

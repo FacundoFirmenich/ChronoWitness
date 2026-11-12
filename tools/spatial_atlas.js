@@ -236,6 +236,7 @@ function refresh(){
   $('renderImage').src=D.render_previews[S.lang];$('renderImage').alt=pick(renderText.renderTitle);
   $('quickPdf').href=$('figurePdf').href='https://github.com/FacundoFirmenich/ChronoWitness/releases/download/v0.15.0/FD7_WITNESS_3D_'+S.lang.toUpperCase()+'.pdf';
   $('quickPdf').textContent=pick(renderText.figurePdf);
+  document.body.dataset.mode=S.mode;
   $('phaseControl').hidden=S.mode!=='witness';
   $('count').hidden=S.mode==='witness';
   $('count').textContent=visible().length+' / '+D.nodes.length+(ix()?' nodos visibles · ':' visible nodes · ')+D.edges.length+(ix()?' aristas totales':' total edges');

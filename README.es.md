@@ -1,10 +1,14 @@
 # ChronoWitness
 
-[English](README.md) · [SuperGraph](https://facundofirmenich.github.io/ChronoWitness/supergraph.html?lang=es) · [Render FD7 interactivo](https://facundofirmenich.github.io/ChronoWitness/render-fd7.html?lang=es) · [Descargas](https://github.com/FacundoFirmenich/ChronoWitness/releases)
+[English](README.md) · [Caso guía FD7](docs/DEMO_FD7_ES.md) · [Grafo epistémico](https://facundofirmenich.github.io/ChronoWitness/epistemic-graph.html?lang=es) · [SuperGraph](https://facundofirmenich.github.io/ChronoWitness/supergraph.html?lang=es) · [Render FD7 interactivo](https://facundofirmenich.github.io/ChronoWitness/render-fd7.html?lang=es) · [Descargas nativas](https://github.com/FacundoFirmenich/ChronoWitness/releases)
 
 ChronoWitness diseña entradas temporales emparejadas para contrastar clases de modelos de memoria celular. Las secuencias FD7 coinciden en los conteos de palabras cíclicas hasta el orden siete y satisfacen la identidad declarada para la media periódica de dos estados. Los testigos exactos muestran dónde lectores con más estados distinguen las historias. Los contratos de observación e inferencia especifican cómo interpretar un contraste medido.
 
 ![Trayectorias exactas de estados bajo FD7](docs/assets/FD7_WITNESS_3D_ES.svg)
+
+## Explorar un caso
+
+La [demo FD7](docs/DEMO_FD7_ES.md) te lleva de un contraste certificado de ocupación de **1/24** a la edición de un símbolo que produce **0** en la ventana finita especificada. Abrí el render y el grafo epistémico en el navegador, o usá el [editor bilingüe Streamlit y Docker](docs/DEMO_FD7_ES.md#abrir-el-editor) para modificar una entrada y exportar el resultado. La [guía para la comunidad y la investigación](docs/COMUNIDAD_INVESTIGACION_ES.md) cubre discriminación de modelos, adquisición finita y calibración celular local.
 
 ## Empezar sin Git
 
@@ -13,6 +17,8 @@ ChronoWitness diseña entradas temporales emparejadas para contrastar clases de 
 3. Escribí `es todo` para el núcleo público completo, `es 1,3` para seleccionar bloques o `es atlas` para explorar. El paquete nativo guarda los resultados en `source/research/results`.
 
 El paquete nativo incluye Python, dependencias numéricas y motores C++ de la plataforma. La ejecución completa usa esos motores y coteja los resultados con las referencias distribuidas. La ruta desde fuentes comprueba además la compilación desde C++17. Los binarios nativos están sin firmar. Si el sistema no los admite, usá la ruta desde fuentes de la [guía de reproducción](docs/GUIA_ES.md).
+
+El desarrollo local se hizo en un **portátil de 2016**, con Intel i5-6200U y 8–16 GB de RAM DDR3. Las campañas de mayor tamaño también usaron CPU alojada. [Release nativa v0.15.0 y recibos por plataforma](https://github.com/FacundoFirmenich/ChronoWitness/releases/tag/v0.15.0)
 
 | Bloque | Alcance |
 |---|---|
@@ -37,6 +43,8 @@ El atlas distingue un recorrido de lectura de las dependencias científicas. La 
 
 ## Ruta desde fuentes y cita
 
-Usá `Start-Windows.bat`, `Start-macOS.command` o `start-linux.sh` con Python 3.12 para abrir el menú desde fuentes. Para la reproducción canónica completa, iniciá Docker y elegí `es todo`, o ejecutá `python launch.py --mode full`. La [guía de reproducción](docs/GUIA_ES.md) explica las rutas.
+Usá `Start-Windows.bat`, `Start-macOS.command` o `start-linux.sh` con Python 3.12 para abrir el menú desde fuentes. La reproducción completa se inicia con `python launch.py --mode full`. El `Dockerfile` principal construye el contenedor de reproducción y `Dockerfile.streamlit` sirve el editor interactivo. [Guía de reproducción](docs/GUIA_ES.md)
+
+[Contribuir](CONTRIBUTING.md) · [Issues](https://github.com/FacundoFirmenich/ChronoWitness/issues) · [Discussions](https://github.com/FacundoFirmenich/ChronoWitness/discussions)
 
 Facundo Firmenich, Pau Firmenich y León Firmenich. [Metadatos de cita](CITATION.cff) · [Software v0.14.3 archivado](https://doi.org/10.5281/zenodo.24147203) · [Todas las versiones](https://doi.org/10.5281/zenodo.24117387). El DOI identifica la versión archivada indicada. El código original se distribuye con [licencia MIT](LICENSE).

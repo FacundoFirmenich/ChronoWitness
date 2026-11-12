@@ -9,6 +9,13 @@ PAIR='research/sources/FD7_CERTIFICATE_v0.7.0.json'
 WITNESS='expected/core/PHASE_INDEPENDENT_PYTHON.json'
 
 
+def state_path(word, transition):
+    path = [0]
+    for bit in word:
+        path.append(transition[2 * path[-1] + int(bit)])
+    return path
+
+
 def trace():
     pair=json.loads((R/PAIR).read_bytes())['pair']
     certificate=json.loads((R/WITNESS).read_bytes())
@@ -16,10 +23,8 @@ def trace():
     states={}
     for arm in 'AB':
         word=pair['sequence_'+arm]
-        q=0;path=[q]
-        for bit in word:
-            q=delta[2*q+int(bit)];path.append(q)
-        assert q==0
+        path=state_path(word,delta)
+        assert path[-1]==0
         counts=Counter(zip(path[:-1],map(int,word)))
         assert [str(counts[s,b]) for s in range(4) for b in range(2)]==certificate['synchronizing_witness_profile_'+arm]
         states[arm]=dict(word=word,path=path,visits=path[:-1].count(3))

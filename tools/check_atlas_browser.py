@@ -82,12 +82,19 @@ RENDER_CHECK=r'''
 <script>
 (()=>{
 const graph=document.getElementById('graph');
-const pass=window.CWAtlas?.state().mode==='witness'&&document.documentElement.lang==='es'
- &&graph.querySelectorAll('polyline').length===48&&graph.querySelectorAll('circle').length===5
- &&graph.getBoundingClientRect().top<window.innerHeight
- &&!document.getElementById('phaseControl').hidden
- &&document.getElementById('quickPdf').href.endsWith('FD7_WITNESS_3D_ES.pdf');
-document.body.dataset.qa=pass?'pass':'fail';
+const bounds=graph.getBoundingClientRect();
+const checks=[
+ [window.CWAtlas?.state().mode==='witness','witness mode'],
+ [document.documentElement.lang==='es','Spanish entry'],
+ [graph.querySelectorAll('polyline').length===48,'trajectory segments'],
+ [graph.querySelectorAll('circle').length===5,'state 3 visits'],
+ [bounds.width>0&&bounds.top<window.innerHeight,`visible graph (${bounds.top}, ${window.innerHeight})`],
+ [!document.getElementById('phaseControl').hidden,'phase control'],
+ [document.getElementById('quickPdf').href.endsWith('FD7_WITNESS_3D_ES.pdf'),'Spanish figure link'],
+];
+const failed=checks.filter(([pass])=>!pass).map(([,label])=>label);
+document.body.dataset.qa=failed.length?'fail':'pass';
+if(failed.length)document.body.dataset.error=failed.join(', ');
 })();
 </script>
 '''

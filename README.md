@@ -1,10 +1,14 @@
 # ChronoWitness
 
-[Castellano](README.es.md) · [SuperGraph](https://facundofirmenich.github.io/ChronoWitness/supergraph.html?lang=en) · [Interactive FD7 render](https://facundofirmenich.github.io/ChronoWitness/render-fd7.html?lang=en) · [Downloads](https://github.com/FacundoFirmenich/ChronoWitness/releases)
+[Castellano](README.es.md) · [FD7 leading case](docs/FD7_DEMO.md) · [Epistemic graph](https://facundofirmenich.github.io/ChronoWitness/epistemic-graph.html?lang=en) · [SuperGraph](https://facundofirmenich.github.io/ChronoWitness/supergraph.html?lang=en) · [Interactive FD7 render](https://facundofirmenich.github.io/ChronoWitness/render-fd7.html?lang=en) · [Native downloads](https://github.com/FacundoFirmenich/ChronoWitness/releases)
 
 ChronoWitness designs matched temporal inputs to test classes of models of cellular memory. Its FD7 schedules agree on cyclic word counts through order seven and on the stated two-state periodic mean identity. The exact witnesses show where readers with more states can distinguish the histories. The observation and inference contracts specify how a measured contrast can bear on that distinction.
 
 ![Exact FD7 state trajectories](docs/assets/FD7_WITNESS_3D_EN.svg)
+
+## Explore a case
+
+The [FD7 demo](docs/FD7_DEMO.md) guides you from a certified occupation contrast of **1/24** to a one-symbol edit that produces **0** in the specified finite window. Open the render and epistemic graph in your browser, or use the bilingual [Streamlit and Docker editor](docs/FD7_DEMO.md#run-the-editor) to change an input and export the result. The [community and research guide](docs/COMMUNITY_RESEARCH.md) covers model discrimination, finite acquisition and local cellular calibration.
 
 ## Start without Git
 
@@ -13,6 +17,8 @@ ChronoWitness designs matched temporal inputs to test classes of models of cellu
 3. Type `en all` for the complete public core, `en 1,3` for a selection, or `en atlas` to explore. Results are written under `source/research/results` in a native package.
 
 The native package bundles Python, numerical dependencies and target-specific C++ engines. The full run executes these engines and compares results with the distributed reference. The source build also checks compilation from C++17 source. Native binaries are unsigned. If your operating system does not allow them, use the source route in the [getting-started guide](docs/GETTING_STARTED.md).
+
+Local development used a mid-range **2016 laptop** with an Intel i5-6200U and 8–16 GB DDR3 RAM. The larger campaigns also used hosted CPU resources. [Native v0.15.0 and platform receipts](https://github.com/FacundoFirmenich/ChronoWitness/releases/tag/v0.15.0)
 
 | Block | Scope |
 |---|---|
@@ -35,6 +41,8 @@ The atlas distinguishes a reading sequence from scientific dependencies. In the 
 
 ## Source route and citation
 
-Use `Start-Windows.bat`, `Start-macOS.command` or `start-linux.sh` with Python 3.12 for the source menu. For the canonical complete source run, start Docker and choose `en all`, or run `python launch.py --mode full`. Use the [reproduction guide](docs/GETTING_STARTED.md) to select a route.
+Use `Start-Windows.bat`, `Start-macOS.command` or `start-linux.sh` with Python 3.12 for the source menu. The complete source run starts with `python launch.py --mode full`. The root `Dockerfile` builds the reproduction container, while `Dockerfile.streamlit` serves the interactive editor. [Reproduction guide](docs/GETTING_STARTED.md)
+
+[Contributing](CONTRIBUTING.md) · [Issues](https://github.com/FacundoFirmenich/ChronoWitness/issues) · [Discussions](https://github.com/FacundoFirmenich/ChronoWitness/discussions)
 
 Facundo Firmenich, Pau Firmenich and León Firmenich. [Citation metadata](CITATION.cff) · [Archived v0.14.3 software](https://doi.org/10.5281/zenodo.24147203) · [All versions](https://doi.org/10.5281/zenodo.24117387). The DOI refers to the named archived version. The original code is [MIT licensed](LICENSE).
