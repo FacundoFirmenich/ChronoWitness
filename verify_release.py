@@ -128,7 +128,18 @@ def main():
                 # floating-point summaries use the same bound as the audit.
                 numerical_comparisons.append(compare_validation_csv(old,fresh))
             elif old.suffix=='.json':
-                delta=differences(stable(json.loads(old.read_text())),stable(json.loads(fresh.read_text())))
+                expected=stable(json.loads(old.read_text()))
+                observed=stable(json.loads(fresh.read_text()))
+                if name=='KINETIC_AUDIT.json':
+                    archived_hashes=expected.pop('output_sha256')
+                    observed_hashes=observed.pop('output_sha256')
+                    assert archived_hashes.keys()==observed_hashes.keys()
+                    for artifact,digest in archived_hashes.items():
+                        assert sha((old.parent/('Data_S11_'+artifact.lower())).read_bytes())==digest,artifact
+                        assert sha((fresh.parent/artifact).read_bytes())==observed_hashes[artifact],artifact
+                    # These same files are also compared by parsed JSON or
+                    # line-ending-independent CSV in this verification pass.
+                delta=differences(expected,observed)
                 if delta:
                     (R/'results/REPRODUCTION_DIFFERENCES.json').write_text(json.dumps(dict(file=name,differences=delta),indent=2)+'\n')
                     print(json.dumps(dict(file=name,difference_count=len(delta),first_differences=delta[:20]),indent=2),flush=True)
