@@ -1,10 +1,10 @@
 # ChronoWitness
 
-[EspaÃ±ol / English quick start](docs/GETTING_STARTED.md) Â· [Interactive epistemic graph](docs/epistemic-graph.html) Â· [Evidence ledger](docs/EVIDENCE_LEDGER.json)
+[Español / English quick start](docs/GETTING_STARTED.md) · [Interactive epistemic graph](docs/epistemic-graph.html) · [Evidence ledger](docs/EVIDENCE_LEDGER.json)
 
 **Start:** download and extract the latest source ZIP. Windows: `Start-Windows.cmd`; macOS: `sh Start-macOS.command`; Linux: `sh start-linux.sh`. The exact example uses Python only. Complete core reproduction: `python launch.py --mode full` with Docker running.
 
-**Current public evidence:** E9 fixes temporal prediction, E10 tests transport to additional acquisitions, and E11 evaluates a selected causal calibration policy on 14 reserved acquisitions. Each retains local tail harms and unsupported jurisdictions. [E9](research/e9-execution/E9_NUMERICAL_PROTOCOL.json) Â· [E10](research/e10-transport/README.md) Â· [E11](research/e11-causal/README.md).
+**Current public evidence:** E9 fixes temporal prediction, E10 tests transport to additional acquisitions, and E11 evaluates a selected causal calibration policy on 14 reserved acquisitions. Each retains local tail harms and unsupported jurisdictions. [E9](research/e9-execution/E9_NUMERICAL_PROTOCOL.json) · [E10](research/e10-transport/README.md) · [E11](research/e11-causal/README.md).
 
 
 ![Visual abstract: exact temporal identities, qualified observation and local evidence](docs/assets/VISUAL_ABSTRACT_EN.svg)
@@ -13,7 +13,7 @@
 
 ChronoWitness turns carefully matched input histories into quantitative tests of dynamical models. Its FD7 schedules share the same symbol counts, short-word statistics, run lengths and autocorrelations. Within the two-state promoter class, they must produce the same periodic mean response for every admissible choice of switching rates. A measured difference can therefore challenge that model class once delivery, observation and sampling have been accounted for.
 
-The software connects that identity to exact state thresholds, kinetic constructions, reporter dynamics and sequential inference. Every reported computational result is accompanied by a reproducible calculation or certificate.
+The software connects that identity to exact state thresholds, kinetic constructions, reporter dynamics and sequential inference. The mathematical core includes executable checks and certificates. Cellular campaigns retain their own protocols and source-data requirements; the reproduction routes are listed below.
 
 ```mermaid
 flowchart LR
@@ -65,7 +65,7 @@ These results qualify observation and calibration. The source dataset used its o
 
 ## New frontier: nested evidence and extended input identities
 
-The [E6Ã¢â‚¬â€œE8 and FD8 campaign](research/e6-e8-fd8/README.md) adds ten acquisition dates and a certified 32-pulse extension. The early guard reduces local upper-tail losses from 102 to 62 on the same 552 supported jurisdictions, while retaining adverse transfers and non-estimable strata. These overlapping jurisdictions are not independent replicates.
+The [E6–E8 and FD8 campaign](research/e6-e8-fd8/README.md) adds ten acquisition dates and a certified 32-pulse extension. The early guard reduces local upper-tail losses from 102 to 62 on the same 552 supported jurisdictions, while retaining adverse transfers and non-estimable strata. These overlapping jurisdictions are not independent replicates.
 
 The FD8-32 pair preserves the three-state deterministic profile-law null and yields a 60.33% larger contrast for the same kinetic witness at fixed total period, using shorter pulses. A separate phase-law check demonstrates why equal means alone are insufficient. The input audit of the cellular acquisitions does not establish a direct FD7 intervention.
 
@@ -73,7 +73,7 @@ Full source, residual-level results and exact certificates are distributed in [r
 
 ## Reproduce the results
 
-The complete verification runs on Linux with Python 3.12 and a C++17 compiler:
+The complete mathematical-core and trajectory-assay verification runs on Linux with Python 3.12 and a C++17 compiler:
 
 ```sh
 python -m pip install -r requirements-assay.txt
@@ -81,6 +81,8 @@ python reproduce_release.py
 ```
 
 This command rebuilds the mathematical results, checks the interval certificate, exact first-crossing probabilities and trajectory-level Monte Carlo against independent moment references, and compares the outputs with the distributed references. The [GitHub Actions workflow](.github/workflows/reproduce.yml) executes the same procedure.
+
+Cellular campaigns E1–E11 use the separate workflows linked in the external-data documentation; they are not launched by `reproduce_release.py`. E12 is documented in the private preprint revision and is not part of this archived public release. The exact introductory example runs natively on Windows, macOS and Linux; the full core launcher uses Docker.
 
 The numerical search is a separate, reproducible step:
 
@@ -95,7 +97,7 @@ Its protocol fixes the parameter domain, objective, seeds and evaluation budget.
 
 - **Understand the method:** [scientific results](docs/SCIENTIFIC_RESULTS.md) and [worked example](docs/WORKED_EXAMPLE.md).
 - **Design an observation:** [assay requirements and decision path](docs/ASSAY_GUIDE.md).
-- **Inspect the evidence:** [data dictionary](research/supplement-v010/DATA_DICTIONARY.md), Data S1Ã¢â‚¬â€œS11 in their versioned directories, [Data S12](research/supplement-v011/data/) and [Data S13](research/supplement-v012/data/).
+- **Inspect the evidence:** [data dictionary](research/supplement-v010/DATA_DICTIONARY.md), Data S1–S11 in their versioned directories, [Data S12](research/supplement-v011/data/) and [Data S13](research/supplement-v012/data/).
 - **Extend the calculation:** exact reader code in `research/analysis/`, observation bounds in `research/finite_reporter/` and `research/input_robustness/`, count envelopes in `research/count_tails/` and `research/translation_counts/`, and tests in `research/statistical_inference/`.
 - **Audit a release:** `RELEASE_MANIFEST.json` records file hashes; release assets include the source distribution and its checksum.
 
@@ -103,6 +105,6 @@ The repository supplies theoretical and computational research, including second
 
 ## Cite and reuse
 
-Research and software by **Facundo Firmenich**. Archived scientific release v0.14.2: [10.5281/zenodo.24146309](https://doi.org/10.5281/zenodo.24146309). All-version record: [10.5281/zenodo.24117387](https://doi.org/10.5281/zenodo.24117387). The v0.14.3 accessibility update retains the scientific reference outputs. Citation metadata is available in [CITATION.cff](CITATION.cff); release metadata is supplied for GitHubÃ¢â‚¬â€œZenodo archiving.
+Research and software by **Facundo Firmenich, Pau Firmenich and León Firmenich**. Archived scientific release v0.14.2: [10.5281/zenodo.24146309](https://doi.org/10.5281/zenodo.24146309). All-version record: [10.5281/zenodo.24117387](https://doi.org/10.5281/zenodo.24117387). The v0.14.3 accessibility update, archived at [10.5281/zenodo.24147203](https://doi.org/10.5281/zenodo.24147203), retains the scientific reference outputs. Citation metadata is available in [CITATION.cff](CITATION.cff); release metadata is supplied for GitHub–Zenodo archiving.
 
 The code is distributed under the **MIT License**. See [LICENSE](LICENSE). The academic manuscript and supplementary document are maintained separately.

@@ -2,7 +2,14 @@
   "title": "ChronoWitness: exact temporal-input identities and kinetic-reader certificates",
   "creators": [
     {
-      "name": "Firmenich, Facundo"
+      "name": "Firmenich, Facundo",
+      "orcid": "0009-0002-6578-3811"
+    },
+    {
+      "name": "Firmenich, Pau"
+    },
+    {
+      "name": "Firmenich, León"
     }
   ],
   "version": "0.14.3",
