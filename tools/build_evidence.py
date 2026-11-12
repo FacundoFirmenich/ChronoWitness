@@ -1,7 +1,8 @@
 """Regenerate the offline graph and bind each claim to current source bytes."""
 from pathlib import Path
-import json,hashlib,argparse
+import json,hashlib,argparse,base64
 from render_witness_3d import trace
+from supergraph_model import extend
 R=Path(__file__).resolve().parents[1]
 p=argparse.ArgumentParser();p.add_argument('--check',action='store_true');a=p.parse_args()
 data=json.loads((R/'docs/EVIDENCE_LEDGER.json').read_text(encoding='utf-8'))
@@ -42,11 +43,9 @@ for i,(edge,es) in enumerate(zip(data['edges'],relations)):
  edge.update(id='edge-'+str(i),relation_es=es)
 for node in data['nodes']:
  node['title_es'],node['meaning_es'],node['group']=translations[node['id']]
-data['routes']=[
- dict(en='How does FD7 separate readers?',es='¿Cómo separa lectores FD7?',steps=['fd7','reader','witness','kinetic']),
- dict(en='When is a contrast interpretable?',es='¿Cuándo es interpretable un contraste?',steps=['fd7','reporter','statistics','qualified']),
- dict(en='What did the reserve establish?',es='¿Qué estableció la reserva?',steps=['e9','e10','e11','harm','date','physical']),
-]
+extend(data)
+data['schema_version']=2
+data['updated']='2026-11-12'
 data['witness']=trace()
 data['local_case']=json.loads((R/'research/e11-causal/LOCAL_CASE_SELECTION.json').read_bytes())
 ids={x['id'] for x in data['nodes']};assert len(ids)==len(data['nodes'])
@@ -54,11 +53,22 @@ for n in data['nodes']:
  source=R/n['source'];assert source.is_file(),source
  n['sha256']=hashlib.sha256(source.read_bytes()).hexdigest()
 for e in data['edges']:assert e['from'] in ids and e['to'] in ids
+assert len({e['id'] for e in data['edges']})==len(data['edges'])
+for node in data['nodes']:
+ if node['kind']=='gate':
+  assert set(node['premises'])=={e['from'] for e in data['edges'] if e['to']==node['id'] and e['kind']=='premise'}
+assert all(set(route['steps'])<=ids for route in data['routes'])
+assert all(sum(e['to']==n['id'] and e['kind']=='provenance' for e in data['edges'])==1
+           for n in data['nodes'] if n['kind']!='source')
 template=(R/'tools/graph-template.html').read_text(encoding='utf-8')
 script=(R/'tools/spatial_atlas.js').read_text(encoding='utf8')
+data['render_previews']={lang:'data:image/svg+xml;base64,'+base64.b64encode(
+    (R/f'docs/assets/FD7_WITNESS_3D_{lang.upper()}.svg').read_bytes()).decode() for lang in ('en','es')}
 html=template.replace('__LEDGER__',json.dumps(data,ensure_ascii=False).replace('</',r'<\/')).replace('__SCRIPT__',script)
-out=R/'docs/epistemic-graph.html'
-outputs={out:html,R/'docs/index.html':html,R/'docs/ATLAS_LEDGER.json':json.dumps(data,indent=2,ensure_ascii=False)+'\n'}
+screens={'index.html':'map','epistemic-graph.html':'map','supergraph.html':'supergraph','render-fd7.html':'render'}
+outputs={R/'docs'/name:html.replace('__SCREEN__',screen) for name,screen in screens.items()}
+data.pop('render_previews')
+outputs[R/'docs/ATLAS_LEDGER.json']=json.dumps(data,indent=2,ensure_ascii=False)+'\n'
 for path,content in outputs.items():
  if a.check:assert path.read_text(encoding='utf-8')==content,'Graph stale: '+str(path)
  else:path.write_text(content,encoding='utf-8',newline='\n')

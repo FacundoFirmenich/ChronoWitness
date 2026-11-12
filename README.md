@@ -1,6 +1,6 @@
 # ChronoWitness
 
-[Castellano](README.es.md) · [Evidence atlas](https://facundofirmenich.github.io/ChronoWitness/?lang=en) · [Downloads](https://github.com/FacundoFirmenich/ChronoWitness/releases)
+[Castellano](README.es.md) · [SuperGraph](https://facundofirmenich.github.io/ChronoWitness/supergraph.html?lang=en) · [Interactive FD7 render](https://facundofirmenich.github.io/ChronoWitness/render-fd7.html?lang=en) · [Downloads](https://github.com/FacundoFirmenich/ChronoWitness/releases)
 
 ChronoWitness designs matched temporal inputs to test classes of models of cellular memory. Its FD7 schedules agree on cyclic word counts through order seven and on the stated two-state periodic mean identity. The exact witnesses show where readers with more states can distinguish the histories. The observation and inference contracts specify how a measured contrast can bear on that distinction.
 

@@ -1,6 +1,6 @@
 # ChronoWitness
 
-[English](README.md) · [Atlas de evidencia](https://facundofirmenich.github.io/ChronoWitness/?lang=es) · [Descargas](https://github.com/FacundoFirmenich/ChronoWitness/releases)
+[English](README.md) · [SuperGraph](https://facundofirmenich.github.io/ChronoWitness/supergraph.html?lang=es) · [Render FD7 interactivo](https://facundofirmenich.github.io/ChronoWitness/render-fd7.html?lang=es) · [Descargas](https://github.com/FacundoFirmenich/ChronoWitness/releases)
 
 ChronoWitness diseña entradas temporales emparejadas para contrastar clases de modelos de memoria celular. Las secuencias FD7 coinciden en los conteos de palabras cíclicas hasta el orden siete y satisfacen la identidad declarada para la media periódica de dos estados. Los testigos exactos muestran dónde lectores con más estados distinguen las historias. Los contratos de observación e inferencia especifican cómo interpretar un contraste medido.
 
