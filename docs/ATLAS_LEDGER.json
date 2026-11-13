@@ -277,6 +277,30 @@
       "sha256": "c74fb792bf6a6acc9a74c5cc920d82c431fec84ba77a5d845361c547f8c6a566"
     },
     {
+      "id": "exposurebounds",
+      "group": "assay",
+      "status": "CERTIFIED",
+      "source": "docs/EXPOSURE_INTERFACE.md",
+      "title": "ExposureBounds software archive",
+      "title_es": "Archivo de software ExposureBounds",
+      "meaning": "Version 4.16.0 contains formal delivery certificates and an exact per-arm transfer example. DOI 10.5281/zenodo.24182710.",
+      "meaning_es": "La versión 4.16.0 contiene certificados formales de entrega y un ejemplo exacto de transferencia por brazo. DOI 10.5281/zenodo.24182710.",
+      "kind": "claim",
+      "sha256": "440fc7615004122621c71803633c755fe992bb11145e40982baac239a5b3c618"
+    },
+    {
+      "id": "fd7-prospective",
+      "group": "limits",
+      "status": "DECLARED",
+      "source": "docs/EXPOSURE_INTERFACE.md",
+      "title": "Prospective cellular FD7 evaluation",
+      "title_es": "Evaluación celular prospectiva de FD7",
+      "meaning": "Instrument qualification, a cellular pilot and independent frozen evaluation define the proposed route.",
+      "meaning_es": "La calificación instrumental, un piloto celular y una evaluación independiente congelada definen la ruta propuesta.",
+      "kind": "claim",
+      "sha256": "440fc7615004122621c71803633c755fe992bb11145e40982baac239a5b3c618"
+    },
+    {
       "id": "endpoint",
       "group": "assay",
       "status": "CONDITIONAL",
@@ -2924,6 +2948,18 @@
       "sha256": "2dcc033c80748314a789f46a74f6cb0eb394349c94497b4b039ba4dd15a80895"
     },
     {
+      "id": "source-bf90f03a7439",
+      "group": "assay",
+      "status": "ARTIFACT",
+      "source": "docs/EXPOSURE_INTERFACE.md",
+      "title": "EXPOSURE_INTERFACE.md",
+      "title_es": "EXPOSURE_INTERFACE.md",
+      "meaning": "Public source bound by SHA-256.",
+      "meaning_es": "Fuente pública identificada por SHA-256.",
+      "kind": "source",
+      "sha256": "440fc7615004122621c71803633c755fe992bb11145e40982baac239a5b3c618"
+    },
+    {
       "id": "source-68b970e35709",
       "group": "assay",
       "status": "ARTIFACT",
@@ -3303,6 +3339,30 @@
     },
     {
       "id": "edge-23",
+      "from": "exposurebounds",
+      "to": "delivery",
+      "relation": "supplies formal per-arm certificates",
+      "relation_es": "aporta certificados formales por brazo",
+      "kind": "scientific"
+    },
+    {
+      "id": "edge-24",
+      "from": "exposurebounds",
+      "to": "fd7-prospective",
+      "relation": "supports instrument qualification",
+      "relation_es": "sustenta la calificación instrumental",
+      "kind": "scientific"
+    },
+    {
+      "id": "edge-25",
+      "from": "physical",
+      "to": "fd7-prospective",
+      "relation": "motivates direct evaluation",
+      "relation_es": "motiva la evaluación directa",
+      "kind": "scientific"
+    },
+    {
+      "id": "edge-26",
       "from": "delivery",
       "to": "statistics",
       "relation": "contributes a bias allowance",
@@ -3310,7 +3370,7 @@
       "kind": "scientific"
     },
     {
-      "id": "edge-24",
+      "id": "edge-27",
       "from": "counts",
       "to": "statistics",
       "relation": "contributes a saturation allowance",
@@ -3318,7 +3378,7 @@
       "kind": "scientific"
     },
     {
-      "id": "edge-25",
+      "id": "edge-28",
       "from": "statistics",
       "to": "power",
       "relation": "defines first crossing",
@@ -3326,7 +3386,7 @@
       "kind": "scientific"
     },
     {
-      "id": "edge-26",
+      "id": "edge-29",
       "from": "power",
       "to": "assay-mc",
       "relation": "benchmarks simulated first crossing",
@@ -3334,7 +3394,7 @@
       "kind": "scientific"
     },
     {
-      "id": "edge-27",
+      "id": "edge-30",
       "from": "e1",
       "to": "e2",
       "relation": "supplies prediction inputs",
@@ -3342,7 +3402,7 @@
       "kind": "scientific"
     },
     {
-      "id": "edge-28",
+      "id": "edge-31",
       "from": "e2",
       "to": "e3",
       "relation": "motivates early policy selection",
@@ -3350,7 +3410,7 @@
       "kind": "scientific"
     },
     {
-      "id": "edge-29",
+      "id": "edge-32",
       "from": "e3",
       "to": "e4",
       "relation": "is resolved by local support",
@@ -3358,7 +3418,7 @@
       "kind": "scientific"
     },
     {
-      "id": "edge-30",
+      "id": "edge-33",
       "from": "e4",
       "to": "e5",
       "relation": "reconstructs containing sets",
@@ -3366,7 +3426,7 @@
       "kind": "scientific"
     },
     {
-      "id": "edge-31",
+      "id": "edge-34",
       "from": "e5",
       "to": "e6",
       "relation": "motivates a tail-aware revision",
@@ -3374,7 +3434,7 @@
       "kind": "scientific"
     },
     {
-      "id": "edge-32",
+      "id": "edge-35",
       "from": "e6",
       "to": "e8-transfer",
       "relation": "tests transport to additional acquisitions",
@@ -3382,7 +3442,7 @@
       "kind": "scientific"
     },
     {
-      "id": "edge-33",
+      "id": "edge-36",
       "from": "e8-transfer",
       "to": "e8",
       "relation": "supplies acquisition-level evidence",
@@ -3390,7 +3450,7 @@
       "kind": "scientific"
     },
     {
-      "id": "edge-34",
+      "id": "edge-37",
       "from": "e9",
       "to": "e9-masking",
       "relation": "supports local comparisons",
@@ -3398,7 +3458,7 @@
       "kind": "scientific"
     },
     {
-      "id": "edge-35",
+      "id": "edge-38",
       "from": "e11",
       "to": "reserve-local",
       "relation": "retains a descriptive adverse case",
@@ -3406,7 +3466,7 @@
       "kind": "scientific"
     },
     {
-      "id": "edge-36",
+      "id": "edge-39",
       "from": "e11",
       "to": "nesting-effect",
       "relation": "leaves attribution open",
@@ -3414,7 +3474,7 @@
       "kind": "scientific"
     },
     {
-      "id": "edge-37",
+      "id": "edge-40",
       "from": "e11",
       "to": "future-mean",
       "relation": "leaves prospective uncertainty open",
@@ -3422,7 +3482,7 @@
       "kind": "scientific"
     },
     {
-      "id": "edge-38",
+      "id": "edge-41",
       "from": "phase-law",
       "to": "gate-reader",
       "relation": "required premise",
@@ -3430,7 +3490,7 @@
       "kind": "premise"
     },
     {
-      "id": "edge-39",
+      "id": "edge-42",
       "from": "witness",
       "to": "gate-reader",
       "relation": "required premise",
@@ -3438,7 +3498,7 @@
       "kind": "premise"
     },
     {
-      "id": "edge-40",
+      "id": "edge-43",
       "from": "reporter",
       "to": "gate-assay",
       "relation": "required premise",
@@ -3446,7 +3506,7 @@
       "kind": "premise"
     },
     {
-      "id": "edge-41",
+      "id": "edge-44",
       "from": "delivery",
       "to": "gate-assay",
       "relation": "required premise",
@@ -3454,7 +3514,7 @@
       "kind": "premise"
     },
     {
-      "id": "edge-42",
+      "id": "edge-45",
       "from": "counts",
       "to": "gate-assay",
       "relation": "required premise",
@@ -3462,7 +3522,7 @@
       "kind": "premise"
     },
     {
-      "id": "edge-43",
+      "id": "edge-46",
       "from": "reserve-freeze",
       "to": "gate-reserve",
       "relation": "required premise",
@@ -3470,7 +3530,7 @@
       "kind": "premise"
     },
     {
-      "id": "edge-44",
+      "id": "edge-47",
       "from": "e11",
       "to": "gate-reserve",
       "relation": "required premise",
@@ -3478,7 +3538,7 @@
       "kind": "premise"
     },
     {
-      "id": "edge-45",
+      "id": "edge-48",
       "from": "revise-physical",
       "to": "physical",
       "relation": "condition for revision",
@@ -3486,7 +3546,7 @@
       "kind": "revision"
     },
     {
-      "id": "edge-46",
+      "id": "edge-49",
       "from": "revise-date",
       "to": "date",
       "relation": "condition for revision",
@@ -3494,7 +3554,7 @@
       "kind": "revision"
     },
     {
-      "id": "edge-47",
+      "id": "edge-50",
       "from": "revise-nesting-effect",
       "to": "nesting-effect",
       "relation": "condition for revision",
@@ -3502,7 +3562,7 @@
       "kind": "revision"
     },
     {
-      "id": "edge-48",
+      "id": "edge-51",
       "from": "revise-future-mean",
       "to": "future-mean",
       "relation": "condition for revision",
@@ -3510,7 +3570,7 @@
       "kind": "revision"
     },
     {
-      "id": "edge-49",
+      "id": "edge-52",
       "from": "acquisition-2019-10-03",
       "to": "e11",
       "relation": "observed reserve acquisition",
@@ -3518,7 +3578,7 @@
       "kind": "containment"
     },
     {
-      "id": "edge-50",
+      "id": "edge-53",
       "from": "acquisition-2019-10-08",
       "to": "e11",
       "relation": "observed reserve acquisition",
@@ -3526,7 +3586,7 @@
       "kind": "containment"
     },
     {
-      "id": "edge-51",
+      "id": "edge-54",
       "from": "acquisition-2019-10-18",
       "to": "e11",
       "relation": "observed reserve acquisition",
@@ -3534,7 +3594,7 @@
       "kind": "containment"
     },
     {
-      "id": "edge-52",
+      "id": "edge-55",
       "from": "acquisition-2019-11-09",
       "to": "e11",
       "relation": "observed reserve acquisition",
@@ -3542,7 +3602,7 @@
       "kind": "containment"
     },
     {
-      "id": "edge-53",
+      "id": "edge-56",
       "from": "acquisition-2019-11-14",
       "to": "e11",
       "relation": "observed reserve acquisition",
@@ -3550,7 +3610,7 @@
       "kind": "containment"
     },
     {
-      "id": "edge-54",
+      "id": "edge-57",
       "from": "acquisition-2020-01-31",
       "to": "e11",
       "relation": "observed reserve acquisition",
@@ -3558,7 +3618,7 @@
       "kind": "containment"
     },
     {
-      "id": "edge-55",
+      "id": "edge-58",
       "from": "acquisition-2021-03-15",
       "to": "e11",
       "relation": "observed reserve acquisition",
@@ -3566,7 +3626,7 @@
       "kind": "containment"
     },
     {
-      "id": "edge-56",
+      "id": "edge-59",
       "from": "acquisition-2021-03-18",
       "to": "e11",
       "relation": "observed reserve acquisition",
@@ -3574,7 +3634,7 @@
       "kind": "containment"
     },
     {
-      "id": "edge-57",
+      "id": "edge-60",
       "from": "acquisition-2021-03-30",
       "to": "e11",
       "relation": "observed reserve acquisition",
@@ -3582,7 +3642,7 @@
       "kind": "containment"
     },
     {
-      "id": "edge-58",
+      "id": "edge-61",
       "from": "acquisition-2021-04-06",
       "to": "e11",
       "relation": "observed reserve acquisition",
@@ -3590,7 +3650,7 @@
       "kind": "containment"
     },
     {
-      "id": "edge-59",
+      "id": "edge-62",
       "from": "acquisition-2021-04-21",
       "to": "e11",
       "relation": "observed reserve acquisition",
@@ -3598,7 +3658,7 @@
       "kind": "containment"
     },
     {
-      "id": "edge-60",
+      "id": "edge-63",
       "from": "acquisition-2021-04-26",
       "to": "e11",
       "relation": "observed reserve acquisition",
@@ -3606,7 +3666,7 @@
       "kind": "containment"
     },
     {
-      "id": "edge-61",
+      "id": "edge-64",
       "from": "acquisition-2021-09-09",
       "to": "e11",
       "relation": "observed reserve acquisition",
@@ -3614,7 +3674,7 @@
       "kind": "containment"
     },
     {
-      "id": "edge-62",
+      "id": "edge-65",
       "from": "acquisition-2021-09-10",
       "to": "e11",
       "relation": "observed reserve acquisition",
@@ -3622,7 +3682,7 @@
       "kind": "containment"
     },
     {
-      "id": "edge-63",
+      "id": "edge-66",
       "from": "source-5e27ce53d77d",
       "to": "fd7",
       "relation": "documents",
@@ -3630,7 +3690,7 @@
       "kind": "provenance"
     },
     {
-      "id": "edge-64",
+      "id": "edge-67",
       "from": "source-4da049f40d87",
       "to": "reader",
       "relation": "documents",
@@ -3638,7 +3698,7 @@
       "kind": "provenance"
     },
     {
-      "id": "edge-65",
+      "id": "edge-68",
       "from": "source-72f75f52b81b",
       "to": "kinetic",
       "relation": "documents",
@@ -3646,7 +3706,7 @@
       "kind": "provenance"
     },
     {
-      "id": "edge-66",
+      "id": "edge-69",
       "from": "source-98df888a1493",
       "to": "reporter",
       "relation": "documents",
@@ -3654,7 +3714,7 @@
       "kind": "provenance"
     },
     {
-      "id": "edge-67",
+      "id": "edge-70",
       "from": "source-8014cca3b10c",
       "to": "statistics",
       "relation": "documents",
@@ -3662,7 +3722,7 @@
       "kind": "provenance"
     },
     {
-      "id": "edge-68",
+      "id": "edge-71",
       "from": "source-c85d1edfa5a2",
       "to": "e4",
       "relation": "documents",
@@ -3670,7 +3730,7 @@
       "kind": "provenance"
     },
     {
-      "id": "edge-69",
+      "id": "edge-72",
       "from": "source-39ca35325c37",
       "to": "e8",
       "relation": "documents",
@@ -3678,7 +3738,7 @@
       "kind": "provenance"
     },
     {
-      "id": "edge-70",
+      "id": "edge-73",
       "from": "source-1ecc7463a310",
       "to": "e9",
       "relation": "documents",
@@ -3686,7 +3746,7 @@
       "kind": "provenance"
     },
     {
-      "id": "edge-71",
+      "id": "edge-74",
       "from": "source-e6b2c171348d",
       "to": "e10",
       "relation": "documents",
@@ -3694,7 +3754,7 @@
       "kind": "provenance"
     },
     {
-      "id": "edge-72",
+      "id": "edge-75",
       "from": "source-9cdb2d45b6f2",
       "to": "e11",
       "relation": "documents",
@@ -3702,7 +3762,7 @@
       "kind": "provenance"
     },
     {
-      "id": "edge-73",
+      "id": "edge-76",
       "from": "source-9cdb2d45b6f2",
       "to": "harm",
       "relation": "documents",
@@ -3710,7 +3770,7 @@
       "kind": "provenance"
     },
     {
-      "id": "edge-74",
+      "id": "edge-77",
       "from": "source-9cdb2d45b6f2",
       "to": "physical",
       "relation": "documents",
@@ -3718,7 +3778,7 @@
       "kind": "provenance"
     },
     {
-      "id": "edge-75",
+      "id": "edge-78",
       "from": "source-0bd858808ad4",
       "to": "date",
       "relation": "documents",
@@ -3726,7 +3786,7 @@
       "kind": "provenance"
     },
     {
-      "id": "edge-76",
+      "id": "edge-79",
       "from": "source-6374ee2ff66f",
       "to": "witness",
       "relation": "documents",
@@ -3734,7 +3794,7 @@
       "kind": "provenance"
     },
     {
-      "id": "edge-77",
+      "id": "edge-80",
       "from": "source-98df888a1493",
       "to": "qualified",
       "relation": "documents",
@@ -3742,7 +3802,7 @@
       "kind": "provenance"
     },
     {
-      "id": "edge-78",
+      "id": "edge-81",
       "from": "source-65d70a124741",
       "to": "fd7-structure",
       "relation": "documents",
@@ -3750,7 +3810,7 @@
       "kind": "provenance"
     },
     {
-      "id": "edge-79",
+      "id": "edge-82",
       "from": "source-4674dcf73f7e",
       "to": "phase-law",
       "relation": "documents",
@@ -3758,7 +3818,7 @@
       "kind": "provenance"
     },
     {
-      "id": "edge-80",
+      "id": "edge-83",
       "from": "source-22d603ca060c",
       "to": "markov-null",
       "relation": "documents",
@@ -3766,7 +3826,7 @@
       "kind": "provenance"
     },
     {
-      "id": "edge-81",
+      "id": "edge-84",
       "from": "source-e0674ee76084",
       "to": "discrete-witness",
       "relation": "documents",
@@ -3774,7 +3834,7 @@
       "kind": "provenance"
     },
     {
-      "id": "edge-82",
+      "id": "edge-85",
       "from": "source-c6522e4b720d",
       "to": "kinetic-certificate",
       "relation": "documents",
@@ -3782,7 +3842,7 @@
       "kind": "provenance"
     },
     {
-      "id": "edge-83",
+      "id": "edge-86",
       "from": "source-39ca35325c37",
       "to": "fd8-design",
       "relation": "documents",
@@ -3790,7 +3850,23 @@
       "kind": "provenance"
     },
     {
-      "id": "edge-84",
+      "id": "edge-87",
+      "from": "source-bf90f03a7439",
+      "to": "exposurebounds",
+      "relation": "documents",
+      "relation_es": "documenta",
+      "kind": "provenance"
+    },
+    {
+      "id": "edge-88",
+      "from": "source-bf90f03a7439",
+      "to": "fd7-prospective",
+      "relation": "documents",
+      "relation_es": "documenta",
+      "kind": "provenance"
+    },
+    {
+      "id": "edge-89",
       "from": "source-68b970e35709",
       "to": "endpoint",
       "relation": "documents",
@@ -3798,7 +3874,7 @@
       "kind": "provenance"
     },
     {
-      "id": "edge-85",
+      "id": "edge-90",
       "from": "source-9dfd39b4350d",
       "to": "delivery",
       "relation": "documents",
@@ -3806,7 +3882,7 @@
       "kind": "provenance"
     },
     {
-      "id": "edge-86",
+      "id": "edge-91",
       "from": "source-65b8fdb06695",
       "to": "counts",
       "relation": "documents",
@@ -3814,7 +3890,7 @@
       "kind": "provenance"
     },
     {
-      "id": "edge-87",
+      "id": "edge-92",
       "from": "source-47fe1ad519ae",
       "to": "instrument",
       "relation": "documents",
@@ -3822,7 +3898,7 @@
       "kind": "provenance"
     },
     {
-      "id": "edge-88",
+      "id": "edge-93",
       "from": "source-732c30a4a881",
       "to": "power",
       "relation": "documents",
@@ -3830,7 +3906,7 @@
       "kind": "provenance"
     },
     {
-      "id": "edge-89",
+      "id": "edge-94",
       "from": "source-ae713d0964c3",
       "to": "assay-mc",
       "relation": "documents",
@@ -3838,7 +3914,7 @@
       "kind": "provenance"
     },
     {
-      "id": "edge-90",
+      "id": "edge-95",
       "from": "source-ad6cd4bbee8d",
       "to": "e1",
       "relation": "documents",
@@ -3846,7 +3922,7 @@
       "kind": "provenance"
     },
     {
-      "id": "edge-91",
+      "id": "edge-96",
       "from": "source-6dae8d621f4f",
       "to": "e2",
       "relation": "documents",
@@ -3854,7 +3930,7 @@
       "kind": "provenance"
     },
     {
-      "id": "edge-92",
+      "id": "edge-97",
       "from": "source-e777765c4fed",
       "to": "e3",
       "relation": "documents",
@@ -3862,7 +3938,7 @@
       "kind": "provenance"
     },
     {
-      "id": "edge-93",
+      "id": "edge-98",
       "from": "source-b80f25f03f56",
       "to": "e5",
       "relation": "documents",
@@ -3870,7 +3946,7 @@
       "kind": "provenance"
     },
     {
-      "id": "edge-94",
+      "id": "edge-99",
       "from": "source-9a3746dda276",
       "to": "e6",
       "relation": "documents",
@@ -3878,7 +3954,7 @@
       "kind": "provenance"
     },
     {
-      "id": "edge-95",
+      "id": "edge-100",
       "from": "source-83be62930ac1",
       "to": "e8-transfer",
       "relation": "documents",
@@ -3886,7 +3962,7 @@
       "kind": "provenance"
     },
     {
-      "id": "edge-96",
+      "id": "edge-101",
       "from": "source-3db9bef9abe6",
       "to": "e9-masking",
       "relation": "documents",
@@ -3894,7 +3970,7 @@
       "kind": "provenance"
     },
     {
-      "id": "edge-97",
+      "id": "edge-102",
       "from": "source-200e32371503",
       "to": "reserve-freeze",
       "relation": "documents",
@@ -3902,7 +3978,7 @@
       "kind": "provenance"
     },
     {
-      "id": "edge-98",
+      "id": "edge-103",
       "from": "source-bbe9eaa8ce59",
       "to": "reserve-local",
       "relation": "documents",
@@ -3910,7 +3986,7 @@
       "kind": "provenance"
     },
     {
-      "id": "edge-99",
+      "id": "edge-104",
       "from": "source-9cdb2d45b6f2",
       "to": "nesting-effect",
       "relation": "documents",
@@ -3918,7 +3994,7 @@
       "kind": "provenance"
     },
     {
-      "id": "edge-100",
+      "id": "edge-105",
       "from": "source-9cdb2d45b6f2",
       "to": "future-mean",
       "relation": "documents",
@@ -3926,7 +4002,7 @@
       "kind": "provenance"
     },
     {
-      "id": "edge-101",
+      "id": "edge-106",
       "from": "source-4da049f40d87",
       "to": "gate-reader",
       "relation": "documents",
@@ -3934,7 +4010,7 @@
       "kind": "provenance"
     },
     {
-      "id": "edge-102",
+      "id": "edge-107",
       "from": "source-98df888a1493",
       "to": "gate-assay",
       "relation": "documents",
@@ -3942,7 +4018,7 @@
       "kind": "provenance"
     },
     {
-      "id": "edge-103",
+      "id": "edge-108",
       "from": "source-9cdb2d45b6f2",
       "to": "gate-reserve",
       "relation": "documents",
@@ -3950,7 +4026,7 @@
       "kind": "provenance"
     },
     {
-      "id": "edge-104",
+      "id": "edge-109",
       "from": "source-9cdb2d45b6f2",
       "to": "revise-physical",
       "relation": "documents",
@@ -3958,7 +4034,7 @@
       "kind": "provenance"
     },
     {
-      "id": "edge-105",
+      "id": "edge-110",
       "from": "source-0bd858808ad4",
       "to": "revise-date",
       "relation": "documents",
@@ -3966,7 +4042,7 @@
       "kind": "provenance"
     },
     {
-      "id": "edge-106",
+      "id": "edge-111",
       "from": "source-9cdb2d45b6f2",
       "to": "revise-nesting-effect",
       "relation": "documents",
@@ -3974,7 +4050,7 @@
       "kind": "provenance"
     },
     {
-      "id": "edge-107",
+      "id": "edge-112",
       "from": "source-9cdb2d45b6f2",
       "to": "revise-future-mean",
       "relation": "documents",
@@ -3982,7 +4058,7 @@
       "kind": "provenance"
     },
     {
-      "id": "edge-108",
+      "id": "edge-113",
       "from": "source-ae4fee497a5e",
       "to": "acquisition-2019-10-03",
       "relation": "documents",
@@ -3990,7 +4066,7 @@
       "kind": "provenance"
     },
     {
-      "id": "edge-109",
+      "id": "edge-114",
       "from": "source-ae4fee497a5e",
       "to": "acquisition-2019-10-08",
       "relation": "documents",
@@ -3998,7 +4074,7 @@
       "kind": "provenance"
     },
     {
-      "id": "edge-110",
+      "id": "edge-115",
       "from": "source-ae4fee497a5e",
       "to": "acquisition-2019-10-18",
       "relation": "documents",
@@ -4006,7 +4082,7 @@
       "kind": "provenance"
     },
     {
-      "id": "edge-111",
+      "id": "edge-116",
       "from": "source-ae4fee497a5e",
       "to": "acquisition-2019-11-09",
       "relation": "documents",
@@ -4014,7 +4090,7 @@
       "kind": "provenance"
     },
     {
-      "id": "edge-112",
+      "id": "edge-117",
       "from": "source-ae4fee497a5e",
       "to": "acquisition-2019-11-14",
       "relation": "documents",
@@ -4022,7 +4098,7 @@
       "kind": "provenance"
     },
     {
-      "id": "edge-113",
+      "id": "edge-118",
       "from": "source-ae4fee497a5e",
       "to": "acquisition-2020-01-31",
       "relation": "documents",
@@ -4030,7 +4106,7 @@
       "kind": "provenance"
     },
     {
-      "id": "edge-114",
+      "id": "edge-119",
       "from": "source-ae4fee497a5e",
       "to": "acquisition-2021-03-15",
       "relation": "documents",
@@ -4038,7 +4114,7 @@
       "kind": "provenance"
     },
     {
-      "id": "edge-115",
+      "id": "edge-120",
       "from": "source-ae4fee497a5e",
       "to": "acquisition-2021-03-18",
       "relation": "documents",
@@ -4046,7 +4122,7 @@
       "kind": "provenance"
     },
     {
-      "id": "edge-116",
+      "id": "edge-121",
       "from": "source-ae4fee497a5e",
       "to": "acquisition-2021-03-30",
       "relation": "documents",
@@ -4054,7 +4130,7 @@
       "kind": "provenance"
     },
     {
-      "id": "edge-117",
+      "id": "edge-122",
       "from": "source-ae4fee497a5e",
       "to": "acquisition-2021-04-06",
       "relation": "documents",
@@ -4062,7 +4138,7 @@
       "kind": "provenance"
     },
     {
-      "id": "edge-118",
+      "id": "edge-123",
       "from": "source-ae4fee497a5e",
       "to": "acquisition-2021-04-21",
       "relation": "documents",
@@ -4070,7 +4146,7 @@
       "kind": "provenance"
     },
     {
-      "id": "edge-119",
+      "id": "edge-124",
       "from": "source-ae4fee497a5e",
       "to": "acquisition-2021-04-26",
       "relation": "documents",
@@ -4078,7 +4154,7 @@
       "kind": "provenance"
     },
     {
-      "id": "edge-120",
+      "id": "edge-125",
       "from": "source-ae4fee497a5e",
       "to": "acquisition-2021-09-09",
       "relation": "documents",
@@ -4086,7 +4162,7 @@
       "kind": "provenance"
     },
     {
-      "id": "edge-121",
+      "id": "edge-126",
       "from": "source-ae4fee497a5e",
       "to": "acquisition-2021-09-10",
       "relation": "documents",
@@ -4183,6 +4259,16 @@
         "gate-reserve",
         "reserve-local",
         "harm"
+      ]
+    },
+    {
+      "en": "How does delivered exposure enter the FD7 test?",
+      "es": "¿Cómo entra la exposición entregada en la prueba FD7?",
+      "steps": [
+        "exposurebounds",
+        "delivery",
+        "gate-assay",
+        "fd7-prospective"
       ]
     },
     {

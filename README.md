@@ -10,6 +10,8 @@ ChronoWitness designs matched temporal inputs to test classes of models of cellu
 
 The [FD7 demo](docs/FD7_DEMO.md) guides you from a certified occupation contrast of **1/24** to a one-symbol edit that produces **0** in the specified finite window. Open the render and epistemic graph in your browser, or use the bilingual [Streamlit and Docker editor](docs/FD7_DEMO.md#run-the-editor) to change an input and export the result. The [community and research guide](docs/COMMUNITY_RESEARCH.md) covers model discrimination, finite acquisition and local cellular calibration.
 
+The [delivery evidence guide](docs/EXPOSURE_INTERFACE.md) connects the FD7 contrast to the per-arm certificates in [ExposureBounds v4.16.0](https://doi.org/10.5281/zenodo.24182710) and describes the prospective cellular evaluation.
+
 ## Start without Git
 
 1. Download the native ZIP for your platform from Releases and extract the whole folder. Targets are Windows x64, Linux x64, and macOS for Apple Silicon or Intel. Use the target listed on the asset.
