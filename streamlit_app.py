@@ -76,3 +76,9 @@ st.markdown(f"[{tr('Interactive 3D render', 'Render 3D interactivo')}]({SITE}ren
             f"[{tr('Epistemic graph', 'Grafo epistémico')}]({SITE}epistemic-graph.html?lang={lang}) · "
             f"[SuperGraph]({SITE}supergraph.html?lang={lang}) · "
             f"[{tr('Source and certificates', 'Fuentes y certificados')}]({REPO})")
+
+st.markdown(
+    f"[{tr('Delivery evidence and the prospective FD7 test', 'Exposición entregada y prueba prospectiva FD7')}]"
+    f"({REPO}/blob/main/docs/EXPOSURE_INTERFACE.md) · "
+    "[ExposureBounds v4.16.0](https://doi.org/10.5281/zenodo.24182710)"
+)

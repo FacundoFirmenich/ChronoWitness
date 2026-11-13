@@ -10,6 +10,8 @@ ChronoWitness diseña entradas temporales emparejadas para contrastar clases de 
 
 La [demo FD7](docs/DEMO_FD7_ES.md) te lleva de un contraste certificado de ocupación de **1/24** a la edición de un símbolo que produce **0** en la ventana finita especificada. Abrí el render y el grafo epistémico en el navegador, o usá el [editor bilingüe Streamlit y Docker](docs/DEMO_FD7_ES.md#abrir-el-editor) para modificar una entrada y exportar el resultado. La [guía para la comunidad y la investigación](docs/COMUNIDAD_INVESTIGACION_ES.md) cubre discriminación de modelos, adquisición finita y calibración celular local.
 
+La [guía de exposición entregada](docs/EXPOSURE_INTERFACE.md) vincula el contraste FD7 con los certificados por brazo de [ExposureBounds v4.16.0](https://doi.org/10.5281/zenodo.24182710) y describe la evaluación celular prospectiva.
+
 ## Empezar sin Git
 
 1. Descargá de Releases el ZIP nativo para tu plataforma y extraé toda la carpeta. Hay destinos para Windows x64, Linux x64 y macOS Apple Silicon o Intel. Elegí la arquitectura que figura en el archivo.
